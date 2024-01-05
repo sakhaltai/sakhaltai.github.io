@@ -10,6 +10,7 @@ const StyledContactSection = styled.section`
   text-align: center;
 
   @media (max-width: 768px) {
+    height: auto; //new
     margin: 0 auto 50px;
   }
 
@@ -60,8 +61,8 @@ const Contact = () => {
       <h2 className="title">Hit Me Up</h2>
 
       <p>
-        I'm hella unemployed, but also hella skilled. You need Motion Graphics, After Effects
-        instruction, Video Editing, Linguistics stuff? HMU!
+        I'm hella unemployed, but also hella skilled. You need Motion Graphics,
+        After Effects instruction, Video Editing, Linguistics stuff? HMU!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>

@@ -13,6 +13,11 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   height: 100vh;
   padding: 0;
+  margin-top: var(
+    --nav-height
+  ); /* Adjust var(--nav-height) to the height of your nav bar */
+  position: relative;
+  top: var(--nav-height); /* Adjust this value */ //new
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
@@ -108,13 +113,15 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a high-octane, down-to-earth, humble, badass motion designer, focused on
-        narrative-driven, clean-transitioning, eye-catching motion graphics, with over 10 years of
-        experience in After Effects, Illustrator, and more. I also{' '}
+        I'm a high-octane, down-to-earth, humble, badass motion designer,
+        focused on narrative-driven, clean-transitioning, eye-catching motion
+        graphics, with over 10 years of experience in After Effects,
+        Illustrator, and more. I also{' '}
         <a
           href="https://www.youtube.com/playlist?list=PLO0g83JdlVkFyl5QYNS0kna97EJpGPniv"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           teach After Effects!
         </a>
       </p>
@@ -123,7 +130,9 @@ const Hero = () => {
 
   const imageData = useStaticQuery(graphql`
     query {
-      thumbnailImage: file(relativePath: { eq: "coverFeaturedDemoReel2024.png" }) {
+      thumbnailImage: file(
+        relativePath: { eq: "coverFeaturedDemoReel2024.png" }
+      ) {
         childImageSharp {
           gatsbyImageData(
             width: 700
@@ -136,7 +145,9 @@ const Hero = () => {
     }
   `);
 
-  const image = getImage(imageData.thumbnailImage.childImageSharp.gatsbyImageData);
+  const image = getImage(
+    imageData.thumbnailImage.childImageSharp.gatsbyImageData,
+  );
 
   const items = [one, two, three, four]; // if wanted, include 'five' at the end of this list to bring back dat button :D
 
@@ -164,8 +175,13 @@ const Hero = () => {
           className="thumbnail-link"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Watch Demo Reel 2024">
-          <GatsbyImage image={image} alt="Demo Reel 2024" className="thumbnail-image" />
+          aria-label="Watch Demo Reel 2024"
+        >
+          <GatsbyImage
+            image={image}
+            alt="Demo Reel 2024"
+            className="thumbnail-image"
+          />
           <div className="overlay-text">Demo Reel 2024</div>
         </a>
       </StyledThumbnail>
