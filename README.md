@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">
-  sakhaltai.github.io Portfolio
+  sakhaltai.github.io
 </h1>
 
 <p align="center">
@@ -18,9 +18,10 @@
 <div align="center">
 
 ![Gatsby](https://img.shields.io/badge/Gatsby-663399.svg?style=for-the-badge&logo=Gatsby&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white)
+![Github Pages](https://img.shields.io/badge/Github-pages.svg)
 ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 </div>
 
