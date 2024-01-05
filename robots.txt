@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sakhaltai.github.io/sitemap-index.xml
+Host: https://sakhaltai.github.io
