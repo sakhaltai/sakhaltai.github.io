@@ -2,21 +2,21 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --dark-navy: #210038;
-    --navy: #7a04eb;
-    --light-navy: #ff00a0;
-    --lightest-navy: #fe75fe;
-    --navy-shadow: rgba(7, 0, 10, 1);
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
     --dark-slate: #495670;
-    --slate: #ffffff;
-    --light-slate: #f1f1f1;
-    --lightest-slate: #f5f5f5;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
     --pink: #f57dff;
-    --blue: #ff9f8e;
-    --fart: #2e2e2e; // this is the new color for 'inlineLinkAlt', which is found in mixins.js, and featured.js
+    --blue: #57cbff;
+    --fart: #64ffda; // this is the new color for 'inlineLinkAlt', which is found in mixins.js, and featured.js
 
     --font-sans: "Calibre", sans-serif;
     --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
@@ -54,17 +54,19 @@ const variables = css`
 export default variables;
 
 // old color values for reference
-/*     --dark-navy: #0 2 0 c 1 b;
-    --navy: # 0 a 1 9 2 f;
-    --light-navy: #1 1 2 2 4 0;
-    --lightest-navy: #2 3 3 5 5 4;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --dark-slate: #4 9 5 6 7 0;
-    --slate: #8 8 9 2 b 0;
-    --light-slate: #a 8 b 2 d 1;
-    --lightest-slate: #c c d 6 f 6;
-    --white: #e 6 f 1 f f;
-    --green: #6 4 f f d a;
+/*         
+    --dark-navy: #210038; ()
+    --navy: #0a192f;
+    --light-navy: #ff00a0;
+    --lightest-navy: #fe75fe;
+    --navy-shadow: rgba(7, 0, 10, 1);
+    --dark-slate: #495670;
+    --slate: #ffffff;
+    --light-slate: #f1f1f1;
+    --lightest-slate: #f5f5f5;
+    --white: #e6f1ff;
+    --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f 5 7 d f f;
-    --blue: #5 7 c b f f; */
+    --pink: #f57dff;
+    --blue: #ff9f8e;
+    --fart: #64ffda; // this is the new color for 'inlineLinkAlt', which is found in mixins.js, and featured.js */
