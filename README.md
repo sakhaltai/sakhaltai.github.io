@@ -17,21 +17,11 @@
 
 <div align="center">
 
-<a href="https://www.gatsbyjs.com/" target="_blank">
-  <img src="https://img.shields.io/badge/Gatsby-663399.svg?style=for-the-badge&logo=Gatsby&logoColor=white" alt="Gatsby">
-</a>
-<a href="https://pages.github.com" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub%20Pages-222222.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
-</a>
-<a href="https://react.dev/" target="_blank">
-  <img src="https://img.shields.io/badge/React-20232A.svg?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-</a>
-<a href="https://nodejs.org/en" target="_blank">
-  <img src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-</a>
-<a href="https://opensource.org/licenses/MIT" target="_blank">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License">
-</a>
+[![Gatsby](https://img.shields.io/badge/Gatsby-663399.svg?style=for-the-badge&logo=Gatsby&logoColor=white)](https://www.gatsbyjs.com/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222.svg?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com)
+[![React](https://img.shields.io/badge/React-20232A.svg?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/license/mit/)
 
 </div>
 
