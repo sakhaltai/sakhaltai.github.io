@@ -13,11 +13,6 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   height: 100vh;
   padding: 0;
-  margin-top: var(
-    --nav-height
-  ); /* Adjust var(--nav-height) to the height of your nav bar */
-  position: relative;
-  top: var(--nav-height); /* Adjust this value */ //new
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
