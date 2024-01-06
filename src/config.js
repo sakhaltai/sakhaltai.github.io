@@ -7,6 +7,10 @@ module.exports = {
       url: 'https://github.com/sakhaltai',
     },
     {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/nikku_online_ebisu_dad/',
+    },
+    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/nicholas-hartmann-85690729/',
     },

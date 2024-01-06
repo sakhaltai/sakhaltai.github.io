@@ -84,41 +84,6 @@ const mixins = {
     }
   `,
 
-  inlineLinkAlt: css`
-    display: inline-block;
-    position: relative;
-    color: var(--fart); // Use the alternate color
-    transition: var(--transition);
-
-    &:hover,
-    &:focus-visible {
-      color: var(--fart); // Use the alternate color for hover state
-      outline: 0;
-      &:after {
-        width: 100%;
-      }
-      & > * {
-        color: var(--fart) !important; // Alternate color for child elements
-        transition: var(--transition);
-      }
-    }
-    &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 1px;
-      position: relative;
-      bottom: 0.37em;
-      background-color: var(
-        --fart
-      ); // Use the alternate color for the underline
-      opacity: 0.5;
-      @media (prefers-reduced-motion: no-preference) {
-        transition: var(--transition);
-      }
-    }
-  `,
-
   button,
 
   smallButton: css`
