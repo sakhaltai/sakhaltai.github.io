@@ -16,8 +16,6 @@ const StyledAboutSection = styled.section`
 
     @media (max-width: 768px) {
       display: block;
-      height: auto; //new
-      padding-top: var(--nav-height); //new
     }
   }
 `;
