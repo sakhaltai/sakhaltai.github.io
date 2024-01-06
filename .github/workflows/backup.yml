@@ -1,0 +1,30 @@
+# when site successfully re-builds and deploys, push a copy of main branch to 'backup' branch.
+
+name: Backup Main Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Push to Backup Branch
+        run: |
+          git fetch origin
+          git checkout -b backup origin/backup || git checkout backup
+          git merge origin/main
+          git push origin backup
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
