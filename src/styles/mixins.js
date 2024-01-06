@@ -70,7 +70,7 @@ const mixins = {
       }
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 1px;
@@ -103,13 +103,15 @@ const mixins = {
       }
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: var(--fart); // Use the alternate color for the underline
+      background-color: var(
+        --fart
+      ); // Use the alternate color for the underline
       opacity: 0.5;
       @media (prefers-reduced-motion: no-preference) {
         transition: var(--transition);
@@ -185,7 +187,7 @@ const mixins = {
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: '▹';
+        content: "▹";
         position: absolute;
         left: 0;
         color: var(--green);
