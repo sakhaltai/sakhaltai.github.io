@@ -7,12 +7,7 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-  //new
-  margin-top: var(
-    --nav-height
-  ); /* Adjust var(--nav-height) to the height of your nav bar */
   position: relative;
-  top: var(--nav-height); /* Adjust this value */ //new
 
   .inner {
     display: grid;
