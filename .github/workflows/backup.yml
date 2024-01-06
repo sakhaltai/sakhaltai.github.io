@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+      
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
 
       - name: Push to Backup Branch
         run: |
@@ -20,3 +25,6 @@ jobs:
           git checkout -b backup origin/backup || git checkout backup
           git merge origin/main
           git push origin backup
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
