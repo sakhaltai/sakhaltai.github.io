@@ -1,7 +1,7 @@
 ---
 date: "8"
 title: "Guardian Robotics"
-cover: "./coverFeaturedDemoReel2024.png"
+cover: "./coverFeaturedGuardianRobotics.png"
 external: "https://youtu.be/O2WzIrzoO5g"
 tech:
   - After Effects
