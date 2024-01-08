@@ -28,10 +28,6 @@ const StyledLoader = styled.div`
       height: 100%;
       margin: 0 auto;
       fill: none;
-      user-select: none;
-      #N {
-        opacity: 0;
-      }
     }
   }
 `;
@@ -51,12 +47,6 @@ const Loader = ({ finishLoading }) => {
         duration: 1500,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
-      })
-      .add({
-        targets: '#logo #N',
-        duration: 700,
-        easing: 'easeInOutQuart',
-        opacity: 1,
       })
       .add({
         targets: '#logo',
