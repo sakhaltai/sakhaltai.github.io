@@ -7,20 +7,13 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-  //new
-  margin-top: var(
-    --nav-height
-  ); /* Adjust var(--nav-height) to the height of your nav bar */
   position: relative;
-  top: var(--nav-height); /* Adjust this value */ //new
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
     @media (max-width: 768px) {
       display: block;
-      height: auto; //new
-      padding-top: var(--nav-height); //new
     }
   }
 `;
