@@ -98,6 +98,27 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const imageData = useStaticQuery(graphql`
+    query {
+      thumbnailImage: file(
+        relativePath: { eq: "coverFeaturedDemoReel2024.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 700
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+  `);
+
+  const image = getImage(
+    imageData.thumbnailImage.childImageSharp.gatsbyImageData,
+  );
+
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Nic Hartmann.</h2>;
   const three = (
@@ -123,28 +144,26 @@ const Hero = () => {
     </>
   );
 
-  const imageData = useStaticQuery(graphql`
-    query {
-      thumbnailImage: file(
-        relativePath: { eq: "coverFeaturedDemoReel2024.png" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 700
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-    }
-  `);
-
-  const image = getImage(
-    imageData.thumbnailImage.childImageSharp.gatsbyImageData,
+  const five = (
+    <StyledThumbnail>
+      <a
+        href="https://youtu.be/_e67KG1zSmA"
+        className="thumbnail-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Watch Demo Reel 2024"
+      >
+        <GatsbyImage
+          image={image}
+          alt="Demo Reel 2024"
+          className="thumbnail-image"
+        />
+        <div className="overlay-text">Demo Reel 2024</div>
+      </a>
+    </StyledThumbnail>
   );
 
-  const items = [one, two, three, four]; // if wanted, include 'five' at the end of this list to bring back dat button :D
+  const items = [one, two, three, four, five]; // if wanted, include 'five' at the end of this list to bring back dat button :D
 
   return (
     <StyledHeroSection>
@@ -164,22 +183,6 @@ const Hero = () => {
             ))}
         </TransitionGroup>
       )}
-      <StyledThumbnail>
-        <a
-          href="https://youtu.be/_e67KG1zSmA"
-          className="thumbnail-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Watch Demo Reel 2024"
-        >
-          <GatsbyImage
-            image={image}
-            alt="Demo Reel 2024"
-            className="thumbnail-image"
-          />
-          <div className="overlay-text">Demo Reel 2024</div>
-        </a>
-      </StyledThumbnail>
     </StyledHeroSection>
   );
 };
