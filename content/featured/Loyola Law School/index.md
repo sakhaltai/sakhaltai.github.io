@@ -10,4 +10,4 @@ tech:
   - Sound Design
 ---
 
-A trailer for [Loyola Law School](https://www.lls.edu/thellsdifference/facesoflls/loyolalaunchesllxexecutiveeducationprogram/loyolalaunchesllx.html) promoting their new online Masterclass/Udemy/LinkedIn Learning-style courses. We also created animated overlays for every course in the curriculum.
+A trailer for [Loyola Law School's LLX Program](https://www.lls.edu/thellsdifference/facesoflls/loyolalaunchesllxexecutiveeducationprogram/loyolalaunchesllx.html), promoting their new online Masterclass/Udemy/LinkedIn Learning-style courses. In addition to the trailer, we created animated overlays for every course in the curriculum.
