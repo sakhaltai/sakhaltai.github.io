@@ -6,6 +6,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledJobsSection = styled.section`
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 70px;
   max-width: 700px;
 
   .inner {
