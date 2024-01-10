@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledJobsSection = styled.section`
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 70px;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 8vh;
   max-width: 700px;
 
   .inner {
@@ -25,7 +25,7 @@ const StyledCompany = styled.span`
 `;
 
 const StyledJob = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 `;
 
 const CVPage = ({ location }) => {
