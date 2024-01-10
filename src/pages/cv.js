@@ -10,6 +10,7 @@ const StyledJobsSection = styled.section`
   margin-right: 8vw;
   margin-top: 8vh;
   max-width: 700px;
+  viewport: flex;
 
   .inner {
     display: column;
