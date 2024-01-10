@@ -9,8 +9,7 @@ const StyledJobsSection = styled.section`
   margin-left: 8vw;
   margin-right: 8vw;
   margin-top: 8vh;
-  max-width: 700px;
-  viewport: flex;
+  max-width: 50vmax; // hey now that's pretty interesting! vmax
 
   .inner {
     display: column;
