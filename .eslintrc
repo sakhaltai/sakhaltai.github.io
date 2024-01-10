@@ -1,10 +1,13 @@
 {
   "root": true,
   "extends": "@upstatement/eslint-config/react",
-  // "overrides": [
-  //   {
-  //     "files": ["*nav.js"],
-  //     "extends": "standard"
-  //   }
-  // ]
+  
+//#region comment out from here
+  "overrides": [
+    {
+      "files": ["*nav.js"],
+      "extends": "standard"
+    }
+  ]
 }
+//#endregion comment out from here
