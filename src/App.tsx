@@ -1,41 +1,39 @@
 import React from "react";
-import Hero from "./components/Hero";
-import Featured from "./components/Featured";
-import WorkHistory from "./components/WorkHistory";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Archive from "./pages/Archive";
 
 export default function App() {
   return (
     <div className="wrap">
       <header className="py-4 flex items-center justify-between">
-        <a href="#top" className="brand">
+        <Link to="/" className="brand">
           Nic Hartmann
-        </a>
+        </Link>
         <nav className="hidden sm:flex gap-2">
-          <a className="btn" href="#featured">
+          <a className="btn" href="/#featured">
             Featured
           </a>
-          <a className="btn" href="#work">
+          <a className="btn" href="/#work">
             Work
           </a>
-          <a className="btn" href="#about">
+          <a className="btn" href="/#about">
             About
           </a>
-          <a className="btn" href="#contact">
+          <a className="btn" href="/#contact">
             Contact
           </a>
+          <Link className="btn" to="/archive">
+            Archive
+          </Link>
         </nav>
       </header>
 
-      <main className="grid gap-6 md:gap-8">
-        <Hero />
-        <Featured />
-        <WorkHistory />
-        <About />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/archive" element={<Archive />} />
+      </Routes>
 
       <Footer />
     </div>

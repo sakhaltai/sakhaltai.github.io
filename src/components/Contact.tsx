@@ -2,6 +2,17 @@ import React from "react";
 import { site } from "../content";
 
 export default function Contact() {
+  const email = site.contactHref.replace("mailto:", "");
+  const [copied, setCopied] = React.useState(false);
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  }
+
   return (
     <section
       id="contact"
@@ -11,13 +22,18 @@ export default function Contact() {
         What’s Next?
       </h2>
       <p className="text-[var(--muted)] max-w-prose mx-auto mb-5">
-        I'm currently open for motion design, editing, and AE instruction. Need
-        clean transitions, narrative chops, or help leveling up your team? Let’s
-        talk.
+        I’m open for motion design, editing, and AE instruction. Reach out
+        anytime.
       </p>
-      <a className="btn primary" href={site.contactHref}>
-        Hit Me Up
-      </a>
+
+      <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-2">
+        <code className="text-sm">{email}</code>
+        <button onClick={copyEmail} className="btn">
+          {copied ? "Copied!" : "Copy"}
+        </button>
+      </div>
+
+      {/* Optional: simple form later (Formspree/Getform/Netlify). */}
     </section>
   );
 }

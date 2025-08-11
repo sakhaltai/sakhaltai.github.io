@@ -7,60 +7,71 @@ export const site = {
     // Replace with your real embed URL. Supports YouTube or Vimeo embed links.
     "https://www.youtube.com/embed/_e67KG1zSmA",
   cta: [
-    { label: "Watch the Reel", href: "#reel" },
-    { label: "Email Me", href: "mailto:nic@example.com", external: true },
+    {
+      label: "Watch the Reel",
+      href: "https://youtu.be/_e67KG1zSmA?si=6no6cEOTK75tqKFn",
+      external: true,
+    },
+    // { label: "Email Me", href: "mailto:sakhaltai@gmail.com", external: true },
     {
       label: "Download Résumé",
       href: "/Nic-Hartmann-Resume.pdf",
       external: true,
     },
   ],
-  contactHref: "mailto:nic@example.com",
+  contactHref: "mailto:sakhaltai@gmail.com",
 };
 
 export const featured = {
   items: [
     {
-      title: "Demo Reel 2024",
+      title: "Demo Reel 2025",
       url: "https://youtu.be/_e67KG1zSmA?si=6no6cEOTK75tqKFn",
       tech: ["After Effects", "Illustrator", "Photoshop"],
       desc: "My latest reel: favorite client and personal pieces; lots of AE, a splash of Blender/UE5.",
+      thumb: "featured/demoReel2025YTThumbnail_01.png",
     },
     {
       title: "XBOX — Soloist",
       url: "https://youtu.be/8FNqpiRyzkk",
       tech: ["After Effects", "Path Animation", "Joysticks n' Sliders"],
       desc: "Explainer series for audience segmentations. Characters animated via paths (no Puppet Tool).",
+      thumb: "featured/coverFeaturedXBOXSoloist.png",
     },
     {
       title: "Sephora Global",
       url: "https://youtu.be/DROgeEzhG0U",
       tech: ["After Effects", "Character Animation", "Joysticks n' Sliders"],
       desc: "Exec-facing internal narrative presenting new customer‑segment research and brand trends.",
+      thumb: "featured/coverFeaturedSephora.png",
     },
     {
       title: "Rumble Monkey",
       url: "https://www.youtube.com/watch?v=IE2f5tyMyEs",
       tech: ["After Effects", "Character Animation", "VFX"],
       desc: "Explainer for an eSports platform—storyboard, design, animation, and compositing.",
+      thumb: "featured/coverFeaturedRumbleMonkey.png",
     },
     {
       title: "Nuclear Threat Initiative",
       url: "https://youtu.be/tJLMear6KFI",
       tech: ["After Effects", "Sound Design", "Mixed Media", "VFX"],
       desc: "Dangers of amateur “benchtop” DNA synthesis—gritty textures, turbulence FX, mixed media.",
+      thumb: "featured/coverFeaturedNTI.png",
     },
     {
       title: "Darklight Cybersecurity",
       url: "https://youtu.be/wwHHtALJPlg",
       tech: ["After Effects", "Visual Design", "Sound Design"],
       desc: "Elevator explainer focused on clean transitions and 2.5D elements for Darklight AI.",
+      thumb: "featured/coverFeaturedDarklight.png",
     },
     {
       title: "Knights Who Say Nah",
       url: "https://youtu.be/dJLtmri-J2k",
       tech: ["Unreal Engine 5", "Blender", "VFX", "Procedural"],
       desc: "Win/lose sequences for an NFT mini‑game—assets, rigs, materials, VFX, and blueprints built from scratch.",
+      thumb: "featured/coverFeaturedKWSN.png",
     },
   ],
 };
@@ -69,7 +80,7 @@ export const about = {
   paragraphs: [
     "Hello! I'm Nic—linguistics enthusiast, devoted dad, passionate educator, and a 10‑year veteran of motion design.",
     "After graduating from Western Washington University (Linguistics), I dove head‑first into After Effects and landed at a boutique shop (Killer Infographics → Killer Visual Strategies). I grew from intern to senior motion designer, and eventually Director of Education—mentoring interns and students, running workshops, and launching passion‑project initiatives.",
-    "I’ve taught at Shoreline Community College (Intro to After Effects + Specializations) where students went from novice to hire‑ready in months. I’ve worked across the motion pipeline: scripting, storyboarding, asset creation, VO, sound, animation, editing, and client management.",
+    "I've taught at Shoreline Community College (Intro to After Effects + Specializations) where students went from novice to hire‑ready in months. I've worked across the motion pipeline: scripting, storyboarding, asset creation, VO, sound, animation, editing, and client management.",
   ],
   skills: [
     "After Effects",
