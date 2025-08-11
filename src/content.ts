@@ -97,30 +97,13 @@ export const about = {
 export const work = {
   jobs: [
     {
-      company: "Material+",
-      role: "Senior Producer",
-      period: "2021–2023",
+      company: "Hartmotion{n}",
+      role: "Freelance Motion Designer",
+      period: "2023–present",
       points: [
-        "Oversaw large ad campaigns, explainers, and social—editing, VFX, 3D assets, and sound.",
-        "Introduced Blender, Unreal, and Figma into creative workflows; taught Lottie/HTML animation best practices.",
-        "Led workshops on gen‑AI for ideation and presentation speed.",
-      ],
-    },
-    {
-      company: "Killer Visual Strategies",
-      role: "Senior Motion Designer · Director of Education",
-      period: "2016–2021",
-      points: [
-        "Mentored interns and students; launched passion‑project initiative; ran AE workshops.",
-        "Delivered premium‑tier motion work; built processes across design/motion teams.",
-      ],
-    },
-    {
-      company: "Killer Infographics",
-      role: "Senior Motion Designer",
-      period: "2013–2016",
-      points: [
-        "Guided motion offerings; animated presentation and premium‑tier projects end‑to‑end.",
+        "Explainers, product stories, data viz; AE, Illustrator, UE5",
+        "Mocha tracking and comp; Lottie exports; micro-interactions for web.",
+        "Clients via referrals and studios; full pipeline delivery.",
       ],
     },
     {
@@ -128,14 +111,35 @@ export const work = {
       role: "Instructor (AE & Specializations)",
       period: "2022–2023",
       points: [
-        "Authored VCT 278 (Intro to After Effects) and taught Specializations (student‑driven focus).",
-        "Recorded virtual classes and tutorials; mentored 1:1 with custom learning paths.",
+        "Authored and taught VCT 278, an brand new offering at Shoreline Community College, a comprehensive After Effects overview course intended to turn novices into hire-ready motion designers.",
+        "Created course curriculum from scratch, including weekly assignments, special exercises, lectures, demonstrations, sample projects, and best practices.",
+        "Created hundreds of hours of tutorials and virtual classes for students.",
+        "Created ScriptUI Panels and tools to expedite student's acquisition of After Effects basics.",
+      ],
+    },
+    {
+      company: "Material+",
+      role: "Senior Producer",
+      period: "2021–2023",
+      points: [
+        "Oversaw campaigns and explainers—editing, VFX, 3D assets, and sound.",
+        "Introduced Blender/Unreal/Figma; taught Lottie/HTML animation best practices.",
+        "Led workshops on gen-AI for quicker ideation and decks.",
+      ],
+    },
+    {
+      company: "Killer Visual Strategies",
+      role: "Senior Motion Designer · Director of Education",
+      period: "2016–2021",
+      points: [
+        "Mentored interns+students; launched passion-project initiative; ran AE workshops.",
+        "Delivered premium motion work; built workflow processes across design/motion teams.",
       ],
     },
   ],
 };
 
-export const archive = {
+export const teaching = {
   videos: [
     "https://www.youtube.com/embed/V5dkLbTDiT4?si=o2zHH_CaTGeKHG-1",
     "https://www.youtube.com/embed/I6iSCFuP5-0?si=pE48lTYqC-KPhWLo",

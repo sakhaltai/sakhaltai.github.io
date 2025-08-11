@@ -42,3 +42,7 @@ body { background: var(--bg); color: var(--text); }
 
 /* Utilities for cards */
 .shadow-card { box-shadow: 0 10px 30px rgba(2,6,23,.12); }
+
+/* hide horizontal scrollbar for the carousel, keep it scrollable */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

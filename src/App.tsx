@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Archive from "./pages/Archive";
+import Teaching from "./pages/Teaching";
 
 export default function App() {
   return (
@@ -24,15 +24,15 @@ export default function App() {
           <a className="btn" href="/#contact">
             Contact
           </a>
-          <Link className="btn" to="/archive">
-            Archive
+          <Link className="btn" to="/teaching">
+            Teaching
           </Link>
         </nav>
       </header>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/archive" element={<Archive />} />
+        <Route path="/teaching" element={<Teaching />} />
       </Routes>
 
       <Footer />
