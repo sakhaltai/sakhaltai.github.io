@@ -7,17 +7,17 @@ export const site = {
     // Replace with your real embed URL. Supports YouTube or Vimeo embed links.
     "https://www.youtube.com/embed/_e67KG1zSmA",
   cta: [
-    {
-      label: "Watch the Reel",
-      href: "https://youtu.be/_e67KG1zSmA?si=6no6cEOTK75tqKFn",
-      external: true,
-    },
-    // { label: "Email Me", href: "mailto:sakhaltai@gmail.com", external: true },
-    {
-      label: "Download Résumé",
-      href: "/Nic-Hartmann-Resume.pdf",
-      external: true,
-    },
+    // {
+    //   label: "Watch the Reel",
+    //   href: "https://youtu.be/_e67KG1zSmA?si=6no6cEOTK75tqKFn",
+    //   external: true,
+    // },
+    // // { label: "Email Me", href: "mailto:sakhaltai@gmail.com", external: true },
+    // {
+    //   label: "Download Résumé",
+    //   href: "/Nic-Hartmann-Resume.pdf",
+    //   external: true,
+    // },
   ],
   contactHref: "mailto:sakhaltai@gmail.com",
 };
