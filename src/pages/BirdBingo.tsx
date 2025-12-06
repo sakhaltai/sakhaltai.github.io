@@ -241,10 +241,10 @@ export default function BirdBingo() {
               key={bird.id}
               type="button"
               onClick={() => handlePlay(bird)}
-              className="group flex flex-col items-center"
+              className="group flex flex-col items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] active:translate-y-[1px] active:scale-[0.97] transition-transform duration-100 ease-out"
             >
               {/* Outer playing-card shell (yellow border, rounded corners) */}
-              <div className="relative w-full max-w-[220px] mx-auto pt-[138%] rounded-[20px] border-[6px] border-[#F6C94B] bg-white shadow-md overflow-hidden">
+              <div className="relative w-full max-w-[220px] mx-auto pt-[138%] rounded-[20px] border-[3px] border-[#F6C94B] bg-white shadow-md transition-shadow duration-100 ease-out active:shadow-sm group-active:shadow-sm">
                 {/* Inner white panel, mimicking the printed card */}
                 <div className="absolute inset-[10px] rounded-[14px] bg-white flex flex-col items-center justify-between">
                   {/* Illustration area */}
