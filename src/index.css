@@ -46,3 +46,28 @@ body { background: var(--bg); color: var(--text); }
 /* hide horizontal scrollbar for the carousel, keep it scrollable */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes modal-backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Simple mount-time animations for the modal */
+.modal-backdrop {
+  animation: modal-backdrop-in 150ms ease-out;
+}
+
+.modal-panel {
+  animation: modal-panel-in 180ms ease-out;
+}
