@@ -8,66 +8,170 @@
   --bg-elev: #0f1117;
   --text: #e5e7eb;
   --muted: #9aa4b2;
-  --border: rgba(255,255,255,0.08);
-  --card: rgba(255,255,255,0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --card: rgba(255, 255, 255, 0.04);
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #f8fafc;
     --bg-elev: #ffffff;
     --text: #0b1220;
     --muted: #475569;
-    --border: rgba(2,6,23,.08);
-    --card: rgba(2,6,23,.04);
+    --border: rgba(2, 6, 23, 0.08);
+    --card: rgba(2, 6, 23, 0.04);
   }
 }
 
-html { scroll-behavior: smooth; }
-html, body, #root { height: 100%; }
-body { background: var(--bg); color: var(--text); }
-
-.gradient-bg { position: fixed; inset: 0; z-index: -1; filter: blur(.5px);
-  background: radial-gradient(1200px 800px at 20% 0%, rgba(34,211,238,.25), transparent 50%),
-              radial-gradient(1000px 700px at 80% 20%, rgba(167,139,250,.25), transparent 60%),
-              linear-gradient(180deg, var(--bg), var(--bg)); }
-
-.wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
-.brand { font-weight: 800; letter-spacing: .2px; }
-
-.btn { --_bg: var(--card); --_fg: var(--text); --_bd: var(--border);
-  display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border-radius:999px; border:1px solid var(--_bd);
-  background:var(--_bg); color:var(--_fg); text-decoration:none; transition: transform .15s ease, border-color .2s ease; }
-.btn:hover { transform: translateY(-1px); border-color: rgb(103 232 249 / .8); }
-.btn.primary { --_bg: linear-gradient(135deg, rgb(34 211 238/.25), rgb(167 139 250/.25)); }
-
-/* Utilities for cards */
-.shadow-card { box-shadow: 0 10px 30px rgba(2,6,23,.12); }
-
-/* hide horizontal scrollbar for the carousel, keep it scrollable */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-@keyframes modal-backdrop-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+html {
+  scroll-behavior: smooth;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
 }
 
-@keyframes modal-panel-in {
+.gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  filter: blur(0.5px);
+  background:
+    radial-gradient(
+      1200px 800px at 20% 0%,
+      rgba(34, 211, 238, 0.25),
+      transparent 50%
+    ),
+    radial-gradient(
+      1000px 700px at 80% 20%,
+      rgba(167, 139, 250, 0.25),
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--bg), var(--bg));
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.btn {
+  --_bg: var(--card);
+  --_fg: var(--text);
+  --_bd: var(--border);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--_bd);
+  background: var(--_bg);
+  color: var(--_fg);
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    border-color 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgb(103 232 249 / 0.8);
+}
+.btn.primary {
+  --_bg: linear-gradient(
+    135deg,
+    rgb(34 211 238 / 0.25),
+    rgb(167 139 250 / 0.25)
+  );
+}
+
+/* Utilities for cards */
+.shadow-card {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+}
+
+/* hide horizontal scrollbar for the carousel, keep it scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ================================
+   Modal animations for Bird Bingo
+   ================================ */
+
+/* Backdrop fade-in */
+@keyframes modal-backdrop-in {
   from {
     opacity: 0;
-    transform: translateY(8px) scale(0.97);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }
 
-/* Simple mount-time animations for the modal */
 .modal-backdrop {
-  animation: modal-backdrop-in 150ms ease-out;
+  animation: modal-backdrop-in 180ms ease-out;
 }
 
-.modal-panel {
-  animation: modal-panel-in 180ms ease-out;
+/* CENTER POP ANIMATION */
+
+.modal-center-enter {
+  opacity: 0;
+  transform: scale(0.92);
+}
+.modal-center-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
+}
+.modal-center-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-center-exit-active {
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 120ms ease-in,
+    transform 120ms ease-in;
+}
+
+/* BOTTOM SLIDE ANIMATION */
+
+.modal-bottom-enter {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.modal-bottom-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 160ms ease-out,
+    transform 160ms ease-out;
+}
+.modal-bottom-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-bottom-exit-active {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 130ms ease-in,
+    transform 130ms ease-in;
 }
