@@ -1,29 +1,46 @@
 // birds-data.ts
 // Pure data + types for the Bird Bingo page.
-// Keeps BirdBingo.tsx nice and lean ✨
 
 export type BirdInfo = {
+  // Top-of-card meta
+  scientificName?: string;
+  order?: string;
+  family?: string;
+  groupName?: string; // e.g. "Rails", "Buntings"
+
+  // Icon row
+  habitat?: string; // "Lakes and ponds"
+  food?: string; // "Plants"
+  nesting?: string; // "Floating"
+  behavior?: string; // "Surface dive"
+  conservation?: string; // "Low concern"
+
+  // Text blocks
+  basicDescription?: string;
   songs?: string;
   calls?: string;
   otherSounds?: string;
-  sourceUrl?: string; // e.g. Cornell Lab page
+
+  // Links
+  sourceUrl?: string; // main Cornell species page
+  lifeHistoryUrl?: string; // optional life history subpage
 };
 
 export type BirdSongVariant = {
   id: string;
-  label: string; // e.g. "PNW song", "Martha's Vineyard song"
-  audio: string; // path to the specific audio file
+  label: string;
+  audio: string;
   note?: string;
 };
 
 export type Bird = {
   id: string;
   name: string;
-  image?: string; // generic image (or a neutral view)
+  image?: string;
   imageMale?: string;
   imageFemale?: string;
-  voice: string; // Nic saying the name
-  call: string; // main bird call
+  voice: string;
+  call: string;
   info?: BirdInfo;
   variants?: BirdSongVariant[];
 };
@@ -38,8 +55,35 @@ export const birds: Bird[] = [
     voice: "/birds/audio/american-coot-voice.mp3",
     call: "/birds/audio/american-coot-call.mp3",
     info: {
+      // Top-of-card meta
+      scientificName: "Fulica americana",
+      order: "Gruiformes",
+      family: "Rallidae",
+      groupName: "Rails",
+
+      // Icon row (from the Cornell-style card)
+      habitat: "Lakes and ponds",
+      food: "Plants",
+      nesting: "Floating",
+      behavior: "Surface dive",
+      conservation: "Low concern",
+
+      // Main blurb (paraphrased from Basic Description)
+      basicDescription:
+        "Stocky, dark waterbirds that cruise around open ponds and marshes with a stark white bill and forehead shield. They often forage alongside ducks, but a closer look at their slim head and long lobed toes reveals that coots are actually rails, more closely related to Sandhill Cranes and secretive marsh birds than to true ducks.",
+
+      // Optional sound notes – you can tweak or delete if you prefer
       songs:
-        "The waterborne American Coot is one good reminder that not everything that floats is a duck. A close look at a coot—that small head, those scrawny legs—reveals a different kind of bird entirely. Their dark bodies and white faces are common sights in nearly any open water across the continent, and they often mix with ducks. But they’re closer relatives of the gangly Sandhill Crane and the nearly invisible rails than of Mallards or teal.",
+        "Gives series of short clucks, croaks, and grunts, often strung together into chattering, mechanical-sounding phrases.",
+      calls:
+        "Loud cackles, honks, and squawks used in contact, aggression, and alarm when squabbling on the water.",
+      otherSounds:
+        "Splashy, slapping footsteps as they run across the water during takeoff or fights, plus noisy wingbeats over the pond.",
+
+      // Links back to Cornell
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Coot",
+      lifeHistoryUrl:
+        "https://www.allaboutbirds.org/guide/American_Coot/lifehistory",
     },
     variants: [
       {

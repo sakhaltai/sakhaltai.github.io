@@ -197,7 +197,7 @@ export default function BirdBingo() {
       const vh = window.innerHeight;
 
       const targetWidth = Math.min(vw - 32, 480);
-      const targetHeight = Math.min(vh - 80, 520);
+      const targetHeight = Math.min(vh - 48, 640);
 
       const targetTop = vh / 2 - targetHeight / 2;
       const targetLeft = vw / 2 - targetWidth / 2;
@@ -341,7 +341,7 @@ export default function BirdBingo() {
                           {/* Liquid fill */}
                           {currentBirdId === bird.id && isPlaying && (
                             <div
-                              className="absolute inset-x-0 bottom-0 bg-slate-300/60"
+                              className="absolute inset-x-0 bottom-0 bg-slate-900/30"
                               style={{ height: `${playProgress * 100}%` }}
                             />
                           )}
@@ -407,7 +407,7 @@ export default function BirdBingo() {
             {/* Close button */}
             <button
               onClick={closeInfo}
-              className="absolute top-3 right-3 text-neutral-200 hover:text-white text-xl z-20"
+              className="absolute top-3 right-3 text-neutral-800 hover:text-white text-xl z-20"
             >
               ×
             </button>
@@ -431,11 +431,11 @@ export default function BirdBingo() {
                   </div>
                 </div>
 
-                {/* BACK */}
-                <div className="card-3d-face card-3d-back rounded-[20px] border-[3px] border-[#F6C94B] bg-white">
-                  <div className="p-4 sm:p-5 md:p-6 max-h-[70vh] overflow-y-auto flex flex-col gap-4">
-                    {/* Bird image + name */}
-                    <div className="flex flex-col items-center gap-3">
+                {/* BACK – Cornell-style overview + your extras */}
+                <div className="card-3d-face card-3d-back rounded-[20px] border-[3px] border-[#F6C94B] bg-white overflow-hidden">
+                  <div className="p-4 sm:p-5 md:p-6 h-full overflow-y-auto flex flex-col gap-4">
+                    {/* Top: image + group / order / family */}
+                    <div className="flex flex-col items-center gap-3 text-center">
                       <div className="w-32 h-32 flex items-center justify-center">
                         <img
                           src={getBirdImage(infoBird, sexFilter)}
@@ -443,16 +443,100 @@ export default function BirdBingo() {
                           className="max-h-full max-w-full object-contain"
                         />
                       </div>
-                      <div className="text-center">
-                        <div className="text-[0.8rem] tracking-[0.25em] text-black/80 font-medium">
+                      <div>
+                        <div className="text-[0.85rem] tracking-[0.25em] text-black/80 font-medium">
                           {infoBird.name.toUpperCase()}
                         </div>
+                        {infoBird.info?.scientificName && (
+                          <div className="mt-1 text-[0.8rem] italic text-neutral-600">
+                            {infoBird.info.scientificName}
+                          </div>
+                        )}
+                        {infoBird.info?.groupName && (
+                          <div className="mt-1 text-[0.7rem] text-neutral-500">
+                            {infoBird.info.groupName}
+                          </div>
+                        )}
+                        {(infoBird.info?.order || infoBird.info?.family) && (
+                          <div className="mt-2 text-[0.7rem] text-neutral-500 space-y-0.5">
+                            {infoBird.info.order && (
+                              <div>
+                                <span className="font-semibold">ORDER: </span>
+                                {infoBird.info.order}
+                              </div>
+                            )}
+                            {infoBird.info.family && (
+                              <div>
+                                <span className="font-semibold">FAMILY: </span>
+                                {infoBird.info.family}
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
 
                     <div className="h-px bg-neutral-200" />
 
-                    {/* Info sections */}
+                    {/* Overview / basic description */}
+                    {infoBird.info?.basicDescription && (
+                      <div>
+                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
+                          Overview
+                        </div>
+                        <p className="text-sm text-neutral-700 leading-relaxed">
+                          {infoBird.info.basicDescription}
+                        </p>
+                      </div>
+                    )}
+                    {/* Life-history chips built from individual fields */}
+                    {(infoBird.info?.habitat ||
+                      infoBird.info?.food ||
+                      infoBird.info?.nesting ||
+                      infoBird.info?.behavior ||
+                      infoBird.info?.conservation) && (
+                      <div>
+                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-2">
+                          Life history
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {infoBird.info?.habitat && (
+                            <div className="px-3 py-1 rounded-full bg-neutral-50 border border-neutral-200 text-[0.7rem] flex flex-col text-neutral-800">
+                              <span className="font-semibold">Habitat</span>
+                              <span>{infoBird.info.habitat}</span>
+                            </div>
+                          )}
+                          {infoBird.info?.food && (
+                            <div className="px-3 py-1 rounded-full bg-neutral-50 border border-neutral-200 text-[0.7rem] flex flex-col text-neutral-800">
+                              <span className="font-semibold">Food</span>
+                              <span>{infoBird.info.food}</span>
+                            </div>
+                          )}
+                          {infoBird.info?.nesting && (
+                            <div className="px-3 py-1 rounded-full bg-neutral-50 border border-neutral-200 text-[0.7rem] flex flex-col text-neutral-800">
+                              <span className="font-semibold">Nesting</span>
+                              <span>{infoBird.info.nesting}</span>
+                            </div>
+                          )}
+                          {infoBird.info?.behavior && (
+                            <div className="px-3 py-1 rounded-full bg-neutral-50 border border-neutral-200 text-[0.7rem] flex flex-col text-neutral-800">
+                              <span className="font-semibold">Behavior</span>
+                              <span>{infoBird.info.behavior}</span>
+                            </div>
+                          )}
+                          {infoBird.info?.conservation && (
+                            <div className="px-3 py-1 rounded-full bg-neutral-50 border border-neutral-200 text-[0.7rem] flex flex-col text-neutral-800">
+                              <span className="font-semibold">
+                                Conservation
+                              </span>
+                              <span>{infoBird.info.conservation}</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Songs / calls / other sounds */}
                     {infoBird.info?.songs && (
                       <div>
                         <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
@@ -486,17 +570,7 @@ export default function BirdBingo() {
                       </div>
                     )}
 
-                    {infoBird.info?.sourceUrl && (
-                      <a
-                        href={infoBird.info.sourceUrl}
-                        className="text-cyan-600 text-xs"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Cornell Lab ↗
-                      </a>
-                    )}
-
+                    {/* Variant buttons */}
                     {infoBird.variants?.length ? (
                       <div>
                         <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-2">
@@ -509,7 +583,7 @@ export default function BirdBingo() {
                               onClick={() =>
                                 handlePlayVariant(infoBird, variant)
                               }
-                              className="px-3 py-1 rounded-full border text-xs text-neutral-800 hover:bg-cyan-50"
+                              className="px-3 py-1 rounded-full border border-neutral-200 bg-neutral-50 text-xs text-neutral-800 hover:border-cyan-400 hover:bg-cyan-50 active:translate-y-[1px] active:scale-[0.98] transition-transform"
                             >
                               {variant.label}
                             </button>
@@ -517,6 +591,18 @@ export default function BirdBingo() {
                         </div>
                       </div>
                     ) : null}
+
+                    {/* Link out to Cornell */}
+                    {infoBird.info?.sourceUrl && (
+                      <a
+                        href={infoBird.info.sourceUrl}
+                        className="mt-1 text-cyan-600 text-xs hover:underline inline-flex items-center gap-1"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        More at Cornell Lab ↗
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
