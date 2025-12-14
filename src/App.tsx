@@ -5,7 +5,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Teaching from "./pages/Teaching";
-import BirdBingo from "./pages/BirdBingo"; // <-- make sure this is here
+import BirdBingo from "./pages/BirdBingo";
+import RockyCare from "./pages/RockyCare";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,9 @@ export default function App() {
           </Link>
           <Link className="btn" to="/bird-bingo">
             Bird Bingo
+          </Link>
+          <Link className="btn" to="/rocky-care">
+            Rocky Care
           </Link>
         </nav>
 
@@ -88,6 +92,13 @@ export default function App() {
             >
               Bird Bingo
             </Link>
+            <Link
+              className="btn"
+              to="/rocky-care"
+              onClick={() => setMenuOpen(false)}
+            >
+              Rocky Care
+            </Link>
           </div>
         )}
       </header>
@@ -96,6 +107,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/bird-bingo" element={<BirdBingo />} />
+        <Route path="/rocky-care" element={<RockyCare />} />
       </Routes>
 
       <Footer />

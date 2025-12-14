@@ -1,4 +1,4 @@
-// BirdBingo.tsx
+// src/pages/BirdBingo.tsx
 
 import React, { useEffect, useRef, useState } from "react";
 import type { Bird, BirdSongVariant } from "../birds-data";
