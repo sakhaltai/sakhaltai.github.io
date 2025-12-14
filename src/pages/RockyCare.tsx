@@ -315,7 +315,7 @@ export default function RockyCare() {
   ];
 
   return (
-    <main className="grid gap-6 md:gap-8 overflow-x-hidden">
+    <main className="grid gap-6 md:gap-8 w-full max-w-full overflow-x-hidden md:overflow-x-visible">
       <style>{`
         @media print {
           .print-hide { display: none !important; }
@@ -349,21 +349,22 @@ export default function RockyCare() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-2 print-hide">
+            <div className="print-hide flex flex-col sm:flex-row sm:flex-wrap gap-2 w-full sm:w-auto min-w-0">
               <button
-                className="btn primary"
+                className="btn primary w-full sm:w-auto"
                 type="button"
                 onClick={() => window.print()}
               >
                 Print this page
               </button>
-              <a className="btn" href="#contacts">
+
+              <a className="btn w-full sm:w-auto" href="#contacts">
                 Emergency contacts
               </a>
-              <a className="btn" href="#meds">
+              <a className="btn w-full sm:w-auto" href="#meds">
                 Daily meds
               </a>
-              <a className="btn" href="#vet">
+              <a className="btn w-full sm:w-auto" href="#vet">
                 Vet info
               </a>
             </div>

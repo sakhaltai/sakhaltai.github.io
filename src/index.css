@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  overflow-x: hidden;
-}
-
 /* =======================================
    Theme tokens (dark & light aware)
    ======================================= */
@@ -32,6 +28,10 @@ html, body {
 }
 
 /* Base layout */
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -92,6 +92,7 @@ body {
   border: 1px solid var(--_bd);
   background: var(--_bg);
   color: var(--_fg);
+  max-width: 100%;
   text-decoration: none;
   transition:
     transform 0.15s ease,
