@@ -315,7 +315,7 @@ export default function RockyCare() {
   ];
 
   return (
-    <main className="grid gap-6 md:gap-8">
+    <main className="grid gap-6 md:gap-8 overflow-x-hidden">
       <style>{`
         @media print {
           .print-hide { display: none !important; }
@@ -377,11 +377,11 @@ export default function RockyCare() {
       </section>
 
       {/* Sticky bar: quick actions + section nav */}
-      <div className="sticky top-2 z-40 print-hide">
+      <div className="sticky top-2 z-40 print-hide hidden md:block">
         <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl shadow-card px-3 py-2">
           <div className="flex flex-col gap-2">
             {/* Quick actions */}
-            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:overflow-x-auto sm:no-scrollbar">
+            <div className="flex flex-wrap gap-2">
               <a className="btn primary" href="#contacts">
                 Emergency contacts
               </a>
@@ -394,7 +394,7 @@ export default function RockyCare() {
             </div>
 
             {/* Section nav */}
-            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:overflow-x-auto sm:no-scrollbar">
+            <div className="flex flex-wrap gap-2">
               {sections.map((s) => (
                 <a key={s.id} className="btn" href={`#${s.id}`}>
                   {s.label}
