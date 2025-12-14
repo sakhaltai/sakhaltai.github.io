@@ -1,3 +1,5 @@
+// src/pages/RockyCare.tsx
+
 import React, { useEffect, useMemo, useState } from "react";
 
 type Photo = {
@@ -50,23 +52,42 @@ function IconCopyButton(props: {
   onCopied: (msg: string) => void;
   label?: string;
 }) {
+  const [copied, setCopied] = React.useState(false);
+
   return (
     <button
       type="button"
-      className="inline-flex items-center justify-center h-8 w-8 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+      className="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
       aria-label={props.label ?? "Copy"}
       title={props.label ?? "Copy"}
       onClick={async () => {
         try {
           await navigator.clipboard.writeText(props.value);
+          setCopied(true);
           props.onCopied("Copied!");
+          window.setTimeout(() => setCopied(false), 800);
         } catch {
-          // Clipboard may be blocked; fail silently
+          // ignore
         }
       }}
     >
-      {/* Simple copy glyph */}
-      <span className="text-sm">⧉</span>
+      {/* COPY ICON */}
+      <span
+        className={`absolute text-sm transition-all duration-150 ease-out ${
+          copied ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"
+        }`}
+      >
+        ⧉
+      </span>
+
+      {/* CHECK ICON */}
+      <span
+        className={`absolute text-sm transition-all duration-150 ease-out ${
+          copied ? "opacity-100 -translate-y-1" : "opacity-0 translate-y-0"
+        }`}
+      >
+        ✓
+      </span>
     </button>
   );
 }
@@ -95,9 +116,14 @@ function SectionCard(props: {
 
 function KV(props: { k: string; v: React.ReactNode }) {
   return (
-    <div className="flex items-start justify-between gap-3 py-2 border-b border-[var(--border)] last:border-b-0">
-      <div className="text-sm text-[var(--muted)]">{props.k}</div>
-      <div className="text-sm text-right">{props.v}</div>
+    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 py-2 border-b border-[var(--border)] last:border-b-0">
+      <div className="text-sm text-[var(--muted)] sm:max-w-[45%]">
+        {props.k}
+      </div>
+
+      <div className="text-sm sm:text-right sm:max-w-[55%] min-w-0">
+        {props.v}
+      </div>
     </div>
   );
 }
@@ -141,13 +167,28 @@ function Gallery(props: { title?: string; photos: Photo[] }) {
 }
 
 function MedImageGrid(props: { items: MedImage[]; note?: string }) {
+  const [open, setOpen] = useState<MedImage | null>(null);
   if (!props.items.length) return null;
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(null);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <div className="mt-3">
       {props.note ? (
         <div className="text-xs text-[var(--muted)] mb-2">{props.note}</div>
       ) : null}
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {props.items.map((m) => (
           <div
@@ -157,13 +198,42 @@ function MedImageGrid(props: { items: MedImage[]; note?: string }) {
             <img
               src={m.src}
               alt={m.alt}
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-square object-cover bg-white cursor-zoom-in"
               loading="lazy"
+              onClick={() => setOpen(m)}
             />
             <div className="p-3 text-xs text-[var(--muted)]">{m.label}</div>
           </div>
         ))}
       </div>
+
+      {/* Lightbox */}
+      {open && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/70 flex items-center justify-center p-4"
+          onClick={() => setOpen(null)}
+        >
+          <div
+            className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl shadow-card max-w-[900px] w-full overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-3 border-b border-[var(--border)]">
+              <div className="text-sm font-semibold">{open.label}</div>
+              <button className="btn" onClick={() => setOpen(null)}>
+                Close
+              </button>
+            </div>
+
+            <div className="p-4">
+              <img
+                src={open.src}
+                alt={open.alt}
+                className="w-full max-h-[75vh] object-contain bg-white rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -178,6 +248,29 @@ export default function RockyCare() {
     const t = window.setTimeout(() => setToast(null), 1200);
     return () => window.clearTimeout(t);
   }, [toast]);
+
+  // near your other state:
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!copiedKey) return;
+    const t = window.setTimeout(() => setCopiedKey(null), 900);
+    return () => window.clearTimeout(t);
+  }, [copiedKey]);
+
+  // constants (put near top of component)
+  const NIC_DISCORD_USER = "Nikkun";
+  const NIC_DISCORD_URL = "https://discordapp.com/users/87359002417049600";
+
+  const NIC_SIGNAL_USER = "@NIC_SIGNAL_USERNAME"; // <-- put your actual handle
+  const NIC_SIGNAL_URL =
+    "https://signal.me/#eu/K5UOi9nwausEZEDRbVCgVEIdVL_qZQAqTXOYFYbENkwJ3uaIxwxFZZMnB9uXlRld";
+
+  const JESSIE_DISCORD_USER = "@JESSIE_DISCORD_USERNAME"; // optional if she has one
+  const JESSIE_DISCORD_URL = "https://discordapp.com/users/XXXXXXXXXXXXXXX"; // optional
+
+  const JESSIE_SIGNAL_USER = "@JESSIE_SIGNAL_USERNAME";
+  const JESSIE_SIGNAL_URL = "https://signal.me/#eu/XXXXXXXXXXXXXXX";
 
   const sections = useMemo(
     () => [
@@ -196,17 +289,11 @@ export default function RockyCare() {
     []
   );
 
-  // Photos you’ll add later (put files in /public/rocky/gallery/)
-  const galleryPhotos: Photo[] = [
-    // { src: "/rocky/gallery/rocky-01.jpg", alt: "Rocky portrait", caption: "Rocky (16) — professional snuggler" },
-    // { src: "/rocky/gallery/rocky-02.jpg", alt: "Rocky on a bed", caption: "One of seven beds (yes, seven)" },
-  ];
+  const galleryPhotos: Photo[] = [];
 
-  // Medication images (put files in /public/rocky/meds/)
-  // Recommended size: 640x640 or 800x800 (square), simple “product photo” style.
   const medImages: MedImage[] = [
     {
-      src: "/rocky/meds/gabapentin.jpg",
+      src: "/rocky/meds/gabapentin.png",
       alt: "Gabapentin capsule",
       label: "Gabapentin 300 mg capsule",
     },
@@ -229,17 +316,12 @@ export default function RockyCare() {
 
   return (
     <main className="grid gap-6 md:gap-8">
-      {/* Page-specific print styling */}
       <style>{`
         @media print {
-          /* Hide site chrome-ish elements inside this page */
           .print-hide { display: none !important; }
-          /* Reduce padding so it prints tighter */
           .print-tight { padding: 0 !important; }
-          /* Improve print contrast */
           body { color: #000 !important; }
           a { color: #000 !important; text-decoration: underline !important; }
-          /* Remove shadows to save ink */
           .shadow-card { box-shadow: none !important; }
         }
       `}</style>
@@ -250,7 +332,8 @@ export default function RockyCare() {
       <section className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 md:p-7 shadow-card">
         <div className="flex flex-col gap-3 md:gap-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
-            <div className="min-w-[240px]">
+            {/* ✅ allow shrink on narrow screens */}
+            <div className="min-w-0">
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
                 Rocky — Rover Care Sheet
               </h1>
@@ -293,36 +376,32 @@ export default function RockyCare() {
         </div>
       </section>
 
-      {/* Sticky bar: quick actions + section nav (so you never lose the “big 3”) */}
+      {/* Sticky bar: quick actions + section nav */}
       <div className="sticky top-2 z-40 print-hide">
         <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl shadow-card px-3 py-2">
           <div className="flex flex-col gap-2">
             {/* Quick actions */}
-            <div className="flex gap-2 overflow-x-auto no-scrollbar">
-              <a className="btn primary whitespace-nowrap" href="#contacts">
+            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:overflow-x-auto sm:no-scrollbar">
+              <a className="btn primary" href="#contacts">
                 Emergency contacts
               </a>
-              <a className="btn primary whitespace-nowrap" href="#meds">
+              <a className="btn primary" href="#meds">
                 Daily meds
               </a>
-              <a className="btn primary whitespace-nowrap" href="#vet">
+              <a className="btn primary" href="#vet">
                 Vet info
               </a>
             </div>
 
             {/* Section nav */}
-            <div className="flex gap-2 overflow-x-auto no-scrollbar">
+            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:overflow-x-auto sm:no-scrollbar">
               {sections.map((s) => (
-                <a
-                  key={s.id}
-                  className="btn whitespace-nowrap"
-                  href={`#${s.id}`}
-                >
+                <a key={s.id} className="btn" href={`#${s.id}`}>
                   {s.label}
                 </a>
               ))}
               <a
-                className="btn whitespace-nowrap"
+                className="btn"
                 href="#top"
                 onClick={(e) => {
                   e.preventDefault();
@@ -359,7 +438,6 @@ export default function RockyCare() {
             />
           </div>
 
-          {/* Replaced the old “Quick Notes” vibe with timezone quick ref */}
           <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl p-4">
             <div className="text-sm font-semibold mb-2">
               Japan time zone quick reference
@@ -381,74 +459,372 @@ export default function RockyCare() {
 
       {/* Contacts */}
       <SectionCard id="contacts" title="Contacts">
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl p-4">
-            <div className="text-sm font-semibold mb-2">Parents</div>
-
-            <KV
-              k="Nicholas (Nic) Hartmann"
-              v={
-                <div className="inline-flex items-center gap-2 justify-end">
-                  <a className="underline" href="mailto:sakhaltai@gmail.com">
-                    sakhaltai@gmail.com
-                  </a>
-                  <IconCopyButton
-                    value="sakhaltai@gmail.com"
-                    onCopied={() => setToast("Nic email copied!")}
-                    label="Copy Nic email"
-                  />
-                </div>
-              }
-            />
-            <KV
-              k="Jessica (Jessie) Hartmann"
-              v={
-                <div className="inline-flex items-center gap-2 justify-end">
-                  <a className="underline" href="mailto:j.e.stein27@gmail.com">
-                    j.e.stein27@gmail.com
-                  </a>
-                  <IconCopyButton
-                    value="j.e.stein27@gmail.com"
-                    onCopied={() => setToast("Jessie email copied!")}
-                    label="Copy Jessie email"
-                  />
-                </div>
-              }
-            />
-
-            <div className="mt-4 text-sm font-semibold">Reach us in Japan</div>
-            <div className="mt-2 grid gap-2">
+        {/** Small helpers scoped to this section */}
+        {(() => {
+          function IconLink(props: {
+            href: string;
+            label: string;
+            title: string;
+            children: React.ReactNode;
+            external?: boolean;
+          }) {
+            return (
               <a
-                className="btn primary"
-                href="https://discordapp.com/users/87359002417049600"
-                target="_blank"
-                rel="noreferrer"
+                className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                href={props.href}
+                aria-label={props.label}
+                title={props.title}
+                target={props.external ? "_blank" : undefined}
+                rel={props.external ? "noreferrer" : undefined}
               >
-                Discord (Nikkun)
+                {props.children}
               </a>
+            );
+          }
 
-              <div className="flex items-center justify-between gap-2">
-                <div className="text-sm text-[var(--muted)] truncate">
-                  Username: <span className="text-[var(--text)]">Nikkun</span>
+          function CopyPill(props: {
+            value: string;
+            label: string;
+            toastMsg: string;
+          }) {
+            return (
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText(props.value);
+                    setToast(props.toastMsg);
+                  } catch {}
+                }}
+                title={`Copy ${props.label}`}
+              >
+                <span className="truncate">
+                  {props.label}:{" "}
+                  <span className="text-[var(--text)]">{props.value}</span>
+                </span>
+                <span className="opacity-70">⧉</span>
+              </button>
+            );
+          }
+
+          function PersonContactCard(props: {
+            name: string;
+            email: string;
+            signalUrl: string;
+            signalUser?: string;
+            discordUrl: string;
+            discordUser?: string;
+            note?: string;
+          }) {
+            return (
+              <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold">{props.name}</div>
+                    {props.note ? (
+                      <div className="text-xs text-[var(--muted)] mt-1">
+                        {props.note}
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    {/* Email */}
+                    <IconLink
+                      href={`mailto:${props.email}`}
+                      label={`${props.name} email`}
+                      title={`Email ${props.email}`}
+                    >
+                      <span className="text-sm">✉</span>
+                    </IconLink>
+
+                    {/* Signal */}
+                    <IconLink
+                      href={props.signalUrl}
+                      label={`${props.name} Signal`}
+                      title="Open Signal link"
+                      external
+                    >
+                      <span className="text-sm">✦</span>
+                    </IconLink>
+
+                    {/* Discord */}
+                    <IconLink
+                      href={props.discordUrl}
+                      label={`${props.name} Discord`}
+                      title="Open Discord profile"
+                      external
+                    >
+                      <span className="text-sm">≋</span>
+                    </IconLink>
+                  </div>
                 </div>
-                <IconCopyButton
-                  value="Nikkun"
-                  onCopied={() => setToast("Discord username copied!")}
-                  label="Copy Discord username"
-                />
+
+                {/* Optional: copyable details (only one row of text, not extra icon buttons) */}
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <CopyPill
+                    value={props.email}
+                    label="Email"
+                    toastMsg={`${props.name} email copied!`}
+                  />
+
+                  {props.signalUser ? (
+                    <CopyPill
+                      value={props.signalUser}
+                      label="Signal"
+                      toastMsg={`${props.name} Signal username copied!`}
+                    />
+                  ) : null}
+
+                  {props.discordUser ? (
+                    <CopyPill
+                      value={props.discordUser}
+                      label="Discord"
+                      toastMsg={`${props.name} Discord username copied!`}
+                    />
+                  ) : null}
+                </div>
+              </div>
+            );
+          }
+
+          return null;
+        })()}
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {/* Primary contacts */}
+          <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl p-4">
+            <div className="text-sm font-semibold mb-3">Parents</div>
+
+            <div className="grid gap-3">
+              {/* NIC */}
+              <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold">
+                      Nicholas (Nic) Hartmann
+                    </div>
+                    <div className="text-xs text-[var(--muted)] mt-1">
+                      Signal = urgent • Discord = async
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href="mailto:sakhaltai@gmail.com"
+                      title="Email Nic"
+                      aria-label="Email Nic"
+                    >
+                      <span className="text-sm">✉</span>
+                    </a>
+
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href={NIC_SIGNAL_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Open Nic Signal link"
+                      aria-label="Open Nic Signal"
+                    >
+                      <span className="text-sm">✦</span>
+                    </a>
+
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href={NIC_DISCORD_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Open Nic Discord profile"
+                      aria-label="Open Nic Discord"
+                    >
+                      <span className="text-sm">≋</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(
+                          "sakhaltai@gmail.com"
+                        );
+                        setToast("Nic email copied!");
+                      } catch {}
+                    }}
+                    title="Copy Nic email"
+                  >
+                    <span className="truncate">
+                      Email:{" "}
+                      <span className="text-[var(--text)]">
+                        sakhaltai@gmail.com
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(NIC_SIGNAL_USER);
+                        setToast("Nic Signal username copied!");
+                      } catch {}
+                    }}
+                    title="Copy Nic Signal username"
+                  >
+                    <span className="truncate">
+                      Signal:{" "}
+                      <span className="text-[var(--text)]">
+                        {NIC_SIGNAL_USER}
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(NIC_DISCORD_USER);
+                        setToast("Nic Discord username copied!");
+                      } catch {}
+                    }}
+                    title="Copy Nic Discord username"
+                  >
+                    <span className="truncate">
+                      Discord:{" "}
+                      <span className="text-[var(--text)]">
+                        {NIC_DISCORD_USER}
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+                </div>
               </div>
 
-              <a
-                className="btn primary"
-                href="https://signal.me/#eu/K5UOi9nwausEZEDRbVCgVEIdVL_qZQAqTXOYFYbENkwJ3uaIxwxFZZMnB9uXlRld"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Signal (link)
-              </a>
+              {/* JESSIE */}
+              <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold">
+                      Jessica (Jessie) Hartmann
+                    </div>
+                    <div className="text-xs text-[var(--muted)] mt-1">
+                      Signal = urgent • Discord = async
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href="mailto:j.e.stein27@gmail.com"
+                      title="Email Jessie"
+                      aria-label="Email Jessie"
+                    >
+                      <span className="text-sm">✉</span>
+                    </a>
+
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href={JESSIE_SIGNAL_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Open Jessie Signal link"
+                      aria-label="Open Jessie Signal"
+                    >
+                      <span className="text-sm">✦</span>
+                    </a>
+
+                    <a
+                      className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[rgb(103_232_249_/_.8)] transition"
+                      href={JESSIE_DISCORD_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Open Jessie Discord profile"
+                      aria-label="Open Jessie Discord"
+                    >
+                      <span className="text-sm">≋</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(
+                          "j.e.stein27@gmail.com"
+                        );
+                        setToast("Jessie email copied!");
+                      } catch {}
+                    }}
+                    title="Copy Jessie email"
+                  >
+                    <span className="truncate">
+                      Email:{" "}
+                      <span className="text-[var(--text)]">
+                        j.e.stein27@gmail.com
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(JESSIE_SIGNAL_USER);
+                        setToast("Jessie Signal username copied!");
+                      } catch {}
+                    }}
+                    title="Copy Jessie Signal username"
+                  >
+                    <span className="truncate">
+                      Signal:{" "}
+                      <span className="text-[var(--text)]">
+                        {JESSIE_SIGNAL_USER}
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(
+                          JESSIE_DISCORD_USER
+                        );
+                        setToast("Jessie Discord username copied!");
+                      } catch {}
+                    }}
+                    title="Copy Jessie Discord username"
+                  >
+                    <span className="truncate">
+                      Discord:{" "}
+                      <span className="text-[var(--text)]">
+                        {JESSIE_DISCORD_USER}
+                      </span>
+                    </span>
+                    <span className="opacity-70">⧉</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
+          {/* Emergency contacts (local) stays as-is */}
           <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl p-4">
             <div className="text-sm font-semibold mb-2">
               Emergency contacts (local)
@@ -457,30 +833,41 @@ export default function RockyCare() {
             <KV
               k="Maija Stein"
               v={
-                <div className="inline-flex items-center gap-2 justify-end">
-                  <a className="underline" href="tel:+12066172193">
+                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                  <a
+                    className="underline break-all min-w-0"
+                    href="tel:+12066172193"
+                  >
                     206-617-2193
                   </a>
-                  <IconCopyButton
-                    value="206-617-2193"
-                    onCopied={() => setToast("Maija phone copied!")}
-                    label="Copy Maija phone"
-                  />
+                  <span className="shrink-0">
+                    <IconCopyButton
+                      value="206-617-2193"
+                      onCopied={() => setToast("Maija phone copied!")}
+                      label="Copy Maija phone"
+                    />
+                  </span>
                 </div>
               }
             />
+
             <KV
               k="Louis Stein"
               v={
-                <div className="inline-flex items-center gap-2 justify-end">
-                  <a className="underline" href="tel:+14258795159">
+                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                  <a
+                    className="underline break-all min-w-0"
+                    href="tel:+14258795159"
+                  >
                     425-879-5159
                   </a>
-                  <IconCopyButton
-                    value="425-879-5159"
-                    onCopied={() => setToast("Louis phone copied!")}
-                    label="Copy Louis phone"
-                  />
+                  <span className="shrink-0">
+                    <IconCopyButton
+                      value="425-879-5159"
+                      onCopied={() => setToast("Louis phone copied!")}
+                      label="Copy Louis phone"
+                    />
+                  </span>
                 </div>
               }
             />
@@ -538,11 +925,12 @@ export default function RockyCare() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-[var(--bg-elev)] border border-[var(--border)] rounded-2xl p-4">
             <div className="text-sm font-semibold mb-2">Food</div>
+
             <KV
               k="Brand"
               v={
                 <a
-                  className="underline"
+                  className="underline break-words"
                   href="https://www.purina.com/dogs/shop/pro-plan-specialized-nutrition-sensitive-skin-stomach-salmon-rice-dry-dog-food"
                   target="_blank"
                   rel="noreferrer"
@@ -690,14 +1078,14 @@ export default function RockyCare() {
               <div>9708 Ormbrek St, Bothell, WA 98011</div>
               <div>
                 Phone:{" "}
-                <a className="underline" href="tel:+14254863251">
+                <a className="underline break-all" href="tel:+14254863251">
                   425-486-3251
                 </a>
               </div>
               <div>
                 Website:{" "}
                 <a
-                  className="underline"
+                  className="underline break-all"
                   href="https://bothellpethospital.com"
                   target="_blank"
                   rel="noreferrer"
@@ -717,14 +1105,14 @@ export default function RockyCare() {
               <div>4725 196th St SW, Lynnwood, WA 98036</div>
               <div>
                 Phone:{" "}
-                <a className="underline" href="tel:+14253297170">
+                <a className="underline break-all" href="tel:+14253297170">
                   (425) 329-7170
                 </a>
               </div>
               <div>
                 Website:{" "}
                 <a
-                  className="underline"
+                  className="underline break-all"
                   href="https://www.veg.com/locations/washington/lynnwood"
                   target="_blank"
                   rel="noreferrer"
@@ -805,18 +1193,19 @@ export default function RockyCare() {
             <KV
               k="Venmo"
               v={
-                <div className="inline-flex items-center gap-2 justify-end">
-                  <span>@nichartmann</span>
-                  <IconCopyButton
-                    value="@nichartmann"
-                    onCopied={() => setToast("Venmo copied!")}
-                    label="Copy Venmo"
-                  />
+                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                  <span className="break-all min-w-0">@nichartmann</span>
+                  <span className="shrink-0">
+                    <IconCopyButton
+                      value="@nichartmann"
+                      onCopied={() => setToast("Venmo copied!")}
+                      label="Copy Venmo"
+                    />
+                  </span>
                 </div>
               }
             />
 
-            {/* Venmo QR */}
             <div className="mt-4 flex items-center justify-between gap-4 print-hide">
               <div className="text-sm text-[var(--muted)]">
                 QR code (optional)
@@ -899,3 +1288,5 @@ export default function RockyCare() {
     </main>
   );
 }
+
+// https://signal.me/#eu/K5UOi9nwausEZEDRbVCgVEIdVL_qZQAqTXOYFYbENkwJ3uaIxwxFZZMnB9uXlRld

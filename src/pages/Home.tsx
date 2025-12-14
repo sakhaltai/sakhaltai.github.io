@@ -1,3 +1,5 @@
+// src/pages/Home.tsx
+
 import React from "react";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";

@@ -1,4 +1,4 @@
-// App.tsx
+// src/App.tsx
 
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
@@ -19,7 +19,7 @@ export default function App() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden sm:flex gap-2">
+        <nav className="hidden sm:flex flex-wrap gap-2 justify-end">
           <a className="btn" href="/#featured">
             Featured
           </a>
