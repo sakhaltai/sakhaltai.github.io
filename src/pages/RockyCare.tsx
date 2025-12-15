@@ -341,7 +341,7 @@ export default function RockyCare() {
                 Dec 26, 2025 – Jan 30, 2026
               </p>
 
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap gap-2 min-w-0">
                 <Chip>Age 16</Chip>
                 <Chip>~70 lbs coonhound</Chip>
                 <Chip>Arthritis / mobility</Chip>
@@ -491,7 +491,9 @@ export default function RockyCare() {
             return (
               <button
                 type="button"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                 onClick={async () => {
                   try {
                     await navigator.clipboard.writeText(props.value);
@@ -500,11 +502,11 @@ export default function RockyCare() {
                 }}
                 title={`Copy ${props.label}`}
               >
-                <span className="truncate">
+                <span className="min-w-0 truncate">
                   {props.label}:{" "}
                   <span className="text-[var(--text)]">{props.value}</span>
                 </span>
-                <span className="opacity-70">⧉</span>
+                <span className="opacity-70 shrink-0">⧉</span>
               </button>
             );
           }
@@ -563,7 +565,7 @@ export default function RockyCare() {
                 </div>
 
                 {/* Optional: copyable details (only one row of text, not extra icon buttons) */}
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2 min-w-0">
                   <CopyPill
                     value={props.email}
                     label="Email"
@@ -645,10 +647,12 @@ export default function RockyCare() {
                   </div>
                 </div>
 
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2 min-w-0">
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(
@@ -659,18 +663,20 @@ export default function RockyCare() {
                     }}
                     title="Copy Nic email"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Email:{" "}
                       <span className="text-[var(--text)]">
                         sakhaltai@gmail.com
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
 
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(NIC_SIGNAL_USER);
@@ -679,18 +685,20 @@ export default function RockyCare() {
                     }}
                     title="Copy Nic Signal username"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Signal:{" "}
                       <span className="text-[var(--text)]">
                         {NIC_SIGNAL_USER}
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
 
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(NIC_DISCORD_USER);
@@ -699,13 +707,13 @@ export default function RockyCare() {
                     }}
                     title="Copy Nic Discord username"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Discord:{" "}
                       <span className="text-[var(--text)]">
                         {NIC_DISCORD_USER}
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
                 </div>
               </div>
@@ -756,10 +764,12 @@ export default function RockyCare() {
                   </div>
                 </div>
 
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2 min-w-0">
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(
@@ -770,18 +780,20 @@ export default function RockyCare() {
                     }}
                     title="Copy Jessie email"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Email:{" "}
                       <span className="text-[var(--text)]">
                         j.e.stein27@gmail.com
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
 
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(JESSIE_SIGNAL_USER);
@@ -790,18 +802,20 @@ export default function RockyCare() {
                     }}
                     title="Copy Jessie Signal username"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Signal:{" "}
                       <span className="text-[var(--text)]">
                         {JESSIE_SIGNAL_USER}
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
 
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition min-w-0"
+                    className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)]
+                    px-3 py-1 text-xs text-[var(--muted)] hover:border-[rgb(103_232_249_/_.8)] transition
+                    min-w-0 max-w-full w-full sm:w-auto"
                     onClick={async () => {
                       try {
                         await navigator.clipboard.writeText(
@@ -812,13 +826,13 @@ export default function RockyCare() {
                     }}
                     title="Copy Jessie Discord username"
                   >
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       Discord:{" "}
                       <span className="text-[var(--text)]">
                         {JESSIE_DISCORD_USER}
                       </span>
                     </span>
-                    <span className="opacity-70">⧉</span>
+                    <span className="opacity-70 shrink-0">⧉</span>
                   </button>
                 </div>
               </div>
@@ -834,7 +848,7 @@ export default function RockyCare() {
             <KV
               k="Maija Stein"
               v={
-                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                <div className="flex flex-wrap items-center gap-2 sm:justify-end min-w-0">
                   <a
                     className="underline break-all min-w-0"
                     href="tel:+12066172193"
@@ -855,7 +869,7 @@ export default function RockyCare() {
             <KV
               k="Louis Stein"
               v={
-                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                <div className="flex flex-wrap items-center gap-2 sm:justify-end min-w-0">
                   <a
                     className="underline break-all min-w-0"
                     href="tel:+14258795159"
@@ -1194,7 +1208,7 @@ export default function RockyCare() {
             <KV
               k="Venmo"
               v={
-                <div className="flex items-center gap-2 sm:justify-end min-w-0">
+                <div className="flex flex-wrap items-center gap-2 sm:justify-end min-w-0">
                   <span className="break-all min-w-0">@nichartmann</span>
                   <span className="shrink-0">
                     <IconCopyButton
