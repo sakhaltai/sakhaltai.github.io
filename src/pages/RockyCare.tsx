@@ -53,7 +53,7 @@ function SectionCard(props: {
   return (
     <section
       id={props.id}
-      className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-8 shadow-card overflow-hidden scroll-mt-24"
+      className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-4 md:p-6 shadow-card overflow-hidden scroll-mt-24"
     >
       <div className="flex flex-col gap-1 min-w-0">
         <h2 className="text-lg md:text-xl font-semibold">{props.title}</h2>
@@ -83,11 +83,32 @@ function KV(props: { k: string; v: React.ReactNode }) {
   );
 }
 
-function Chip(props: { children: React.ReactNode }) {
+function Chip(props: {
+  children: React.ReactNode;
+  tone?: "quiet" | "nav";
+  href?: string;
+  onClick?: () => void;
+}) {
+  const base =
+    "inline-flex items-center rounded-full text-xs border border-[var(--border)] transition";
+  const quiet = "bg-[var(--bg-elev)] text-[var(--muted)] px-2.5 py-1";
+  const nav =
+    "bg-[var(--card)] text-[var(--text)] px-3 py-1.5 hover:border-[rgb(103_232_249_/_.8)]";
+
+  const cls = `${base} ${props.tone === "nav" ? nav : quiet}`;
+
+  if (props.href) {
+    return (
+      <a className={cls} href={props.href}>
+        {props.children}
+      </a>
+    );
+  }
+
   return (
-    <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs border border-[var(--border)] bg-[var(--bg-elev)]">
+    <button type="button" className={cls} onClick={props.onClick}>
       {props.children}
-    </span>
+    </button>
   );
 }
 
@@ -298,6 +319,18 @@ export default function RockyCare() {
     return () => window.clearTimeout(t);
   }, [toast]);
 
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowTop(window.scrollY > 120);
+    };
+
+    onScroll(); // seed on load
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // ====== EDIT THESE ======
   const NIC_EMAIL = "sakhaltai@gmail.com";
   const NIC_DISCORD_USER = "nikkun";
@@ -358,94 +391,71 @@ export default function RockyCare() {
   ];
 
   return (
-    <main className="wrap grid gap-6 md:gap-8">
+    <main className="grid gap-6 md:gap-8">
       <style>{`
-        @media print {
-          .print-hide { display: none !important; }
-          body { color: #000 !important; }
-          a { color: #000 !important; text-decoration: underline !important; }
-          .shadow-card { box-shadow: none !important; }
-        }
-      `}</style>
+      @media print {
+        .print-hide { display: none !important; }
+        body { color: #000 !important; }
+        a { color: #000 !important; text-decoration: underline !important; }
+        .shadow-card { box-shadow: none !important; }
+      }
+    `}</style>
 
       <Toast message={toast} />
       <div id="top" />
 
-      {/* HERO (BirdBingo-style: one card, padded, no sideways scroll) */}
+      {/* HERO (clean hierarchy: vitals → quick actions → jump links) */}
       <section className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-8 shadow-card overflow-hidden">
         <div className="flex flex-col gap-4 min-w-0">
-          <div className="flex flex-col gap-2 min-w-0">
-            <div className="flex items-start justify-between gap-3 min-w-0">
-              <div className="min-w-0">
-                <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight break-anywhere">
-                  Rocky — Rover Care Sheet
-                </h1>
-                <p className="text-sm md:text-base text-[var(--muted)] mt-1 break-anywhere">
-                  Dec 26, 2025 – Jan 30, 2026
-                </p>
+          <div className="min-w-0">
+            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight break-anywhere">
+              Rocky — Rover Care Sheet
+            </h1>
+            <p className="text-sm md:text-base text-[var(--muted)] mt-1 break-anywhere">
+              Dec 26, 2025 – Jan 30, 2026
+            </p>
 
-                <div className="mt-3 flex flex-wrap gap-2 min-w-0">
-                  <Chip>Age 16</Chip>
-                  <Chip>~70 lbs coonhound</Chip>
-                  <Chip>Arthritis / mobility</Chip>
-                  <Chip>Sweet’s syndrome (managed)</Chip>
-                </div>
-              </div>
-
-              <div className="print-hide hidden sm:flex flex-col gap-2 shrink-0">
-                <button className="btn primary" onClick={() => window.print()}>
-                  Print this page
-                </button>
-                <a className="btn" href="#contacts">
-                  Emergency contacts
-                </a>
-                <a className="btn" href="#meds">
-                  Daily meds
-                </a>
-                <a className="btn" href="#vet">
-                  Vet info
-                </a>
-              </div>
-            </div>
-
-            {/* Mobile buttons */}
-            <div className="print-hide sm:hidden grid gap-2 mt-1">
-              <button
-                className="btn primary w-full"
-                onClick={() => window.print()}
-              >
-                Print this page
-              </button>
-              <a className="btn w-full" href="#contacts">
-                Emergency contacts
-              </a>
-              <a className="btn w-full" href="#meds">
-                Daily meds
-              </a>
-              <a className="btn w-full" href="#vet">
-                Vet info
-              </a>
+            {/* Vitals (quiet, non-action) */}
+            <div className="mt-3 flex flex-wrap gap-2 min-w-0">
+              <Chip tone="quiet">Age 16</Chip>
+              <Chip tone="quiet">~70 lbs coonhound</Chip>
+              <Chip tone="quiet">Arthritis / mobility</Chip>
+              <Chip tone="quiet">Sweet’s syndrome (managed)</Chip>
             </div>
           </div>
 
-          {/* Quick section nav (safe, wraps) */}
+          {/* Quick actions (clearly “do this now”) */}
+          <div className="print-hide grid gap-2 sm:grid-cols-3">
+            <a className="btn primary" href="#contacts">
+              Emergency contacts
+            </a>
+            <a className="btn primary" href="#meds">
+              Daily meds
+            </a>
+            <a className="btn primary" href="#vet">
+              Vet info
+            </a>
+          </div>
+
+          {/* Jump links (small, consistent chips) */}
           <div className="print-hide">
+            <div className="text-xs font-semibold text-[var(--muted)] mb-2">
+              Jump to section
+            </div>
+
             <div className="flex flex-wrap gap-2">
               {sections.map((s) => (
-                <a key={s.id} className="btn" href={`#${s.id}`}>
+                <Chip key={s.id} tone="nav" href={`#${s.id}`}>
                   {s.label}
-                </a>
+                </Chip>
               ))}
-              <a
-                className="btn"
-                href="#top"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+
+              <Chip
+                tone="nav"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Top
-              </a>
+              </Chip>
             </div>
           </div>
 
@@ -1079,6 +1089,35 @@ export default function RockyCare() {
         </div>
 
         <Gallery title="Gallery" photos={galleryPhotos} />
+      </section>
+
+      {/* Floating Top button */}
+      <div className="print-hide fixed bottom-4 right-4 z-[9999]">
+        <button
+          type="button"
+          className={`btn transition-all duration-200 ${
+            showTop
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2 pointer-events-none"
+          }`}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Back to top"
+          title="Back to top"
+        >
+          ↑ Top
+        </button>
+      </div>
+
+      {/* Print (bottom) */}
+      <section className="print-hide rounded-2xl bg-[var(--card)] border border-[var(--border)] p-4 md:p-6 shadow-card overflow-hidden">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div className="text-sm text-[var(--muted)]">
+            Want a paper copy for the fridge or counter?
+          </div>
+          <button className="btn primary" onClick={() => window.print()}>
+            Print this page
+          </button>
+        </div>
       </section>
 
       <div className="h-8" />
