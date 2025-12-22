@@ -1,8 +1,9 @@
 // src/content/japanese/loadJapanesePost.ts
 
-const mdFiles = import.meta.glob("./*.md", {
-  as: "raw",
-  eager: false,
+// Each entry is a function that returns the raw markdown string.
+const mdModules = import.meta.glob<string>("./*.md", {
+  query: "?raw",
+  import: "default",
 });
 
 /**
@@ -11,13 +12,13 @@ const mdFiles = import.meta.glob("./*.md", {
  * @param file e.g. "mountain-village-life.md"
  */
 export async function loadJapanesePost(file: string): Promise<string> {
-  // Keys in mdFiles look like "./mountain-village-life.md"
+  // Keys in mdModules look like "./mountain-village-life.md"
   const key = `./${file}`;
+  const loader = mdModules[key];
 
-  const loader = mdFiles[key];
   if (!loader) {
     // Helpful debug: show what keys exist
-    const available = Object.keys(mdFiles)
+    const available = Object.keys(mdModules)
       .map((k) => k.replace("./", ""))
       .sort()
       .join(", ");
