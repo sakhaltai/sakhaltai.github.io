@@ -34,4 +34,12 @@ export const japanesePosts: JapanesePostMeta[] = [
     date: "2025-12-21",
     tags: ["暮らし", "福祉"],
   },
+  {
+    id: "zelda-miyamoto",
+    file: "zelda-miyamoto.md",
+    title: "任天堂と「ゼルダ」を作る人",
+    subtitle: "Creating Zelda at Nintendo",
+    date: "2025-12-21",
+    tags: ["任天堂", "ゲーム制作", "ゼルダ"],
+  },
 ];
