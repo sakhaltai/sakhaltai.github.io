@@ -1,11 +1,10 @@
 // src/pages/Home.tsx
 
-import React from "react";
-import Hero from "../components/Hero";
-import Featured from "../components/Featured";
-import WorkHistory from "../components/WorkHistory";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Featured from "../components/Featured";
+import Hero from "../components/Hero";
+import WorkHistory from "../components/WorkHistory";
 
 export default function Home() {
   return (

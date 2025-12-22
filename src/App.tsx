@@ -1,12 +1,13 @@
 // src/App.tsx
 
-import React, { useEffect, useRef, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Teaching from "./pages/Teaching";
 import BirdBingo from "./pages/BirdBingo";
+import Home from "./pages/Home";
+import JapaneseArticles from "./pages/JapaneseArticles";
 import RockyCare from "./pages/RockyCare";
+import Teaching from "./pages/Teaching";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,6 +79,9 @@ export default function App() {
           </Link>
           <Link className="btn" to="/rocky-care">
             Rocky Care
+          </Link>
+          <Link className="btn" to="/jp">
+            日本語読解練習
           </Link>
         </nav>
 
@@ -183,6 +187,13 @@ export default function App() {
                 >
                   Rocky Care
                 </Link>
+                <Link
+                  className="btn"
+                  to="/jp"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  日本語読解練習
+                </Link>
               </div>
             )}
           </div>
@@ -194,6 +205,9 @@ export default function App() {
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/bird-bingo" element={<BirdBingo />} />
         <Route path="/rocky-care" element={<RockyCare />} />
+
+        <Route path="/jp" element={<JapaneseArticles />} />
+        <Route path="/jp/:id" element={<JapaneseArticles />} />
       </Routes>
 
       <Footer />
