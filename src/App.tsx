@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import JapaneseArticles from "./pages/JapaneseArticles";
 import RockyCare from "./pages/RockyCare";
 import Teaching from "./pages/Teaching";
+import OscarCare from "./pages/OscarCare";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -187,6 +188,9 @@ export default function App() {
                 >
                   Rocky Care
                 </Link>
+                <Link className="btn" to="/oscar-care">
+                  Oscar Care
+                </Link>
                 <Link
                   className="btn"
                   to="/jp"
@@ -205,7 +209,7 @@ export default function App() {
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/bird-bingo" element={<BirdBingo />} />
         <Route path="/rocky-care" element={<RockyCare />} />
-
+        <Route path="/oscar-care" element={<OscarCare />} />
         <Route path="/jp" element={<JapaneseArticles />} />
         <Route path="/jp/:id" element={<JapaneseArticles />} />
       </Routes>
