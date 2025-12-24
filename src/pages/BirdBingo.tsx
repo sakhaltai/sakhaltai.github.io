@@ -40,6 +40,9 @@ export default function BirdBingo() {
   // Flip modal state
   const [isFlipped, setIsFlipped] = useState(false);
 
+  // Optionally turn off voice before bird call
+  const [playNameVoice, setPlayNameVoice] = useState(true);
+
   // Flying card state
   const [infoBird, setInfoBird] = useState<Bird | null>(null);
   const [infoOriginRect, setInfoOriginRect] = useState<Rect | null>(null);
@@ -117,7 +120,7 @@ export default function BirdBingo() {
     audio.pause();
     audio.currentTime = 0;
 
-    queueRef.current = [bird.voice, bird.call];
+    queueRef.current = playNameVoice ? [bird.voice, bird.call] : [bird.call];
     setCurrentBirdId(bird.id);
     setIsPlaying(true);
     setPlayProgress(0);
@@ -126,8 +129,13 @@ export default function BirdBingo() {
     audio
       .play()
       .then(() =>
-        setNowPlaying(`Playing: ${bird.name} – your voice, then call`)
+        setNowPlaying(
+          playNameVoice
+            ? `Playing: ${bird.name} – your voice, then call`
+            : `Playing: ${bird.name} – call only`
+        )
       )
+
       .catch(() => {
         setIsPlaying(false);
         setNowPlaying("");
@@ -260,7 +268,8 @@ export default function BirdBingo() {
           </h1>
 
           <p className="text-[var(--muted)] mt-2">
-            Tap a bird card to hear Nic say the name, followed by its call.
+            Tap a bird card to play the call
+            {playNameVoice ? " (with voice intro)" : ""}.
           </p>
 
           <div className="mt-4 text-xs text-center text-[var(--muted)] min-h-[1.25rem]">
@@ -297,6 +306,27 @@ export default function BirdBingo() {
                   </button>
                 </div>
               </div>
+              <label className="inline-flex items-center gap-2 select-none">
+                <span>Voice</span>
+
+                <button
+                  type="button"
+                  onClick={() => setPlayNameVoice((v) => !v)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full border border-[var(--border)] transition
+                    ${playNameVoice ? "bg-white" : "bg-[var(--bg-elev)]"}`}
+                  aria-pressed={playNameVoice}
+                  aria-label={playNameVoice ? "Voice on" : "Voice off"}
+                >
+                  <span
+                    className={`inline-block h-5 w-5 transform rounded-full bg-black transition
+                      ${playNameVoice ? "translate-x-5" : "translate-x-1"}`}
+                  />
+                </button>
+
+                <span className="text-[0.7rem] text-[var(--muted)]">
+                  {playNameVoice ? "on" : "off"}
+                </span>
+              </label>
 
               <label className="inline-flex items-center gap-2">
                 <span>Grown-up info</span>
