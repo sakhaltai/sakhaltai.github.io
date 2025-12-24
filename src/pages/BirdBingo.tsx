@@ -135,7 +135,6 @@ export default function BirdBingo() {
             : `Playing: ${bird.name} – call only`
         )
       )
-
       .catch(() => {
         setIsPlaying(false);
         setNowPlaying("");
@@ -262,7 +261,8 @@ export default function BirdBingo() {
   return (
     <>
       <main className="grid gap-6 md:gap-8">
-        <section className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-8 shadow-card">
+        {/* overflow-x-hidden prevents any accidental horizontal scroll (mobile centering bug) */}
+        <section className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-8 shadow-card overflow-x-hidden">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--text)]">
             Sibley Backyard Birding Bingo – Sounds
           </h1>
@@ -280,7 +280,8 @@ export default function BirdBingo() {
           <div className="mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-[var(--muted)]">
             <div>Tap a card to play/stop.</div>
 
-            <div className="flex items-center gap-4">
+            {/* IMPORTANT: flex-wrap on mobile prevents horizontal overflow */}
+            <div className="flex flex-wrap items-center gap-4 sm:flex-nowrap">
               <div className="inline-flex items-center gap-2">
                 <span>View:</span>
                 <div className="inline-flex rounded-full border border-[var(--border)] bg-[var(--bg-elev)] p-0.5">
@@ -306,20 +307,23 @@ export default function BirdBingo() {
                   </button>
                 </div>
               </div>
+
               <label className="inline-flex items-center gap-2 select-none">
                 <span>Voice</span>
 
                 <button
                   type="button"
                   onClick={() => setPlayNameVoice((v) => !v)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full border border-[var(--border)] transition
-                    ${playNameVoice ? "bg-white" : "bg-[var(--bg-elev)]"}`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full border border-[var(--border)] transition ${
+                    playNameVoice ? "bg-white" : "bg-[var(--bg-elev)]"
+                  }`}
                   aria-pressed={playNameVoice}
                   aria-label={playNameVoice ? "Voice on" : "Voice off"}
                 >
                   <span
-                    className={`inline-block h-5 w-5 transform rounded-full bg-black transition
-                      ${playNameVoice ? "translate-x-5" : "translate-x-1"}`}
+                    className={`inline-block h-5 w-5 transform rounded-full bg-black transition ${
+                      playNameVoice ? "translate-x-5" : "translate-x-1"
+                    }`}
                   />
                 </button>
 
@@ -519,6 +523,7 @@ export default function BirdBingo() {
                         </p>
                       </div>
                     )}
+
                     {/* Life-history chips built from individual fields */}
                     {(infoBird.info?.habitat ||
                       infoBird.info?.food ||
