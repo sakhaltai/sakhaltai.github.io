@@ -261,7 +261,7 @@ export default function BirdBingo() {
 
   return (
     <>
-      <main className="grid gap-6 md:gap-8">
+      <main className="mx-auto w-full max-w-5xl px-4 overflow-x-hidden grid gap-6 md:gap-8">
         <section className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-8 shadow-card">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--text)]">
             Sibley Backyard Birding Bingo – Sounds
@@ -280,8 +280,8 @@ export default function BirdBingo() {
           <div className="mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-[var(--muted)]">
             <div>Tap a card to play/stop.</div>
 
-            <div className="flex items-center gap-4">
-              <div className="inline-flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-4 justify-start sm:justify-end min-w-0">
+              <div className="inline-flex items-center gap-2 min-w-0">
                 <span>View:</span>
                 <div className="inline-flex rounded-full border border-[var(--border)] bg-[var(--bg-elev)] p-0.5">
                   <button
@@ -306,7 +306,7 @@ export default function BirdBingo() {
                   </button>
                 </div>
               </div>
-              <label className="inline-flex items-center gap-2 select-none">
+              <label className="inline-flex items-center gap-2 select-none whitespace-nowrap">
                 <span>Voice</span>
 
                 <button
@@ -328,7 +328,7 @@ export default function BirdBingo() {
                 </span>
               </label>
 
-              <label className="inline-flex items-center gap-2">
+              <label className="inline-flex items-center gap-2 whitespace-nowrap">
                 <span>Grown-up info</span>
                 <input
                   type="checkbox"
