@@ -14,14 +14,14 @@ function getBirdImage(bird: Bird, sex: SexFilter): string {
       bird.imageFemale ||
       bird.imageMale ||
       bird.image ||
-      "/birds/img/placeholder.jpg"
+      "/birds/img/placeholder.png"
     );
   }
   return (
     bird.imageMale ||
     bird.image ||
     bird.imageFemale ||
-    "/birds/img/placeholder.jpg"
+    "/birds/img/placeholder.png"
   );
 }
 
@@ -375,7 +375,7 @@ export default function BirdBingo() {
                           {/* Liquid fill */}
                           {currentBirdId === bird.id && isPlaying && (
                             <div
-                              className="absolute inset-x-0 bottom-0 bg-slate-900/30"
+                              className="absolute inset-x-0 bottom-0 bg-yellow-400/30"
                               style={{ height: `${playProgress * 100}%` }}
                             />
                           )}
@@ -509,9 +509,7 @@ export default function BirdBingo() {
                         )}
                       </div>
                     </div>
-
                     <div className="h-px bg-neutral-200" />
-
                     {/* Overview / basic description */}
                     {infoBird.info?.basicDescription && (
                       <div>
@@ -523,7 +521,6 @@ export default function BirdBingo() {
                         </p>
                       </div>
                     )}
-
                     {/* Life-history chips built from individual fields */}
                     {(infoBird.info?.habitat ||
                       infoBird.info?.food ||
@@ -570,7 +567,6 @@ export default function BirdBingo() {
                         </div>
                       </div>
                     )}
-
                     {/* Songs / calls / other sounds */}
                     {infoBird.info?.songs && (
                       <div>
@@ -582,7 +578,6 @@ export default function BirdBingo() {
                         </p>
                       </div>
                     )}
-
                     {infoBird.info?.calls && (
                       <div>
                         <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
@@ -593,7 +588,6 @@ export default function BirdBingo() {
                         </p>
                       </div>
                     )}
-
                     {infoBird.info?.otherSounds && (
                       <div>
                         <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
@@ -604,7 +598,6 @@ export default function BirdBingo() {
                         </p>
                       </div>
                     )}
-
                     {/* Variant buttons */}
                     {infoBird.variants?.length ? (
                       <div>
@@ -626,7 +619,6 @@ export default function BirdBingo() {
                         </div>
                       </div>
                     ) : null}
-
                     {/* Link out to Cornell */}
                     {infoBird.info?.sourceUrl && (
                       <a
