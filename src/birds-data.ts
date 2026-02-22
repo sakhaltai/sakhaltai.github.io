@@ -45,7 +45,7 @@ export type Bird = {
   variants?: BirdSongVariant[];
 };
 
-export const birds: Bird[] = [
+export const primaryBirds: Bird[] = [
   {
     id: "american-coot",
     name: "American Coot",
@@ -699,7 +699,43 @@ export const birds: Bird[] = [
     info: { songs: "" },
     variants: [],
   },
-  // ── New species ─────────────────────────────────────────────
+];
+
+// ── Expansion birds (alphabetical by display name) ───────────────────────────
+export const expansionBirds: Bird[] = [
+  {
+    id: "african-fish-eagle",
+    name: "African Fish Eagle",
+    imageMale: "/birds/img/african-fish-eagle-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/african-fish-eagle-voice.mp3",
+    call: "/birds/audio/african-fish-eagle-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "flamingo",
+    name: "American Flamingo",
+    imageMale: "/birds/img/american-flamingo-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/american-flamingo-voice.mp3",
+    call: "/birds/audio/american-flamingo-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "indian-koel",
+    name: "Asian Koel",
+    imageMale: "/birds/img/indian-koel-male.png",
+    imageFemale: "/birds/img/indian-koel-female.png", // very dimorphic – male glossy black, female spotted brown
+    image: "",
+    voice: "/birds/audio/indian-koel-voice.mp3",
+    call: "/birds/audio/indian-koel-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
   {
     id: "atlantic-puffin",
     name: "Atlantic Puffin",
@@ -723,167 +759,13 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "blue-footed-booby",
-    name: "Blue-footed Booby",
-    imageMale: "/birds/img/blue-footed-booby-male.png",
+    id: "black-swan",
+    name: "Black Swan",
+    imageMale: "/birds/img/black-swan-male.png",
     imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/blue-footed-booby-voice.mp3",
-    call: "/birds/audio/blue-footed-booby-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "cassowary",
-    name: "Southern Cassowary",
-    imageMale: "/birds/img/southern-cassowary-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/southern-cassowary-voice.mp3",
-    call: "/birds/audio/southern-cassowary-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "emperor-penguin",
-    name: "Emperor Penguin",
-    imageMale: "/birds/img/emperor-penguin-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/emperor-penguin-voice.mp3",
-    call: "/birds/audio/emperor-penguin-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "flamingo",
-    name: "American Flamingo",
-    imageMale: "/birds/img/american-flamingo-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/american-flamingo-voice.mp3",
-    call: "/birds/audio/american-flamingo-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "great-cormorant",
-    name: "Great Cormorant",
-    imageMale: "/birds/img/great-cormorant-male.png",
-    imageFemale: "/birds/img/great-cormorant-female.png",
-    image: "",
-    voice: "/birds/audio/great-cormorant-voice.mp3",
-    call: "/birds/audio/great-cormorant-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "harpy-eagle",
-    name: "Harpy Eagle",
-    imageMale: "/birds/img/harpy-eagle-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/harpy-eagle-voice.mp3",
-    call: "/birds/audio/harpy-eagle-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "indian-peafowl",
-    name: "Indian Peafowl",
-    imageMale: "/birds/img/indian-peafowl-male.png",
-    imageFemale: "/birds/img/indian-peafowl-female.png", // very dimorphic – male is the spectacular one
-    image: "",
-    voice: "/birds/audio/indian-peafowl-voice.mp3",
-    call: "/birds/audio/indian-peafowl-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "keel-billed-toucan",
-    name: "Keel-billed Toucan",
-    imageMale: "/birds/img/keel-billed-toucan-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/keel-billed-toucan-voice.mp3",
-    call: "/birds/audio/keel-billed-toucan-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "kookaburra",
-    name: "Laughing Kookaburra",
-    imageMale: "/birds/img/kookaburra-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/kookaburra-voice.mp3",
-    call: "/birds/audio/kookaburra-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "lyrebird",
-    name: "Superb Lyrebird",
-    imageMale: "/birds/img/superb-lyrebird-male.png",
-    imageFemale: "/birds/img/superb-lyrebird-female.png", // dimorphic – male has spectacular lyre-shaped tail
-    image: "",
-    voice: "/birds/audio/lyrebird-voice.mp3",
-    call: "/birds/audio/lyrebird-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "ostrich",
-    name: "Common Ostrich",
-    imageMale: "/birds/img/common-ostrich-male.png",
-    imageFemale: "/birds/img/common-ostrich-female.png", // dimorphic – male black, female brown
-    image: "",
-    voice: "/birds/audio/common-ostrich-voice.mp3",
-    call: "/birds/audio/common-ostrich-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "red-winged-blackbird",
-    name: "Red-winged Blackbird",
-    imageMale: "/birds/img/red-winged-blackbird-male.png",
-    imageFemale: "/birds/img/red-winged-blackbird-female.png", // very dimorphic – male black w/ red epaulets, female streaky brown
-    image: "",
-    voice: "/birds/audio/red-winged-blackbird-voice.mp3",
-    call: "/birds/audio/red-winged-blackbird-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "secretary-bird",
-    name: "Secretary Bird",
-    imageMale: "/birds/img/secretary-bird-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/secretary-bird-voice.mp3",
-    call: "/birds/audio/secretary-bird-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "snowy-owl",
-    name: "Snowy Owl",
-    imageMale: "/birds/img/snowy-owl-male.png",
-    imageFemale: "/birds/img/snowy-owl-female.png", // dimorphic – male nearly pure white, female has dark barring
-    image: "",
-    voice: "/birds/audio/snowy-owl-voice.mp3",
-    call: "/birds/audio/snowy-owl-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "african-fish-eagle",
-    name: "African Fish Eagle",
-    imageMale: "/birds/img/african-fish-eagle-male.png",
-    imageFemale: "", // monomorphic
-    image: "",
-    voice: "/birds/audio/african-fish-eagle-voice.mp3",
-    call: "/birds/audio/african-fish-eagle-call.mp3",
+    voice: "/birds/audio/black-swan-voice.mp3",
+    call: "/birds/audio/black-swan-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -895,6 +777,17 @@ export const birds: Bird[] = [
     image: "",
     voice: "/birds/audio/blyths-kingfisher-voice.mp3",
     call: "/birds/audio/blyths-kingfisher-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "blue-footed-booby",
+    name: "Blue-footed Booby",
+    imageMale: "/birds/img/blue-footed-booby-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/blue-footed-booby-voice.mp3",
+    call: "/birds/audio/blue-footed-booby-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -921,6 +814,39 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
+    id: "cuckoo",
+    name: "Common Cuckoo",
+    imageMale: "/birds/img/cuckoo-male.png",
+    imageFemale: "/birds/img/cuckoo-female.png", // somewhat dimorphic – hepatic female morph
+    image: "",
+    voice: "/birds/audio/cuckoo-voice.mp3",
+    call: "/birds/audio/cuckoo-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "european-nightingale",
+    name: "Common Nightingale",
+    imageMale: "/birds/img/european-nightingale-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/european-nightingale-voice.mp3",
+    call: "/birds/audio/european-nightingale-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "ostrich",
+    name: "Common Ostrich",
+    imageMale: "/birds/img/common-ostrich-male.png",
+    imageFemale: "/birds/img/common-ostrich-female.png", // dimorphic – male black, female brown
+    image: "",
+    voice: "/birds/audio/common-ostrich-voice.mp3",
+    call: "/birds/audio/common-ostrich-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
     id: "crimson-rosella",
     name: "Crimson Rosella",
     imageMale: "/birds/img/crimson-rosella-male.png",
@@ -932,13 +858,13 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "cuckoo",
-    name: "Common Cuckoo",
-    imageMale: "/birds/img/cuckoo-male.png",
-    imageFemale: "/birds/img/cuckoo-female.png", // somewhat dimorphic – hepatic female morph
+    id: "emperor-penguin",
+    name: "Emperor Penguin",
+    imageMale: "/birds/img/emperor-penguin-male.png",
+    imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/cuckoo-voice.mp3",
-    call: "/birds/audio/cuckoo-call.mp3",
+    voice: "/birds/audio/emperor-penguin-voice.mp3",
+    call: "/birds/audio/emperor-penguin-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -987,13 +913,24 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "european-nightingale",
-    name: "Common Nightingale",
-    imageMale: "/birds/img/european-nightingale-male.png",
-    imageFemale: "", // monomorphic
+    id: "golden-pheasant",
+    name: "Golden Pheasant",
+    imageMale: "/birds/img/golden-pheasant-male.png",
+    imageFemale: "/birds/img/golden-pheasant-female.png", // extremely dimorphic – male red/gold/green, female brown/barred
     image: "",
-    voice: "/birds/audio/european-nightingale-voice.mp3",
-    call: "/birds/audio/european-nightingale-call.mp3",
+    voice: "/birds/audio/golden-pheasant-voice.mp3",
+    call: "/birds/audio/golden-pheasant-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "great-cormorant",
+    name: "Great Cormorant",
+    imageMale: "/birds/img/great-cormorant-male.png",
+    imageFemale: "/birds/img/great-cormorant-female.png",
+    image: "",
+    voice: "/birds/audio/great-cormorant-voice.mp3",
+    call: "/birds/audio/great-cormorant-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -1009,13 +946,35 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "indian-koel",
-    name: "Asian Koel",
-    imageMale: "/birds/img/indian-koel-male.png",
-    imageFemale: "/birds/img/indian-koel-female.png", // very dimorphic – male glossy black, female spotted brown
+    id: "greater-rhea",
+    name: "Greater Rhea",
+    imageMale: "/birds/img/greater-rhea-male.png",
+    imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/indian-koel-voice.mp3",
-    call: "/birds/audio/indian-koel-call.mp3",
+    voice: "/birds/audio/greater-rhea-voice.mp3",
+    call: "/birds/audio/greater-rhea-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "harpy-eagle",
+    name: "Harpy Eagle",
+    imageMale: "/birds/img/harpy-eagle-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/harpy-eagle-voice.mp3",
+    call: "/birds/audio/harpy-eagle-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "indian-peafowl",
+    name: "Indian Peafowl",
+    imageMale: "/birds/img/indian-peafowl-male.png",
+    imageFemale: "/birds/img/indian-peafowl-female.png", // very dimorphic – male is the spectacular one
+    image: "",
+    voice: "/birds/audio/indian-peafowl-voice.mp3",
+    call: "/birds/audio/indian-peafowl-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -1031,35 +990,35 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "kiwi",
-    name: "North Island Brown Kiwi",
-    imageMale: "/birds/img/kiwi-male.png",
+    id: "keel-billed-toucan",
+    name: "Keel-billed Toucan",
+    imageMale: "/birds/img/keel-billed-toucan-male.png",
     imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/kiwi-voice.mp3",
-    call: "/birds/audio/kiwi-call.mp3",
+    voice: "/birds/audio/keel-billed-toucan-voice.mp3",
+    call: "/birds/audio/keel-billed-toucan-call.mp3",
     info: { songs: "" },
     variants: [],
   },
   {
-    id: "macaw",
-    name: "Scarlet Macaw",
-    imageMale: "/birds/img/macaw-male.png",
+    id: "kookaburra",
+    name: "Laughing Kookaburra",
+    imageMale: "/birds/img/kookaburra-male.png",
     imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/macaw-voice.mp3",
-    call: "/birds/audio/macaw-call.mp3",
+    voice: "/birds/audio/kookaburra-voice.mp3",
+    call: "/birds/audio/kookaburra-call.mp3",
     info: { songs: "" },
     variants: [],
   },
   {
-    id: "white-bellied-sea-eagle",
-    name: "White-bellied Sea Eagle",
-    imageMale: "/birds/img/white-bellied-sea-eagle-male.png",
+    id: "little-spotted-kiwi",
+    name: "Little Spotted Kiwi",
+    imageMale: "/birds/img/little-spotted-kiwi-male.png",
     imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/white-bellied-sea-eagle-voice.mp3",
-    call: "/birds/audio/white-bellied-sea-eagle-call.mp3",
+    voice: "/birds/audio/little-spotted-kiwi-voice.mp3",
+    call: "/birds/audio/little-spotted-kiwi-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -1071,6 +1030,28 @@ export const birds: Bird[] = [
     image: "",
     voice: "/birds/audio/nicobar-pigeon-voice.mp3",
     call: "/birds/audio/nicobar-pigeon-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "kiwi",
+    name: "North Island Brown Kiwi",
+    imageMale: "/birds/img/kiwi-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/kiwi-voice.mp3",
+    call: "/birds/audio/kiwi-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "purple-swamphen",
+    name: "Purple Swamphen",
+    imageMale: "/birds/img/purple-swamphen-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/purple-swamphen-voice.mp3",
+    call: "/birds/audio/purple-swamphen-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -1097,6 +1078,17 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
+    id: "red-winged-blackbird",
+    name: "Red-winged Blackbird",
+    imageMale: "/birds/img/red-winged-blackbird-male.png",
+    imageFemale: "/birds/img/red-winged-blackbird-female.png", // very dimorphic – male black w/ red epaulets, female streaky brown
+    image: "",
+    voice: "/birds/audio/red-winged-blackbird-voice.mp3",
+    call: "/birds/audio/red-winged-blackbird-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
     id: "resplendent-quetzal",
     name: "Resplendent Quetzal",
     imageMale: "/birds/img/resplendent-quetzal-male.png",
@@ -1104,6 +1096,72 @@ export const birds: Bird[] = [
     image: "",
     voice: "/birds/audio/resplendent-quetzal-voice.mp3",
     call: "/birds/audio/resplendent-quetzal-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "macaw",
+    name: "Scarlet Macaw",
+    imageMale: "/birds/img/macaw-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/macaw-voice.mp3",
+    call: "/birds/audio/macaw-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "scarlet-macaw",
+    name: "Scarlet Macaw",
+    imageMale: "/birds/img/scarlet-macaw-male.png",
+    imageFemale: "", // monomorphic – identical
+    image: "",
+    voice: "/birds/audio/scarlet-macaw-voice.mp3",
+    call: "/birds/audio/scarlet-macaw-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "secretary-bird",
+    name: "Secretary Bird",
+    imageMale: "/birds/img/secretary-bird-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/secretary-bird-voice.mp3",
+    call: "/birds/audio/secretary-bird-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "snowy-owl",
+    name: "Snowy Owl",
+    imageMale: "/birds/img/snowy-owl-male.png",
+    imageFemale: "/birds/img/snowy-owl-female.png", // dimorphic – male nearly pure white, female has dark barring
+    image: "",
+    voice: "/birds/audio/snowy-owl-voice.mp3",
+    call: "/birds/audio/snowy-owl-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "southern-brown-kiwi",
+    name: "Southern Brown Kiwi",
+    imageMale: "/birds/img/southern-brown-kiwi-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/southern-brown-kiwi-voice.mp3",
+    call: "/birds/audio/southern-brown-kiwi-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
+    id: "cassowary",
+    name: "Southern Cassowary",
+    imageMale: "/birds/img/southern-cassowary-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/southern-cassowary-voice.mp3",
+    call: "/birds/audio/southern-cassowary-call.mp3",
     info: { songs: "" },
     variants: [],
   },
@@ -1119,6 +1177,17 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
+    id: "lyrebird",
+    name: "Superb Lyrebird",
+    imageMale: "/birds/img/superb-lyrebird-male.png",
+    imageFemale: "/birds/img/superb-lyrebird-female.png", // dimorphic – male has spectacular lyre-shaped tail
+    image: "",
+    voice: "/birds/audio/lyrebird-voice.mp3",
+    call: "/birds/audio/lyrebird-call.mp3",
+    info: { songs: "" },
+    variants: [],
+  },
+  {
     id: "victoria-crowned-pigeon",
     name: "Victoria Crowned Pigeon",
     imageMale: "/birds/img/victoria-crowned-pigeon-male.png",
@@ -1130,25 +1199,16 @@ export const birds: Bird[] = [
     variants: [],
   },
   {
-    id: "golden-pheasant",
-    name: "Golden Pheasant",
-    imageMale: "/birds/img/golden-pheasant-male.png",
-    imageFemale: "/birds/img/golden-pheasant-female.png", // extremely dimorphic – male red/gold/green, female brown/barred
+    id: "white-bellied-sea-eagle",
+    name: "White-bellied Sea Eagle",
+    imageMale: "/birds/img/white-bellied-sea-eagle-male.png",
+    imageFemale: "", // monomorphic
     image: "",
-    voice: "/birds/audio/golden-pheasant-voice.mp3",
-    call: "/birds/audio/golden-pheasant-call.mp3",
-    info: { songs: "" },
-    variants: [],
-  },
-  {
-    id: "scarlet-macaw",
-    name: "Scarlet Macaw",
-    imageMale: "/birds/img/scarlet-macaw-male.png",
-    imageFemale: "", // monomorphic – identical
-    image: "",
-    voice: "/birds/audio/scarlet-macaw-voice.mp3",
-    call: "/birds/audio/scarlet-macaw-call.mp3",
+    voice: "/birds/audio/white-bellied-sea-eagle-voice.mp3",
+    call: "/birds/audio/white-bellied-sea-eagle-call.mp3",
     info: { songs: "" },
     variants: [],
   },
 ];
+
+export const birds: Bird[] = [...primaryBirds, ...expansionBirds];
