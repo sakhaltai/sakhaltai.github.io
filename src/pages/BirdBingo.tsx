@@ -374,8 +374,8 @@ export default function BirdBingo() {
                         }}
                         className="relative group flex flex-col items-center cursor-pointer active:scale-[0.97]"
                       >
-                        <div className="relative w-full max-w-[220px] mx-auto pt-[138%] rounded-[20px] border-[3px] border-[#F6C94B] bg-white shadow-md">
-                          <div className="absolute inset-[10px] rounded-[14px] overflow-hidden bg-white">
+                        <div className="relative w-full max-w-[220px] mx-auto pt-[124%] rounded-[20px] border-[8px] border-[#9BBFCE] bg-white shadow-sm">
+                          <div className="absolute inset-[4px] rounded-[16px] overflow-hidden bg-white">
                             <div className="relative w-full h-full flex flex-col items-center">
                               {currentBirdId === bird.id && isPlaying && (
                                 <div
@@ -392,15 +392,19 @@ export default function BirdBingo() {
                                     i
                                   </button>
                                 )}
-                              <div className="w-full flex-1 flex items-center justify-center p-3">
+                              <div className="w-full flex-1 flex items-center justify-center px-3 pt-3 pb-1">
                                 <img
                                   src={imgSrc}
                                   alt={bird.name}
                                   className="max-h-full max-w-full object-contain"
                                 />
                               </div>
-                              <div className="pb-4 text-center text-[0.7rem] tracking-[0.25em] text-black/80 font-medium">
-                                {bird.name.toUpperCase()}
+                              <div className="px-5 pb-9 text-center text-[0.84rem] tracking-[0.22em] text-black font-medium leading-snug">
+                                {(() => {
+                                  const words = bird.name.toUpperCase().split(" ");
+                                  if (words.length === 2) return <>{words[0]}<br />{words[1]}</>;
+                                  return bird.name.toUpperCase();
+                                })()}
                               </div>
                             </div>
                           </div>

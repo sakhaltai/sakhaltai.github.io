@@ -1101,7 +1101,7 @@ export const expansionBirds: Bird[] = [
   },
   {
     id: "macaw",
-    name: "Scarlet Macaw",
+    name: "Macaw",
     imageMale: "/birds/img/macaw-male.png",
     imageFemale: "", // monomorphic
     image: "",
