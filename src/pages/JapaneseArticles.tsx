@@ -143,7 +143,7 @@ export default function JapaneseArticles() {
 
         {/* Active article card */}
         {activeMeta && (
-          <article className="mt-6 rounded-2xl bg-[var(--bg-elev)] border border-[var(--border)] p-4 md:p-6 shadow-card">
+          <article className="mt-6">
             <header className="space-y-1">
               <h2 className="text-xl md:text-2xl font-semibold">
                 {activeMeta.title}

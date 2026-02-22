@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 import BirdBingo from "./pages/BirdBingo";
 import Home from "./pages/Home";
 import JapaneseArticles from "./pages/JapaneseArticles";
+import OscarCare from "./pages/OscarCare";
 import RockyCare from "./pages/RockyCare";
 import Teaching from "./pages/Teaching";
-import OscarCare from "./pages/OscarCare";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,9 +78,9 @@ export default function App() {
           <Link className="btn" to="/bird-bingo">
             Bird Bingo
           </Link>
-          <Link className="btn" to="/rocky-care">
+          {/* <Link className="btn" to="/rocky-care">
             Rocky Care
-          </Link>
+          </Link> */}
           <Link className="btn" to="/jp">
             日本語読解練習
           </Link>
@@ -181,7 +181,7 @@ export default function App() {
                 >
                   Bird Bingo
                 </Link>
-                <Link
+                {/* <Link
                   className="btn"
                   to="/rocky-care"
                   onClick={() => setMenuOpen(false)}
@@ -190,7 +190,7 @@ export default function App() {
                 </Link>
                 <Link className="btn" to="/oscar-care">
                   Oscar Care
-                </Link>
+                </Link> */}
                 <Link
                   className="btn"
                   to="/jp"
