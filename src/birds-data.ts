@@ -1603,7 +1603,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/african-fish-eagle-voice.mp3",
     call: "/birds/audio/african-fish-eagle-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Haliaeetus vocifer",
+      order: "Accipitriformes",
+      family: "Accipitridae",
+      groupName: "Eagles",
+      habitat: "Lakes and large rivers",
+      food: "Fish",
+      nesting: "Large stick nest in tall tree near water",
+      behavior: "Perch-hunts; plunges to snatch fish from surface",
+      conservation: "Least concern",
+      basicDescription:
+        "Africa's most iconic eagle, with a snow-white head and chestnut body draped over every large lake and river south of the Sahara. Its electrifying, yelping call is so deeply tied to the African wilderness that it's often used in movies whenever a jungle scene needs to feel wilder — even when set on a different continent.",
+      songs:
+        "A ringing, melodic 'wee-ah, hyo-hyo' yelp that carries far over open water — pairs often duet, with the male's higher cry answering the female's lower wail in a beautiful back-and-forth.",
+      calls:
+        "Sharp, repeated yelps delivered from prominent perches or in soaring flight; both sexes call, throwing their heads back dramatically as they do.",
+      sourceUrl: "https://ebird.org/species/afeagl1",
+    },
     variants: [],
   },
   {
@@ -1614,7 +1631,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/american-flamingo-voice.mp3",
     call: "/birds/audio/american-flamingo-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Phoenicopterus ruber",
+      order: "Phoenicopteriformes",
+      family: "Phoenicopteridae",
+      groupName: "Flamingos",
+      habitat: "Shallow salt lagoons and mudflats",
+      food: "Algae and invertebrates (filter-fed)",
+      nesting: "Mud mound colony on exposed flat",
+      behavior: "Filter-feeds upside-down; stands on one leg",
+      conservation: "Least concern",
+      basicDescription:
+        "The most brilliantly pink of all flamingos, found in Caribbean lagoons and occasionally the Gulf Coast. Their shocking color comes entirely from carotenoid pigments in the brine shrimp and algae they eat — a flamingo deprived of its pink food would slowly turn white. They feed with their bill held upside-down, pumping water through built-in filters.",
+      songs:
+        "A flock of flamingos sounds surprisingly like a noisy gaggle of geese — a constant honking, gabbling, and murmuring that rises and falls as birds come and go.",
+      calls:
+        "Deep nasal honks and low grunts within the flock; a louder, sharper honk when alarmed or taking flight.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Flamingo",
+    },
     variants: [],
   },
   {
@@ -1625,7 +1659,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/indian-koel-voice.mp3",
     call: "/birds/audio/indian-koel-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Eudynamys scolopaceus",
+      order: "Cuculiformes",
+      family: "Cuculidae",
+      groupName: "Cuckoos",
+      habitat: "Forests, gardens, and urban trees",
+      food: "Fruit, insects, and caterpillars",
+      nesting: "Brood parasite — lays eggs in crow nests",
+      behavior: "Males sing persistently; females sneak eggs into host nests",
+      conservation: "Least concern",
+      basicDescription:
+        "A brood parasite of the cuckoo family, found across South and Southeast Asia. The glossy jet-black male has piercing red eyes and one of the most recognized voices in the tropics. The spotted brown female is sneaky by design — she slips into crow nests to lay her eggs while the crows are distracted, then disappears.",
+      songs:
+        "The male's ascending 'ko-EL ko-EL ko-EL' rises in pitch and speed, growing louder and more urgent until it reaches a frantic crescendo — a signature sound of the Asian monsoon season.",
+      calls:
+        "A bubbling, excited chatter when alarmed; females give a rapid, harsh 'kik-kik-kik' used to distract host nest owners while she lays her egg.",
+      sourceUrl: "https://ebird.org/species/askoel1",
+    },
     variants: [],
   },
   {
@@ -1636,7 +1687,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/atlantic-puffin-voice.mp3",
     call: "/birds/audio/atlantic-puffin-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Fratercula arctica",
+      order: "Charadriiformes",
+      family: "Alcidae",
+      groupName: "Auks",
+      habitat: "Open ocean; rocky sea cliffs for nesting",
+      food: "Small fish (sand lance, herring, capelin)",
+      nesting: "Burrow in cliff-top soil",
+      behavior: "'Flies' underwater; carries dozens of fish crosswise in bill",
+      conservation: "Vulnerable",
+      basicDescription:
+        "The clown-faced seabird of the North Atlantic, with its rainbow bill and crisp tuxedo plumage. For most of the year puffins live far out at sea, diving and 'flying' underwater to chase fish. Come summer they waddle back to rocky islands to nest in burrows they dig with their feet and bills.",
+      songs:
+        "Mostly silent at sea. In their nesting burrows they make a low, moaning growl — a strange sound, more like a tiny chainsaw than a bird.",
+      calls:
+        "A low, vibrating 'arr-arr' from inside the burrow; rapid wingbeats produce a whirring sound in flight.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Atlantic_Puffin",
+    },
     variants: [],
   },
   {
@@ -1647,7 +1715,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/barn-owl-voice.mp3",
     call: "/birds/audio/barn-owl-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Tyto alba",
+      order: "Strigiformes",
+      family: "Tytonidae",
+      groupName: "Barn-Owls",
+      habitat: "Open farmland, grasslands, and marsh edges",
+      food: "Small mammals (voles, mice, shrews)",
+      nesting: "Cavity in barn, hollow tree, or cliff ledge",
+      behavior: "Hunts by sound in complete darkness",
+      conservation: "Least concern",
+      basicDescription:
+        "The world's most widespread owl, found on every continent except Antarctica. Its ghostly white heart-shaped face, silent flight, and blood-curdling screech have inspired centuries of ghost stories. Those facial discs aren't just decorative — they act like satellite dishes, funneling the faintest sounds of a mouse into the owl's precisely positioned ears.",
+      songs:
+        "Does not hoot like most owls. Instead delivers a long, drawn-out, rasping screech — like a rusty gate slowly swinging open in the dark.",
+      calls:
+        "A hissing, clicking chatter when defending the nest; hungry chicks produce a loud snoring hiss that sounds absolutely eerie coming from a dark barn.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Barn_Owl",
+    },
     variants: [],
   },
   {
@@ -1658,7 +1743,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/black-swan-voice.mp3",
     call: "/birds/audio/black-swan-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cygnus atratus",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Swans",
+      habitat: "Wetlands, lakes, rivers, and estuaries",
+      food: "Aquatic plants and algae",
+      nesting: "Large mound of reeds in shallow water",
+      behavior: "Grazes on aquatic vegetation; pairs bond for life",
+      conservation: "Least concern",
+      basicDescription:
+        "The legendary all-black swan of Australia — once considered impossible by Europeans who had never seen anything but white swans. Its brilliant red bill and ghostly white flight feathers make it one of the most striking waterbirds on Earth. Now introduced to parks and lakes worldwide, it's hard to believe it was once considered a myth.",
+      songs:
+        "Soft, musical bugling and crooning notes; in flight the wings produce a faint, high-pitched whistling sound.",
+      calls:
+        "A high, bugling 'ko-ho' used for contact between partners; a hissing grunt and trumpeting when defending territory or young.",
+      sourceUrl: "https://ebird.org/species/blkswa1",
+    },
     variants: [],
   },
   {
@@ -1669,7 +1771,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/blyths-kingfisher-voice.mp3",
     call: "/birds/audio/blyths-kingfisher-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Alcedo hercules",
+      order: "Coraciiformes",
+      family: "Alcedinidae",
+      groupName: "Kingfishers",
+      habitat: "Fast mountain streams and rivers in Southeast Asia",
+      food: "Fish, crabs, and aquatic insects",
+      nesting: "Tunnel excavated in riverbank",
+      behavior: "Perches low over rushing water; plunges headfirst for fish",
+      conservation: "Least concern",
+      basicDescription:
+        "The largest of the classic 'river kingfisher' group, found along mountain streams from northeastern India to southern China. Its electric blue back and rich orange underparts make it look like a regular kingfisher with the colors turned up to maximum — essentially a jewel that zips along jungle rivers.",
+      songs:
+        "A loud, penetrating whistle or 'peep' repeated in rapid series, often heard as the bird arrows along the waterway.",
+      calls:
+        "A sharp, high-pitched 'tseet' alarm call; also a rattling chatter near the nest burrow.",
+      sourceUrl: "https://ebird.org/species/blykin1",
+    },
     variants: [],
   },
   {
@@ -1680,7 +1799,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/blue-footed-booby-voice.mp3",
     call: "/birds/audio/blue-footed-booby-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sula nebouxii",
+      order: "Suliformes",
+      family: "Sulidae",
+      groupName: "Boobies",
+      habitat: "Tropical Pacific coastlines and rocky islands",
+      food: "Fish (plunge-dives from height)",
+      nesting: "Bare ground — a ring of guano on the rocks",
+      behavior: "Males display by high-stepping to show off blue feet",
+      conservation: "Least concern",
+      basicDescription:
+        "Famous for its impossibly turquoise-blue feet, which males show off in an exaggerated, comical high-stepping strut to attract mates. The bluer the feet, the healthier the bird — females actually check foot color when choosing a partner! Found along Pacific coasts and most famously in the Galápagos Islands.",
+      songs:
+        "Males produce a high, airy whistle-hoot; females give a raspy, honking bark — one of the clearest cases in birds of the male and female having completely different voices.",
+      calls:
+        "Shrill whistles and honking calls in the nesting colony; young birds make loud, insistent begging cries.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Blue-footed_Booby",
+    },
     variants: [],
   },
   {
@@ -1691,7 +1827,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/budgie-voice.mp3",
     call: "/birds/audio/budgie-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Melopsittacus undulatus",
+      order: "Psittaciformes",
+      family: "Psittaculidae",
+      groupName: "Parrots",
+      habitat: "Open grasslands and scrubland across Australia",
+      food: "Grass seeds",
+      nesting: "Hollow in a eucalyptus tree",
+      behavior: "Nomadic flocks follow rainfall; outstanding mimics in captivity",
+      conservation: "Least concern",
+      basicDescription:
+        "The world's most popular pet bird, and one of Australia's most extraordinary wild birds. In the outback, massive flocks of wild budgies — bright green and yellow, not the rainbow colors of pet shops — follow the rains across thousands of miles. They are among the best talking birds on Earth, capable of learning hundreds of words.",
+      songs:
+        "A continuous, rolling stream of cheerful warbling, chattering, and mimicry; wild flocks produce a shimmering wave of musical chatter that rises and falls across the grassland.",
+      calls:
+        "A chatty, rising 'chee-chee-chee' contact call; sharp chirps for alarm; soft rolling warbles to signal contentment.",
+      sourceUrl: "https://ebird.org/species/budger1",
+    },
     variants: [],
   },
   {
@@ -1702,7 +1855,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/chicken-voice.mp3",
     call: "/birds/audio/chicken-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Gallus gallus domesticus",
+      order: "Galliformes",
+      family: "Phasianidae",
+      groupName: "Pheasants",
+      habitat: "Farmyards and fields; wild ancestor in South Asian forest edges",
+      food: "Seeds, grains, insects, and worms",
+      nesting: "Scrape on ground hidden in vegetation",
+      behavior: "Roosters crow to claim territory; hens cluck constantly",
+      conservation: "Domesticated (wild ancestor Near Threatened)",
+      basicDescription:
+        "The most numerous bird on Earth — over 30 billion alive at any moment. Domesticated from the Red Junglefowl of Southeast Asia over 8,000 years ago, chickens still carry all the social and foraging instincts of their wild ancestors. The rooster's crow is one of the most universally recognized sounds in all of human culture.",
+      songs:
+        "The rooster's crow is a territorial declaration, not just a morning alarm — roosters will crow all day long if they feel like it!",
+      calls:
+        "Soft rhythmic clucking keeps the flock together; a rapid 'buck-buck-BWOCK' signals alarm; mother hens use a soft purr to settle their chicks.",
+      sourceUrl: "https://ebird.org/species/doochi1",
+    },
     variants: [],
   },
   {
@@ -1713,7 +1883,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/cuckoo-voice.mp3",
     call: "/birds/audio/cuckoo-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cuculus canorus",
+      order: "Cuculiformes",
+      family: "Cuculidae",
+      groupName: "Cuckoos",
+      habitat: "Open woodland, farmland, heath, and reed beds",
+      food: "Hairy caterpillars (that most other birds avoid)",
+      nesting: "Brood parasite — lays one egg in host's nest",
+      behavior: "Female watches nest for days before sneaking in to lay",
+      conservation: "Least concern",
+      basicDescription:
+        "The bird whose name IS its song. This master brood parasite lays its eggs in over 100 different host species' nests across Eurasia — the chick hatches first, then methodically shoves every other egg over the edge to have all the food to itself. The unwitting foster parents, often tiny warblers, work themselves ragged feeding a chick that grows three times their size.",
+      songs:
+        "The iconic two-note 'cuck-OO!' is given by males from exposed perches in spring. In Europe, hearing the first cuckoo of the year is a beloved sign that winter is truly over.",
+      calls:
+        "The female gives a beautiful, bubbling liquid trill that sounds nothing like the famous 'cuck-oo'; both sexes make a soft 'kwow' when flushed.",
+      sourceUrl: "https://ebird.org/species/comcuc1",
+    },
     variants: [],
   },
   {
@@ -1724,7 +1911,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/european-nightingale-voice.mp3",
     call: "/birds/audio/european-nightingale-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Luscinia megarhynchos",
+      order: "Passeriformes",
+      family: "Muscicapidae",
+      groupName: "Old World Flycatchers",
+      habitat: "Dense thickets, hedgerows, and woodland edges",
+      food: "Insects, worms, and berries",
+      nesting: "Cup nest hidden low in dense vegetation",
+      behavior: "Sings by day and night; notoriously hard to see",
+      conservation: "Least concern",
+      basicDescription:
+        "Arguably the most celebrated songbird in all of human history — praised by poets, composers, and naturalists for thousands of years. The joke is that despite all this fame, the nightingale is a small, entirely plain brown bird. It makes up for its looks in pure vocal power: a rich, complex cascade of phrases that it delivers with startling loudness, day and night, for weeks on end.",
+      songs:
+        "An extraordinary mix of long liquid whistles, rapid trills, crescendos, and sudden loud bursts — males improvise continuously, night and day, in a performance no other songbird can match for sheer range and intensity.",
+      calls:
+        "A throaty 'hweet' contact call; a sharp repeated 'tac-tac' alarm note; a frog-like low churring.",
+      sourceUrl: "https://ebird.org/species/comnig1",
+    },
     variants: [],
   },
   {
@@ -1735,7 +1939,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/common-ostrich-voice.mp3",
     call: "/birds/audio/common-ostrich-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Struthio camelus",
+      order: "Struthioniformes",
+      family: "Struthionidae",
+      groupName: "Ostriches",
+      habitat: "African savanna and semi-arid plains",
+      food: "Seeds, roots, leaves, insects, and small animals",
+      nesting: "Communal ground scrape — male and dominant female share eggs",
+      behavior: "Fastest running bird; can kick hard enough to kill a lion",
+      conservation: "Least concern",
+      basicDescription:
+        "The world's largest living bird and the fastest two-legged animal on Earth, reaching 45 mph. An ostrich's eye is bigger than its own brain. Contrary to popular legend, ostriches don't bury their heads in the sand — they put their head to the ground to rotate their eggs, which from a distance can look like hiding.",
+      songs:
+        "Males produce a deep, resonant booming roar by inflating their neck — disturbingly lion-like, and audible well over a mile away on the open savanna.",
+      calls:
+        "Loud hisses and grunts in threat; a snorting bark when alarmed; soft peeping between chicks and parents.",
+      sourceUrl: "https://ebird.org/species/comose1",
+    },
     variants: [],
   },
   {
@@ -1746,7 +1967,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/crimson-rosella-voice.mp3",
     call: "/birds/audio/crimson-rosella-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Platycercus elegans",
+      order: "Psittaciformes",
+      family: "Psittaculidae",
+      groupName: "Parrots",
+      habitat: "Forest, woodland, and gardens in southeastern Australia",
+      food: "Seeds, fruit, nectar, and insects",
+      nesting: "Tree hollow",
+      behavior: "Usually in pairs; visits gardens and feeders; fairly tame",
+      conservation: "Least concern",
+      basicDescription:
+        "One of Australia's most brilliantly colored parrots — a dazzling cascade of scarlet red and vivid blue that looks almost too bright to be real. A fixture in the mountain forests and suburban gardens of southeastern Australia, crimson rosellas have learned to be remarkably tame around people and will often feed from the hand.",
+      songs:
+        "A high, clear, descending whistle and melodic chattering, often delivered in flight as pairs call back and forth through the trees.",
+      calls:
+        "A loud, piping 'kwink-kwink' contact call; chattery squabbling in groups; a harsh screech of alarm.",
+      sourceUrl: "https://ebird.org/species/criros1",
+    },
     variants: [],
   },
   {
@@ -1757,7 +1995,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/emperor-penguin-voice.mp3",
     call: "/birds/audio/emperor-penguin-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Aptenodytes forsteri",
+      order: "Sphenisciformes",
+      family: "Spheniscidae",
+      groupName: "Penguins",
+      habitat: "Antarctic sea ice and open Southern Ocean",
+      food: "Fish, squid, and krill",
+      nesting: "No nest — males balance the egg on their feet under a brood pouch",
+      behavior: "Males fast 65+ days in Antarctic winter; huddle for warmth",
+      conservation: "Near threatened",
+      basicDescription:
+        "The largest penguin on Earth, and one of the most extreme parents in nature. After the female lays a single egg and heads to the sea to feed, the male stands on Antarctic sea ice through the brutal polar winter — in pitch darkness, with temperatures plunging to -76°F and winds reaching 100 mph — balancing the egg on his feet and eating nothing for up to four months.",
+      songs:
+        "Each penguin has a unique vocal signature — a personal 'voice fingerprint' — that allows mates and chicks to find each other in the chaos of a colony tens of thousands strong.",
+      calls:
+        "A loud, resonant trumpeting bray; chicks give high-pitched whistles to call their parents back with food.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Emperor_Penguin",
+    },
     variants: [],
   },
   {
@@ -1768,7 +2023,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/emu-voice.mp3",
     call: "/birds/audio/emu-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Dromaius novaehollandiae",
+      order: "Casuariiformes",
+      family: "Dromaiidae",
+      groupName: "Emus",
+      habitat: "Open savanna, scrubland, and grassland across Australia",
+      food: "Plants, seeds, fruit, and insects",
+      nesting: "Ground scrape — male incubates and raises chicks alone",
+      behavior: "Males do all parenting; females may mate with multiple males",
+      conservation: "Least concern",
+      basicDescription:
+        "Australia's largest bird and the second-tallest on Earth. Famous for the 'Emu War' of 1932 — the Australian military sent armed soldiers to control emu numbers in Western Australia. The emus won. Males handle all the parenting duties: incubating eggs for eight weeks without eating, then raising the striped chicks solo for up to 18 months.",
+      songs:
+        "The female produces a deep, resonant booming drum — a sound made with a special inflatable throat sac, one of the lowest and most powerful bird sounds in the world.",
+      calls:
+        "Males grunt and drum more softly; chicks peep with a striped head pattern that helps them hide in tall grass.",
+      sourceUrl: "https://ebird.org/species/emu1",
+    },
     variants: [],
   },
   {
@@ -1779,7 +2051,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/eurasian-golden-oriole-voice.mp3",
     call: "/birds/audio/eurasian-golden-oriole-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Oriolus oriolus",
+      order: "Passeriformes",
+      family: "Oriolidae",
+      groupName: "Old World Orioles",
+      habitat: "Broadleaf woodland, poplar groves, and large parks",
+      food: "Insects, berries, and fruit",
+      nesting: "Elegant hammock woven between a high forked branch",
+      behavior: "Males are brilliantly colored but surprisingly secretive in canopy",
+      conservation: "Least concern",
+      basicDescription:
+        "A bird with one of Europe's most beautiful songs and one of its most striking looks — the male is an intense chrome yellow with jet-black wings that looks almost tropical. Yet despite these brilliant colors, males are remarkably hard to spot as they move quietly through the dappled light of a leafy canopy. You're much more likely to hear this bird than see it.",
+      songs:
+        "A loud, melodious, fluty whistle — a rich, rolling 'wee-la-weeooo' often described as the most beautiful bird call in Europe, delivered lazily from the treetops like a relaxed tropical yodel.",
+      calls:
+        "A harsh, jay-like screeching 'kraaah' alarm call — strikingly at odds with the beautiful song.",
+      sourceUrl: "https://ebird.org/species/eugori1",
+    },
     variants: [],
   },
   {
@@ -1790,7 +2079,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/eurasian-hoopoe-voice.mp3",
     call: "/birds/audio/eurasian-hoopoe-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Upupa epops",
+      order: "Bucerotiformes",
+      family: "Upupidae",
+      groupName: "Hoopoes",
+      habitat: "Open woodland, farmland, orchards, and savanna",
+      food: "Large insects and grubs probed from soil",
+      nesting: "Tree hole or rock crevice — nest is famously smelly",
+      behavior: "Fans spectacular crown crest when excited; probes soil with long bill",
+      conservation: "Least concern",
+      basicDescription:
+        "One of the most instantly recognizable birds in the world — sandy-pink with bold black-and-white barred wings and a spectacular fan crest it raises like a feathered crown when alarmed or excited. Named for its call. The national bird of Israel. Its nest has a truly horrible smell, produced by a special oil the female secretes — a very effective predator deterrent.",
+      songs:
+        "A soft, far-carrying 'hoo-poo-poo' — a low, almost ventriloquial call that seems to come from everywhere at once across open farmland and orchards.",
+      calls:
+        "A harsh 'chaaarr' alarm call; chattery rattling between rivals; soft clucking near the nest.",
+      sourceUrl: "https://ebird.org/species/euahoo1",
+    },
     variants: [],
   },
   {
@@ -1801,7 +2107,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/eurasian-skylark-voice.mp3",
     call: "/birds/audio/eurasian-skylark-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Alauda arvensis",
+      order: "Passeriformes",
+      family: "Alaudidae",
+      groupName: "Larks",
+      habitat: "Open farmland, grassland, heath, and meadows",
+      food: "Seeds and insects",
+      nesting: "Cup nest hidden in grass on the ground",
+      behavior: "Males hover hundreds of feet up, singing continuously for minutes",
+      conservation: "Least concern",
+      basicDescription:
+        "Famous for one of the most astonishing song-flights in the bird world — males climb hundreds of feet into the sky and pour out a continuous, shimmering cascade of song for minutes at a time, barely visible as a speck against the blue. Celebrated by Shelley, Shakespeare, and Vaughan Williams, the skylark is one of the most culturally beloved birds in all of British history.",
+      songs:
+        "An extraordinary, unbroken torrent of warbles, trills, and melodic phrases delivered in hovering flight — males can sing non-stop for 2-3 minutes before descending, then immediately go straight back up.",
+      calls:
+        "A liquid, rolling 'chirrip' contact call in flight; a short, dry 'trrr' alarm.",
+      sourceUrl: "https://ebird.org/species/euasla1",
+    },
     variants: [],
   },
   {
@@ -1812,7 +2135,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/golden-pheasant-voice.mp3",
     call: "/birds/audio/golden-pheasant-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Chrysolophus pictus",
+      order: "Galliformes",
+      family: "Phasianidae",
+      groupName: "Pheasants",
+      habitat: "Dense bamboo forest and steep hillsides in central China",
+      food: "Seeds, buds, leaves, and berries",
+      nesting: "Simple scrape on the ground",
+      behavior: "Male fans his golden cape around female's face during display",
+      conservation: "Least concern",
+      basicDescription:
+        "The most dramatically colored pheasant on Earth — the male's scarlet body, chrome-yellow crest, and iridescent green back look like someone painted a bird from a fever dream. Native to dense bamboo forests in central China, introduced populations have taken hold in dark forest plantations across Britain, where they glow like living treasure in the shadows.",
+      songs:
+        "A loud, harsh metallic 'chet-chet' crowing call from males; a sharp squawk when flushed from cover.",
+      calls:
+        "A clipped 'chak' alarm note; males produce soft clucking sounds while foraging.",
+      sourceUrl: "https://ebird.org/species/golphe1",
+    },
     variants: [],
   },
   {
@@ -1823,7 +2163,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/great-cormorant-voice.mp3",
     call: "/birds/audio/great-cormorant-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Phalacrocorax carbo",
+      order: "Suliformes",
+      family: "Phalacrocoracidae",
+      groupName: "Cormorants",
+      habitat: "Coastlines, rivers, lakes, and estuaries worldwide",
+      food: "Fish (pursued underwater)",
+      nesting: "Colonial stick nest in trees or on cliff ledges",
+      behavior: "Spreads wings to dry after swimming — feathers aren't waterproof",
+      conservation: "Least concern",
+      basicDescription:
+        "A large, prehistoric-looking waterbird found on every continent except Antarctica. Unlike ducks, cormorants lack the oil to waterproof their feathers — they actually soak up water as they dive, making them less buoyant and better underwater swimmers. The tradeoff: they have to stand with wings spread wide to dry out after every swim, giving them their unmistakable heraldic pose.",
+      songs:
+        "Mostly silent away from the colony; at the nest gives a deep, guttural gargling and grunting chorus.",
+      calls:
+        "A throaty 'korrr' or rolling croak; loud gargling between mates at the nest.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Great_Cormorant",
+    },
     variants: [],
   },
   {
@@ -1834,7 +2191,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/greater-racket-tailed-drongo-voice.mp3",
     call: "/birds/audio/greater-racket-tailed-drongo-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Dicrurus paradiseus",
+      order: "Passeriformes",
+      family: "Dicruridae",
+      groupName: "Drongos",
+      habitat: "Tropical forest and forest edges from India to Southeast Asia",
+      food: "Insects, nectar, and small lizards",
+      nesting: "Cup nest in a forked branch",
+      behavior: "Bold mimic; mobs predators; sometimes fakes alarm calls to steal food",
+      conservation: "Least concern",
+      basicDescription:
+        "A glossy-black bird with an outrageous tail — two bare wire-like streamers tipped with twisted paddle-shaped 'rackets' that can be longer than the whole body. One of the most accomplished vocal mimics in Asia, it can flawlessly impersonate dozens of species. Other birds follow drongos through the forest because they warn everyone about predators — but drongos sometimes cry wolf just to steal another bird's meal.",
+      songs:
+        "A rich, ever-changing medley of its own calls woven together with near-perfect imitations of kingfishers, babblers, raptors, and dozens of other forest birds.",
+      calls:
+        "A metallic, ringing 'tee-hee-hee' and a rapid scolding chatter; plus a constantly shifting repertoire of borrowed calls.",
+      sourceUrl: "https://ebird.org/species/grtdro1",
+    },
     variants: [],
   },
   {
@@ -1845,7 +2219,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/greater-rhea-voice.mp3",
     call: "/birds/audio/greater-rhea-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Rhea americana",
+      order: "Rheiformes",
+      family: "Rheidae",
+      groupName: "Rheas",
+      habitat: "Open grasslands and savanna of South America",
+      food: "Broad-leafed plants, seeds, insects, and small animals",
+      nesting: "Ground scrape — male builds nest, incubates eggs from multiple females",
+      behavior: "One female lays in multiple males' nests; dad raises all the chicks alone",
+      conservation: "Near threatened",
+      basicDescription:
+        "South America's largest bird — the continent's own answer to the ostrich. The male is one of the most dedicated bird fathers on Earth: he builds the nest, collects eggs from up to a dozen different females, incubates them all solo for six weeks, then raises all the chicks alone, fiercely defending the fluffy flock for months until they can fend for themselves.",
+      songs:
+        "Males produce a deep, far-carrying booming roar during breeding season — a sound that rolls across the open pampas.",
+      calls:
+        "Loud booming grunts and low roars; hissing and wing-spreading as threat displays.",
+      sourceUrl: "https://ebird.org/species/grerea1",
+    },
     variants: [],
   },
   {
@@ -1856,7 +2247,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/harpy-eagle-voice.mp3",
     call: "/birds/audio/harpy-eagle-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Harpia harpyja",
+      order: "Accipitriformes",
+      family: "Accipitridae",
+      groupName: "Eagles",
+      habitat: "Lowland tropical rainforest in Central and South America",
+      food: "Sloths, monkeys, and large reptiles",
+      nesting: "Enormous stick nest high in an emergent rainforest tree",
+      behavior: "Hunts through dense canopy; talons as large as a bear's claws",
+      conservation: "Vulnerable",
+      basicDescription:
+        "One of the most powerful birds of prey on Earth. Its talons are as long as a grizzly bear's claws, with a gripping force strong enough to crush bone — it can snatch a full-grown sloth or howler monkey straight out of the canopy. The largest eagle in the Americas, it navigates dense rainforest with surprising speed and agility for a bird of its immense size.",
+      songs:
+        "A loud, somewhat mournful wailing or weak-sounding screech — surprisingly unimpressive for such a powerful predator.",
+      calls:
+        "A series of weak, whistled notes; a drawn-out, raspy screech near the nest.",
+      sourceUrl: "https://ebird.org/species/hareag1",
+    },
     variants: [],
   },
   {
@@ -1867,7 +2275,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/indian-peafowl-voice.mp3",
     call: "/birds/audio/indian-peafowl-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Pavo cristatus",
+      order: "Galliformes",
+      family: "Phasianidae",
+      groupName: "Pheasants",
+      habitat: "Forest edges, farmland, and scrub across South Asia",
+      food: "Seeds, berries, insects, and small reptiles",
+      nesting: "Simple scrape hidden in vegetation",
+      behavior: "Males fan enormous tail train to attract females",
+      conservation: "Least concern",
+      basicDescription:
+        "The peacock is arguably the most extreme example of sexual selection in the animal kingdom. The male's train — those iridescent blue-green feathers tipped with shimmering eye-spots — can stretch over six feet long and makes up 60% of his total body length. Females choose mates based on the quality and number of eye-spots, locking males in millions of years of evolutionary pressure to become ever more spectacular.",
+      songs:
+        "A startlingly loud, far-carrying 'may-AWE' scream — once heard, completely unforgettable. One of the most distinctive sounds in all of South Asia.",
+      calls:
+        "Loud screaming calls at dawn and dusk; alarm screams that alert every creature in the forest to approaching danger.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Indian_Peafowl",
+    },
     variants: [],
   },
   {
@@ -1878,7 +2303,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/japanese-tit-voice.mp3",
     call: "/birds/audio/japanese-tit-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Parus minor",
+      order: "Passeriformes",
+      family: "Paridae",
+      groupName: "Chickadees and Tits",
+      habitat: "Forests, parks, and gardens in Japan and East Asia",
+      food: "Insects, seeds, and nuts",
+      nesting: "Tree cavity or nest box",
+      behavior: "Combines alarm calls in sequences to mean different specific threats",
+      conservation: "Least concern",
+      basicDescription:
+        "The East Asian counterpart of the Great Tit — familiar and feisty in Japanese forests and city parks. Researchers discovered that Japanese Tits combine different alarm calls in specific sequences to communicate different messages, making them one of very few animals besides humans known to use something resembling grammar and syntax in their communication.",
+      songs:
+        "A cheerful, rising 'see-see-see-tsi' whistle and a variety of clear piped phrases; song patterns vary noticeably between regions.",
+      calls:
+        "A rapid, harsh 'pit-pit-pit' scolding call; a nasal 'dee-dee' contact note used to keep the flock together.",
+      sourceUrl: "https://ebird.org/species/japtit1",
+    },
     variants: [],
   },
   {
@@ -1889,18 +2331,52 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/keel-billed-toucan-voice.mp3",
     call: "/birds/audio/keel-billed-toucan-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Ramphastos sulfuratus",
+      order: "Piciformes",
+      family: "Ramphastidae",
+      groupName: "Toucans",
+      habitat: "Tropical lowland rainforest from Mexico to Colombia",
+      food: "Fruit, insects, lizards, and eggs",
+      nesting: "Hollowed-out tree cavity",
+      behavior: "Tosses food in air to swallow; sleeps with tail folded over back",
+      conservation: "Least concern",
+      basicDescription:
+        "The iconic rainbow-billed toucan — the one on the Froot Loops box. That enormous bill, striped in yellow, red, green, and blue, takes up a third of the bird's body length but is surprisingly light, being mostly hollow with a honeycomb interior. To fit inside their tree cavity at night, toucans fold their tail all the way forward over their back, compressing their whole body into a neat package.",
+      songs:
+        "A loud, repetitive frog-like 'keel-keel-keel' or 'rrrrip' croaking call that carries far through the forest canopy.",
+      calls:
+        "A rattling, repetitive croak; harsh chattering and bill-clacking in groups.",
+      sourceUrl: "https://ebird.org/species/kebill1",
+    },
     variants: [],
   },
   {
     id: "kookaburra",
     name: "Laughing Kookaburra",
     imageMale: "/birds/img/kookaburra-male.png",
-    imageFemale: "", // monomorphic
+    imageFemale: "/birds/img/kookaburra-female.png", // dimorphic – female has rufous/chestnut tail, male has blue tail
     image: "",
     voice: "/birds/audio/kookaburra-voice.mp3",
     call: "/birds/audio/kookaburra-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Dacelo novaeguineae",
+      order: "Coraciiformes",
+      family: "Alcedinidae",
+      groupName: "Kingfishers",
+      habitat: "Open woodland, forest edges, and suburban gardens in Australia",
+      food: "Snakes, lizards, large insects, and small mammals",
+      nesting: "Tree hollow",
+      behavior: "Groups laugh at dawn and dusk to claim territory; kills snakes by bashing them on branches",
+      conservation: "Least concern",
+      basicDescription:
+        "The world's largest kingfisher — and one that rarely eats fish. Kookaburras prefer to smash snakes, lizards, and large insects against a branch until they stop moving. Their cackling laugh is so completely synonymous with wild Australia that it's routinely used as a jungle sound effect in movies and TV shows set in entirely different continents.",
+      songs:
+        "The famous laughing call — a loud, rollicking 'koo-koo-koo-oo-oo-kaa-kaa-kaa' — performed by whole family groups together at dawn and dusk to declare their territory to neighbors.",
+      calls:
+        "A softer chuckling between family members; harsh alarm notes; a low 'woop' contact call.",
+      sourceUrl: "https://ebird.org/species/laukoo1",
+    },
     variants: [],
   },
   {
@@ -1911,7 +2387,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/little-spotted-kiwi-voice.mp3",
     call: "/birds/audio/little-spotted-kiwi-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Apteryx owenii",
+      order: "Apterygiformes",
+      family: "Apterygidae",
+      groupName: "Kiwis",
+      habitat: "Native forest on offshore islands of New Zealand",
+      food: "Earthworms, insects, and berries sniffed out at night",
+      nesting: "Burrow — lays one of the largest eggs relative to body size of any bird",
+      behavior: "Strictly nocturnal; uses nostrils at bill tip to smell prey underground",
+      conservation: "Near threatened",
+      basicDescription:
+        "The smallest kiwi, and one of the most ancient and strange birds on Earth. Kiwis have no real wings (just tiny hidden stubs), nostrils at the very tip of their long bill to sniff out earthworms underground, and feathers that look and feel more like coarse hair. Their egg is so enormous relative to body size that it fills nearly the whole abdomen — about 20% of the female's total body weight.",
+      songs:
+        "Males give a high, rapid whistling 'kee-wee kee-wee' rising sharply in pitch; females answer with a lower, huskier call.",
+      calls:
+        "Loud, carrying whistles and sharp shrieks that pierce the forest on still New Zealand nights.",
+      sourceUrl: "https://ebird.org/species/lispki1",
+    },
     variants: [],
   },
   {
@@ -1922,7 +2415,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/nicobar-pigeon-voice.mp3",
     call: "/birds/audio/nicobar-pigeon-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Caloenas nicobarica",
+      order: "Columbiformes",
+      family: "Columbidae",
+      groupName: "Pigeons and Doves",
+      habitat: "Small forested islands from Nicobar Islands to the Solomon Islands",
+      food: "Seeds, fruit, and hard nuts (crushed by stone-hard gizzard)",
+      nesting: "Stick platform in coastal trees",
+      behavior: "Nomadic between islands; closest living relative of the Dodo",
+      conservation: "Near threatened",
+      basicDescription:
+        "One of the most spectacular pigeons in the world, with iridescent green and copper plumage and long hackle feathers cascading from the neck like a shaggy cape. Found on small Indo-Pacific islands, it is the closest living relative of the extinct Dodo. Unlike most pigeons, it swallows hard nuts whole and grinds them to powder with a stone-filled gizzard.",
+      songs:
+        "A deep, resonant cooing — soft and low, relatively quiet for a pigeon of its size.",
+      calls:
+        "A low purring coo; soft grunts; mostly quiet compared to other pigeons.",
+      sourceUrl: "https://ebird.org/species/nicpig1",
+    },
     variants: [],
   },
   {
@@ -1933,7 +2443,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/kiwi-voice.mp3",
     call: "/birds/audio/kiwi-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Apteryx mantelli",
+      order: "Apterygiformes",
+      family: "Apterygidae",
+      groupName: "Kiwis",
+      habitat: "Native forest across North Island, New Zealand",
+      food: "Earthworms, insects, berries, and fallen fruit",
+      nesting: "Burrow — female lays a massive egg, male incubates it",
+      behavior: "Strictly nocturnal; uses nostrils at bill tip to smell prey",
+      conservation: "Vulnerable",
+      basicDescription:
+        "New Zealand's national bird, and one of the strangest on Earth. It has no tail, barely-there wing stubs hidden under its shaggy hair-like feathers, nostrils at the very tip of its bill to sniff out earthworms, and lays an egg so enormous it takes up roughly 20% of the female's body — proportionally the largest egg of any bird alive.",
+      songs:
+        "The male gives a loud, shrill, ascending whistle repeated many times — 'kee-wee kee-wee' — which gives the bird its name; females answer with a lower, hoarser call.",
+      calls:
+        "Loud piercing whistles and grunts cut through the New Zealand bush on dark nights.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/North_Island_Brown_Kiwi",
+    },
     variants: [],
   },
   {
@@ -1944,7 +2471,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/purple-swamphen-voice.mp3",
     call: "/birds/audio/purple-swamphen-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Porphyrio melanotus",
+      order: "Gruiformes",
+      family: "Rallidae",
+      groupName: "Rails",
+      habitat: "Freshwater wetlands, reed beds, and lake margins",
+      food: "Reeds, rushes, aquatic plants, frogs, and eggs",
+      nesting: "Platform of reeds over shallow water",
+      behavior: "Uses feet like hands to hold food; communal breeding groups",
+      conservation: "Least concern",
+      basicDescription:
+        "A large, spectacular rail with iridescent purple-blue plumage and a massive red bill and shield — looks like someone built a moorhen and then dramatically overdid it. Found across wetlands from southern Asia to Australia and New Zealand. They hold food in their feet while eating, like a parrot, and live in cooperative family groups where multiple adults share parenting duties.",
+      songs:
+        "A loud, raucous screeching, squealing, and booming that erupts from reed beds — one of the more dramatic sounds of the wetland at dusk.",
+      calls:
+        "A sharp, explosive 'tok' contact call; a trumpeting screech when alarmed; communal groups call back and forth constantly.",
+      sourceUrl: "https://ebird.org/species/purswa3",
+    },
     variants: [],
   },
   {
@@ -1955,18 +2499,52 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/rainbow-lorikeet-voice.mp3",
     call: "/birds/audio/rainbow-lorikeet-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Trichoglossus moluccanus",
+      order: "Psittaciformes",
+      family: "Psittaculidae",
+      groupName: "Parrots",
+      habitat: "Rainforest, woodland, and urban parks across eastern Australia",
+      food: "Nectar and pollen (brush-tipped tongue is specially designed for this)",
+      nesting: "Tree hollow",
+      behavior: "Forages in loud, fast-moving flocks; enormous communal roosts at dusk",
+      conservation: "Least concern",
+      basicDescription:
+        "Possibly the most eye-catching parrot in Australia — a blur of blue, green, red, and orange that screams across the sky in chattering flocks. Unlike most parrots, lorikeets are specialized nectar feeders with a brush-tipped tongue for lapping pollen from flowers. At dusk, thousands of them descend together on certain trees to roost, creating an almost overwhelming spectacle of color and noise.",
+      songs:
+        "A continuous, high-pitched screeching and chattering in flight — flocks can be heard long before they're seen.",
+      calls:
+        "A rolling, shrill 'screet-screet' contact screech; rapid chattering and squabbling at feeding trees.",
+      sourceUrl: "https://ebird.org/species/rainlo1",
+    },
     variants: [],
   },
   {
     id: "red-bearded-bee-eater",
     name: "Red-bearded Bee-eater",
     imageMale: "/birds/img/red-bearded-bee-eater-male.png",
-    imageFemale: "", // monomorphic
+    imageFemale: "/birds/img/red-bearded-bee-eater-female.png", // dimorphic – female has green chin/beard, male has red
     image: "",
     voice: "/birds/audio/red-bearded-bee-eater-voice.mp3",
     call: "/birds/audio/red-bearded-bee-eater-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Nyctyornis amictus",
+      order: "Coraciiformes",
+      family: "Meropidae",
+      groupName: "Bee-eaters",
+      habitat: "Lowland and foothill forest in Southeast Asia",
+      food: "Bees, wasps, and large insects (bee venom is harmless to them)",
+      nesting: "Long tunnel excavated in an earthen bank or flat ground",
+      behavior: "Perches quietly in forest interior; rubs bee's stinger off before eating",
+      conservation: "Least concern",
+      basicDescription:
+        "The largest bee-eater in Asia, and one of the most gorgeous forest birds in Southeast Asia. Unlike its more open-country relatives, this species haunts the shadowy interior of lowland rainforest. The male's scarlet-red chin and shaggy breast feathers contrast with brilliant green plumage; the female's chin is green — she literally doesn't have the red beard.",
+      songs:
+        "A series of deep, resonant churring notes — a slow, rolling sound quite unlike the fast whistles of other bee-eaters.",
+      calls:
+        "A low, growling 'urrr' and a harsh chattering; mostly quiet for a bee-eater.",
+      sourceUrl: "https://ebird.org/species/rebbee1",
+    },
     variants: [],
   },
   {
@@ -1977,7 +2555,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/red-winged-blackbird-voice.mp3",
     call: "/birds/audio/red-winged-blackbird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Agelaius phoeniceus",
+      order: "Passeriformes",
+      family: "Icteridae",
+      groupName: "Blackbirds",
+      habitat: "Marshes, wetlands, fields, and roadsides across North America",
+      food: "Seeds, grains, and insects",
+      nesting: "Deep cup woven into marsh vegetation",
+      behavior: "Males flash red shoulder patches and sing constantly to hold territory",
+      conservation: "Least concern",
+      basicDescription:
+        "One of the most abundant birds in North America — and one of the most sexually dimorphic. The glossy black male with flaming red-and-yellow shoulder patches looks nothing like the streaky brown female, who resembles a completely different species. Males aggressively defend territories in marshes, chasing away birds many times their size, including hawks.",
+      songs:
+        "A loud, rich, gurgling 'konk-la-ree!' or 'oak-a-lee!' that defines the sound of North American marshes from spring through summer.",
+      calls:
+        "A sharp 'chek' contact note; a harsh, scolding 'teer' alarm; females give a chattery, rapid chatter.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Red-winged_Blackbird",
+    },
     variants: [],
   },
   {
@@ -1988,7 +2583,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/resplendent-quetzal-voice.mp3",
     call: "/birds/audio/resplendent-quetzal-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Pharomachrus mocinno",
+      order: "Trogoniformes",
+      family: "Trogonidae",
+      groupName: "Trogons",
+      habitat: "Cloud forest in Central America (Guatemala to Panama)",
+      food: "Wild avocados and other fruit; insects and small frogs",
+      nesting: "Woodpecker hole in a dead tree",
+      behavior: "Male grows spectacular 3-foot tail plumes in breeding season",
+      conservation: "Near threatened",
+      basicDescription:
+        "Considered by many the most beautiful bird in the Western Hemisphere, and sacred to the ancient Maya and Aztec. The male's iridescent green tail plumes can reach three feet long — longer than the whole rest of his body. It is the national bird of Guatemala and its image appears on the Guatemalan currency (also called the quetzal).",
+      songs:
+        "A rich, melodious 'kyow' and a mournful repeating whistle that carries through the misty cloud forest — described as one of the most hauntingly beautiful bird songs in the Americas.",
+      calls:
+        "A sharp, high 'week' alarm note; a wailing, repeated 'wac-wac' contact call.",
+      sourceUrl: "https://ebird.org/species/resqua1",
+    },
     variants: [],
   },
   {
@@ -1999,7 +2611,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/macaw-voice.mp3",
     call: "/birds/audio/macaw-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Ara sp.",
+      order: "Psittaciformes",
+      family: "Psittacidae",
+      groupName: "Parrots",
+      habitat: "Tropical rainforest and woodland in Central and South America",
+      food: "Seeds, nuts, fruit, and clay (to neutralize toxins in food)",
+      nesting: "Tree hollow or cliff crevice",
+      behavior: "Pairs bond for life; gather at clay licks to eat mineral-rich soil",
+      conservation: "Varies by species",
+      basicDescription:
+        "The largest parrots on Earth, with powerful hooked bills that can crack open Brazil nuts and voices that carry for miles. Macaws mate for life and are rarely seen without their partner. One of their strangest habits is visiting clay licks — riverbank exposures of mineral-rich soil — where hundreds gather to eat the clay, which neutralizes toxins in the seeds they eat.",
+      songs:
+        "Loud, raucous screeching and squawking that echoes through the forest canopy — not melodious, but utterly unmistakable.",
+      calls:
+        "Harsh, grinding screeches and rolling caws; soft chattering and mutual preening between bonded pairs.",
+      sourceUrl: "https://ebird.org/species/y00678",
+    },
     variants: [],
   },
   {
@@ -2010,7 +2639,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/scarlet-macaw-voice.mp3",
     call: "/birds/audio/scarlet-macaw-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Ara macao",
+      order: "Psittaciformes",
+      family: "Psittacidae",
+      groupName: "Parrots",
+      habitat: "Tropical rainforest and forest edges from Mexico to Brazil",
+      food: "Seeds, fruit, nuts, and clay (to detoxify food)",
+      nesting: "Tree hollow — same cavity used year after year",
+      behavior: "Pairs bond for life; enormous flocks at clay licks",
+      conservation: "Least concern",
+      basicDescription:
+        "One of the most iconic birds in the world — blazing red, yellow, and blue, with a wingspan that can reach four feet. A national symbol of Honduras. Pairs bond for life and are rarely seen apart. Their powerful bills can bite through a broomstick, yet they use the same bill with extraordinary delicacy to feed chicks and groom their partners.",
+      songs:
+        "A loud, hoarse 'raaak' or rolling screech that cuts through the forest canopy — you hear macaws long before you see them.",
+      calls:
+        "Harsh, raucous screeching in flight; soft chattering and bill-touching between bonded pairs.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Scarlet_Macaw",
+    },
     variants: [],
   },
   {
@@ -2021,7 +2667,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/secretary-bird-voice.mp3",
     call: "/birds/audio/secretary-bird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sagittarius serpentarius",
+      order: "Accipitriformes",
+      family: "Sagittariidae",
+      groupName: "Secretary-birds",
+      habitat: "Open grassland and savanna across sub-Saharan Africa",
+      food: "Snakes, lizards, insects, and small mammals (stomped to death)",
+      nesting: "Enormous flat stick platform on top of an acacia or thorn tree",
+      behavior: "Hunts on foot; stamps prey to death with powerful kicks",
+      conservation: "Endangered",
+      basicDescription:
+        "One of the most extraordinary birds on Earth — a raptor that hunts entirely on foot, stalking across the African savanna on long crane-like legs. Its name likely comes from the quill-like crest feathers that resemble old-fashioned secretaries with pens tucked behind their ears. It kills snakes and other prey by stomping them with kicks powerful enough to break human bones.",
+      songs:
+        "A deep, resonant croaking at the nest, and a loud, repeated croak in display flight overhead.",
+      calls:
+        "A harsh, frog-like croaking; mostly quiet while hunting on foot.",
+      sourceUrl: "https://ebird.org/species/secbir1",
+    },
     variants: [],
   },
   {
@@ -2032,7 +2695,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/snowy-owl-voice.mp3",
     call: "/birds/audio/snowy-owl-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Bubo scandiacus",
+      order: "Strigiformes",
+      family: "Strigidae",
+      groupName: "Owls",
+      habitat: "Arctic tundra; moves south in winter when prey is scarce",
+      food: "Lemmings and other small mammals (also rabbits and birds)",
+      nesting: "Simple scrape on an elevated tundra ridge",
+      behavior: "Hunts by day; a single owl can eat 1,600 lemmings per year",
+      conservation: "Vulnerable",
+      basicDescription:
+        "The largest owl in North America by weight — a ghost of the Arctic that occasionally sweeps south in winter when lemming populations crash. Mature males are nearly pure white; females and young birds are white with bold dark bars. Famous to a whole generation as Harry Potter's owl, Hedwig. A single Snowy Owl consumes up to 1,600 lemmings a year.",
+      songs:
+        "A deep, booming 'hoo-hoo' that rolls across the tundra; much lower and more resonant than most owls.",
+      calls:
+        "A harsh, barking 'kre-kre-kre' alarm when defending the nest; a whistling whine from hungry chicks.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Snowy_Owl",
+    },
     variants: [],
   },
   {
@@ -2043,18 +2723,52 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/southern-brown-kiwi-voice.mp3",
     call: "/birds/audio/southern-brown-kiwi-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Apteryx australis",
+      order: "Apterygiformes",
+      family: "Apterygidae",
+      groupName: "Kiwis",
+      habitat: "Native forest on South Island and Stewart Island, New Zealand",
+      food: "Earthworms, insects, berries, and fallen fruit",
+      nesting: "Burrow — male does most of the incubation",
+      behavior: "Nocturnal; sniffs out prey with nostrils at bill tip; monogamous pairs",
+      conservation: "Vulnerable",
+      basicDescription:
+        "The largest kiwi — a shaggy, flightless mystery of the New Zealand forest. Like all kiwis, it has no visible wings, hair-like feathers, and nostrils at the very tip of its bill to sniff out earthworms in the dark. Just before the female lays her single enormous egg, it fills so much of her belly that it's actually visible as a bulge from the outside.",
+      songs:
+        "Males give a loud, shrill, rapidly repeated whistle rising in pitch; females answer with a lower, huskier, rasping call.",
+      calls:
+        "Piercing shrieks and grunts that carry across the still forest at night; pairs call back and forth to hold their territory.",
+      sourceUrl: "https://ebird.org/species/soubki1",
+    },
     variants: [],
   },
   {
     id: "cassowary",
     name: "Southern Cassowary",
     imageMale: "/birds/img/southern-cassowary-male.png",
-    imageFemale: "", // monomorphic
+    imageFemale: "/birds/img/southern-cassowary-female.png", // reverse dimorphic – female is larger and more vividly colored
     image: "",
     voice: "/birds/audio/southern-cassowary-voice.mp3",
     call: "/birds/audio/southern-cassowary-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Casuarius casuarius",
+      order: "Casuariiformes",
+      family: "Casuariidae",
+      groupName: "Cassowaries",
+      habitat: "Tropical rainforest in New Guinea and northeastern Australia",
+      food: "Fallen fruit; also fungi, insects, and small animals",
+      nesting: "Ground scrape — male incubates eggs and raises chicks alone",
+      behavior: "Female is larger and more colorful; the male does all the parenting",
+      conservation: "Vulnerable",
+      basicDescription:
+        "The most dangerous bird on Earth, according to the Guinness World Records — armed with a dagger-like inner claw that can reach five inches long and a forward kick of explosive force. Despite the reputation, cassowaries are critical to their rainforest: they swallow enormous fruits whole and deposit the seeds far away, making them among the most important seed dispersers on the planet. This is a case where the female is bigger and more vividly colored than the male.",
+      songs:
+        "A deep, resonant booming and rumbling — some of the lowest frequency sounds made by any bird, felt as much as heard, produced by inflating throat sacs.",
+      calls:
+        "Deep booming rumbles and hissing snorts; a sharp hiss and kick when threatened.",
+      sourceUrl: "https://ebird.org/species/soucas1",
+    },
     variants: [],
   },
   {
@@ -2065,7 +2779,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/splendid-fairywren-voice.mp3",
     call: "/birds/audio/splendid-fairywren-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Malurus splendens",
+      order: "Passeriformes",
+      family: "Maluridae",
+      groupName: "Fairywrens",
+      habitat: "Dry scrubland, mulga, and mallee woodland across southern Australia",
+      food: "Small insects and spiders",
+      nesting: "Dome-shaped grass nest hidden in a low, dense shrub",
+      behavior: "Males brilliant blue year-round; chicks raised cooperatively by extended family",
+      conservation: "Least concern",
+      basicDescription:
+        "Australia's fairywrens are arguably the most vivid small birds in the world, and the male Splendid Fairywren is the most electric blue of them all — an almost impossibly intense cobalt and sapphire that seems to glow against the red Australian scrub. The female looks like an entirely different species: a modest little brown bird. Despite his glamour, the male is a devoted family member who helps raise chicks in a cooperative group.",
+      songs:
+        "A fast, high-pitched reeling trill that descends slightly — delivered at speed from an exposed perch, tail cocked.",
+      calls:
+        "A sharp, rapid 'trit-trit-trit' contact note; a short buzzing alarm when danger approaches.",
+      sourceUrl: "https://ebird.org/species/splfai1",
+    },
     variants: [],
   },
   {
@@ -2076,7 +2807,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/lyrebird-voice.mp3",
     call: "/birds/audio/lyrebird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Menura novaehollandiae",
+      order: "Passeriformes",
+      family: "Menuridae",
+      groupName: "Lyrebirds",
+      habitat: "Wet sclerophyll forest and rainforest in southeastern Australia",
+      food: "Insects, worms, and small invertebrates raked from leaf litter",
+      nesting: "Large domed stick nest low to ground — female builds it and raises chick alone",
+      behavior: "Greatest vocal mimic of any bird on Earth; male's tail fans into a lyre shape",
+      conservation: "Least concern",
+      basicDescription:
+        "The greatest natural vocal performer on Earth. The male Superb Lyrebird can flawlessly imitate chainsaws, camera shutters, car alarms, other bird species, and virtually any sound he has ever heard — weaving them together into a continuous, breathtaking performance that can last for hours. His spectacular lyre-shaped tail takes seven years to grow. The female is an unassuming brown bird who does all the nesting alone.",
+      songs:
+        "An extraordinary, non-stop medley of perfect imitations — dozens of bird species, human sounds, machinery — strung together without pause. Each male's repertoire is unique and grows richer throughout his life.",
+      calls:
+        "A loud, resonant 'kwork' contact call; harsh alarm notes that send every animal in the forest running.",
+      sourceUrl: "https://ebird.org/species/suplyb1",
+    },
     variants: [],
   },
   {
@@ -2087,7 +2835,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/victoria-crowned-pigeon-voice.mp3",
     call: "/birds/audio/victoria-crowned-pigeon-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Goura victoria",
+      order: "Columbiformes",
+      family: "Columbidae",
+      groupName: "Pigeons and Doves",
+      habitat: "Lowland rainforest in northern New Guinea",
+      food: "Fallen fruit, seeds, and berries",
+      nesting: "Platform of sticks in a tree",
+      behavior: "Walks regally on the forest floor; raises and lowers crest in display",
+      conservation: "Near threatened",
+      basicDescription:
+        "The largest pigeon on Earth — the size of a small turkey — and one of the most breathtaking. Named after Queen Victoria, it wears an extraordinary fan of delicate, lacy blue-tipped crest feathers arranged in a perfect halo above its head, with vivid crimson eyes. It moves slowly and regally across the floor of the New Guinea rainforest, and the male's booming call is felt through the ground as much as heard through the air.",
+      songs:
+        "A deep, resonant, repetitive 'bwoom-bwoom-bwoom' that reverberates through the forest floor — one of the most atmospheric sounds in any rainforest.",
+      calls:
+        "A loud 'whomp' alarm call; wing-clapping on takeoff.",
+      sourceUrl: "https://ebird.org/species/vicrpi1",
+    },
     variants: [],
   },
   {
@@ -2098,7 +2863,24 @@ export const expansionBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/white-bellied-sea-eagle-voice.mp3",
     call: "/birds/audio/white-bellied-sea-eagle-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Icthyophaga leucogaster",
+      order: "Accipitriformes",
+      family: "Accipitridae",
+      groupName: "Eagles",
+      habitat: "Coastlines, large rivers, and lakes from India to Australia",
+      food: "Fish, sea snakes, and waterbirds",
+      nesting: "Massive stick nest reused for decades in a tall tree near water",
+      behavior: "Pairs soar together; same nest added to and returned to every year",
+      conservation: "Least concern",
+      basicDescription:
+        "One of the largest raptors in Australia and Southeast Asia — a striking bird of coasts and large waterways with a pure white head and belly contrasting sharply with slate-gray wings. Pairs mate for life and return to the same enormous nest year after year, adding sticks each season until the nest can grow large enough to swallow a small car.",
+      songs:
+        "A loud, repeated honking or yelping — goose-like and surprisingly nasal for such a large, powerful eagle. Pairs often call together in a ringing duet from their nest tree.",
+      calls:
+        "A harsh 'ank-ank-ank' honking series in flight; a loud yelping display call.",
+      sourceUrl: "https://ebird.org/species/whbsea2",
+    },
     variants: [],
   },
 ];
