@@ -650,7 +650,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/eastern-bluebird-voice.mp3",
     call: "/birds/audio/eastern-bluebird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sialia sialis",
+      order: "Passeriformes",
+      family: "Turdidae",
+      groupName: "Thrushes",
+      habitat: "Open woodland, meadows, farms",
+      food: "Insects, berries",
+      nesting: "Cavities and nest boxes",
+      behavior: "Drops to ground for insects",
+      conservation: "Low concern",
+      basicDescription:
+        "One of North America's most beloved birds — the male's royal blue back and warm rusty breast are iconic. Eastern Bluebird populations crashed in the mid-20th century as starlings and House Sparrows took over their nesting cavities. They bounced back almost entirely thanks to volunteer nest box trails, making them one of the great citizen conservation success stories.",
+      songs:
+        "A soft, mellow warble — 'chur-lee, chur-lee' — gentle and musical, often described as one of the most pleasant bird songs in North America.",
+      calls:
+        "A soft, musical 'tu-a-wee' or 'chur-wee' in flight. Nothing about a bluebird's voice is harsh.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Eastern_Bluebird",
+    },
     variants: [],
   },
   {
@@ -661,7 +678,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/great-blue-heron-voice.mp3",
     call: "/birds/audio/great-blue-heron-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Ardea herodias",
+      order: "Pelecaniformes",
+      family: "Ardeidae",
+      groupName: "Herons",
+      habitat: "Wetlands, shorelines, marshes",
+      food: "Fish, frogs, small mammals",
+      nesting: "Tall trees (colonies called rookeries)",
+      behavior: "Stands motionless, strikes fast",
+      conservation: "Low concern",
+      basicDescription:
+        "North America's largest heron — a statuesque, slate-blue bird that stands over four feet tall and hunts by standing completely still at the water's edge, then striking with lightning speed. Despite their size they weigh only about 5 pounds; their bones are hollow. They nest in large colonies (rookeries) in tall trees, sometimes with dozens of stick nests crammed into a single tree.",
+      songs:
+        "Not a melodic vocalist. Produces deep, prehistoric-sounding squawks and croaks.",
+      calls:
+        "A loud, harsh, guttural 'FRAHNK' or series of 'kraak' squawks when disturbed in flight — one of the most startling sounds you'll hear at a marsh. Also makes lower croaking sounds at the nest.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Great_Blue_Heron",
+    },
     variants: [],
   },
   {
@@ -672,7 +706,52 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/great-horned-owl-voice.mp3",
     call: "/birds/audio/great-horned-owl-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Bubo virginianus",
+      order: "Strigiformes",
+      family: "Strigidae",
+      groupName: "Owls",
+      habitat: "Forests, deserts, suburbs, tundra",
+      food: "Rabbits, skunks, geese, other owls",
+      nesting: "Abandoned nests of other large birds",
+      behavior: "Nocturnal ambush predator",
+      conservation: "Low concern",
+      basicDescription:
+        "The most widespread owl in the Americas and one of the most fearsome predators of the night. Great Horned Owls will take prey as large as geese and as pungent as skunks — they have an almost nonexistent sense of smell, which makes skunks an easy meal other predators avoid. They begin nesting in January or February, the earliest of any North American bird, incubating eggs through blizzards.",
+      songs:
+        "The classic deep hoot — 'hoo-hoo-hoooo, hoo-hoo' — is one of the most recognizable sounds in nature. Mated pairs duet, with the female's voice slightly higher than the male's.",
+      calls:
+        "Also produces barks, shrieks, and bill-clapping. Young owls give a loud, raspy hissing scream that can be alarming to hear in the dark.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Great_Horned_Owl",
+    },
+    variants: [],
+  },
+  {
+    id: "greater-prairie-chicken",
+    name: "Greater Prairie Chicken",
+    imageMale: "/birds/img/greater-prairie-chicken-male.png",
+    imageFemale: "/birds/img/greater-prairie-chicken-female.png",
+    image: "",
+    voice: "/birds/audio/greater-prairie-chicken-voice.mp3",
+    call: "/birds/audio/greater-prairie-chicken-call.mp3",
+    info: {
+      scientificName: "Tympanuchus cupido",
+      order: "Galliformes",
+      family: "Phasianidae",
+      groupName: "Grouse",
+      habitat: "Tallgrass prairie",
+      food: "Seeds, grains, insects, buds",
+      nesting: "Ground (hidden scrape in tall grass)",
+      behavior: "Males boom and dance on leks",
+      conservation: "Near threatened",
+      basicDescription:
+        "A stocky grouse of the tallgrass prairie, famous for the male's extraordinary booming display on communal dancing grounds called leks. Males inflate bright orange neck sacs, stamp their feet rapidly, raise dramatic feather pinnae on their necks, and produce a deep, resonant booming that carries for miles on still spring mornings. Tallgrass prairie has been reduced to less than 4% of its original extent, making this bird increasingly rare.",
+      songs:
+        "The male's booming is produced by inflating the yellow-orange neck sacs — a deep, foghorn-like 'ooo-woom-ooo' that echoes dramatically across open prairie at dawn.",
+      calls:
+        "A clucking 'book-book-book' and various cackles. Males also give loud wing-whirring displays and cackling challenges to rival males on the lek.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Greater_Prairie-Chicken",
+    },
     variants: [],
   },
   {
@@ -683,7 +762,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/house-finch-voice.mp3",
     call: "/birds/audio/house-finch-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Haemorhous mexicanus",
+      order: "Passeriformes",
+      family: "Fringillidae",
+      groupName: "Finches",
+      habitat: "Cities, suburbs, farms",
+      food: "Seeds, buds, berries",
+      nesting: "Trees, ledges, hanging baskets",
+      behavior: "Flocks at feeders",
+      conservation: "Low concern",
+      basicDescription:
+        "A cheerful, streaky finch whose males wear a splash of red earned from the foods they eat — the redder the male, the more carotenoid-rich his diet, and the more attractive he is to females. Originally a western bird, House Finches were released illegally in New York in 1940 and have since spread across the entire continent. They are among the most common backyard birds in North America.",
+      songs:
+        "A long, bubbly warble of musical phrases with a distinctive hoarse or buzzy note near the end — 'wheeer.' Males sing constantly during breeding season.",
+      calls:
+        "A rising 'wheet' call, often given in flight. Also a short, soft 'chit' within flocks.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/House_Finch",
+    },
     variants: [],
   },
   {
@@ -694,7 +790,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/house-sparrow-voice.mp3",
     call: "/birds/audio/house-sparrow-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Passer domesticus",
+      order: "Passeriformes",
+      family: "Passeridae",
+      groupName: "Old World Sparrows",
+      habitat: "Cities, farms, anywhere near people",
+      food: "Seeds, grains, scraps",
+      nesting: "Cavities, crevices, signs, nests",
+      behavior: "Lives entirely around humans",
+      conservation: "Low concern",
+      basicDescription:
+        "Introduced from England to New York in 1851, the House Sparrow has become one of the most abundant birds on Earth — found on every continent except Antarctica. It is not a true sparrow (it's in its own Old World family) and is fiercely competitive for nest cavities, making it a significant threat to bluebirds and other cavity-nesters. It has lived alongside humans for at least 10,000 years, since the dawn of agriculture.",
+      songs:
+        "A series of cheerful, monotonous chirps — 'cheep, cheep, cheep' — delivered rapidly and incessantly, especially around nesting sites.",
+      calls:
+        "A persistent 'chirrup' and variety of soft, chattering chips. Flocks at a feeder produce a constant pleasant background chatter.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/House_Sparrow",
+    },
     variants: [],
   },
   {
@@ -705,7 +818,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/indigo-bunting-voice.mp3",
     call: "/birds/audio/indigo-bunting-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Passerina cyanea",
+      order: "Passeriformes",
+      family: "Cardinalidae",
+      groupName: "Cardinals and Allies",
+      habitat: "Shrubby edges, roadsides, forest margins",
+      food: "Seeds, insects, berries",
+      nesting: "Shrubs and low trees (cup nest)",
+      behavior: "Male sings from exposed perches",
+      conservation: "Low concern",
+      basicDescription:
+        "The male Indigo Bunting is an intense, saturated blue — one of the most vivid colors in the bird world. Surprisingly, there is no blue pigment in the feathers; the color is entirely structural, produced by the microscopic structure of the feathers scattering light. In dim light or shade, the male looks nearly black. They migrate at night, using the stars to navigate.",
+      songs:
+        "A lively, energetic series of paired phrases — 'fire-fire, where-where, here-here, see-it-see-it' — bright and musical. Males sing persistently through the heat of summer, even at midday when most birds have gone quiet.",
+      calls:
+        "A sharp, electric 'spink' or 'spit.' Also a dry, buzzy 'bzzt' in flight.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Indigo_Bunting",
+    },
     variants: [],
   },
   {
@@ -716,7 +846,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/killdeer-voice.mp3",
     call: "/birds/audio/killdeer-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Charadrius vociferus",
+      order: "Charadriiformes",
+      family: "Charadriidae",
+      groupName: "Plovers",
+      habitat: "Open ground, fields, parking lots",
+      food: "Insects, worms, seeds",
+      nesting: "Ground (bare scrape)",
+      behavior: "Broken-wing distraction display",
+      conservation: "Low concern",
+      basicDescription:
+        "A plover of open ground famous for its theatrical broken-wing act — when a predator approaches the nest, the adult runs away dragging one wing and crying pitifully to lure the threat away from its eggs. Killdeer nest on gravel, bare dirt, even rooftops and parking lots, relying on their eggs' camouflage pattern to avoid detection. Their Latin name, vociferus, means 'loud voice.'",
+      songs:
+        "Produces a rolling, liquid 'kill-dee' or 'dee-dee-dee' that gives the bird its name, often repeated rapidly in alarm.",
+      calls:
+        "An urgent, rising 'DEE-dee-dee-dee' when alarmed or disturbed, and a trilled 'trrrr' given near the nest. Extremely vocal — hard to miss when you're near one.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Killdeer",
+    },
     variants: [],
   },
   {
@@ -727,7 +874,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/laughing-gull-voice.mp3",
     call: "/birds/audio/laughing-gull-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Leucophaeus atricilla",
+      order: "Charadriiformes",
+      family: "Laridae",
+      groupName: "Gulls",
+      habitat: "Atlantic and Gulf coasts",
+      food: "Fish, invertebrates, scraps",
+      nesting: "Ground in salt marshes",
+      behavior: "Steals food from other birds",
+      conservation: "Low concern",
+      basicDescription:
+        "The most common gull along the Atlantic and Gulf coasts, with a distinctive black hood in breeding season and a loud, hysterical laugh that is the quintessential sound of beach vacations. They are opportunistic feeders and have no shame — they'll steal food from Brown Pelicans right out of their pouches as the pelicans surface from a dive.",
+      songs:
+        "The namesake laugh is a long, descending series of 'ha-ha-ha-ha-haah-haah' notes, starting high and fading. Extremely social and vocal in colonies.",
+      calls:
+        "A short, nasal 'kee-ah' and a sharp 'ka' in alarm. Flocks are endlessly chattering.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Laughing_Gull",
+    },
     variants: [],
   },
   {
@@ -738,7 +902,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/mallard-voice.mp3",
     call: "/birds/audio/mallard-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Anas platyrhynchos",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Ducks",
+      habitat: "Lakes, ponds, parks, wetlands",
+      food: "Plants, seeds, invertebrates",
+      nesting: "Ground near water",
+      behavior: "Tips up to feed underwater",
+      conservation: "Low concern",
+      basicDescription:
+        "The ancestor of nearly all domestic duck breeds, and the most abundant duck in the world. The male's iridescent green head is iconic; females are streaky brown with an orange-and-black bill. Mallards are dabbling ducks — they tip forward to feed underwater rather than diving. They hybridize readily with other ducks, and in some areas their genetics are spreading into rarer species.",
+      songs:
+        "The classic 'quack' belongs to the female — she produces the loud, bold quack most people associate with ducks. Males make a softer, raspy 'rhaeb.'",
+      calls:
+        "Females give a series of descending quacks — loud at first, trailing off: 'quack-quack-quack-quack.' Males produce quiet, nasal grunts and whistles during courtship.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Mallard",
+    },
     variants: [],
   },
   {
@@ -749,7 +930,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/mourning-dove-voice.mp3",
     call: "/birds/audio/mourning-dove-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Zenaida macroura",
+      order: "Columbiformes",
+      family: "Columbidae",
+      groupName: "Pigeons and Doves",
+      habitat: "Fields, roadsides, suburbs, deserts",
+      food: "Seeds almost exclusively",
+      nesting: "Trees (flimsy platform)",
+      behavior: "Bobs head while walking",
+      conservation: "Low concern",
+      basicDescription:
+        "One of the most abundant birds in North America — estimates put the population above 350 million. Their mournful, cooing call is a fixture of quiet mornings across the continent. Mourning Doves are swift, agile fliers with a distinctive whistling sound made by their wings on takeoff. They drink by suction, like a straw — most birds must tilt their head back to swallow.",
+      songs:
+        "The soft, melancholy 'ooo-woo-woo-woo' cooing, often mistaken for an owl by newcomers. A peaceful sound that carries well on still mornings.",
+      calls:
+        "Wings make a distinctive sharp whistling sound on takeoff — a built-in alarm signal for other doves in the area. The cooing call is also used as a contact note.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Mourning_Dove",
+    },
     variants: [],
   },
   {
@@ -760,7 +958,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/mute-swan-voice.mp3",
     call: "/birds/audio/mute-swan-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cygnus olor",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Swans",
+      habitat: "Ponds, lakes, bays, slow rivers",
+      food: "Aquatic plants, algae, invertebrates",
+      nesting: "Large mound at water's edge",
+      behavior: "Arches wings in threat display",
+      conservation: "Low concern",
+      basicDescription:
+        "The graceful white swan of fairy tales, introduced to North America from Europe and now widespread. Despite their serene appearance, Mute Swans are fiercely aggressive territory defenders — they will charge kayaks, boats, and people, using their powerful wings like clubs. Their populations have grown large enough in some areas that they are damaging aquatic ecosystems by uprooting native plants.",
+      songs:
+        "Largely silent — the 'swan song' sung at death is mythology. They produce only hisses, grunts, and snorts.",
+      calls:
+        "Soft snorts and hisses when threatened. Wings produce a loud, slow, throbbing whistle in flight — like a turbine winding up — audible from far away.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Mute_Swan",
+    },
     variants: [],
   },
   {
@@ -771,7 +986,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/northern-cardinal-voice.mp3",
     call: "/birds/audio/northern-cardinal-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cardinalis cardinalis",
+      order: "Passeriformes",
+      family: "Cardinalidae",
+      groupName: "Cardinals and Allies",
+      habitat: "Woodland edges, gardens, shrubs",
+      food: "Seeds, fruits, insects",
+      nesting: "Dense shrubs and vines",
+      behavior: "Female also sings (unusual)",
+      conservation: "Low concern",
+      basicDescription:
+        "The brilliant red male is one of the most iconic birds in North America, a fixture of winter feeders from the East to the Southwest. Uniquely among North American songbirds, female Northern Cardinals also sing — often from the nest, possibly to communicate with their mate about when to bring food. They don't migrate and keep their vivid color year-round, even in snow.",
+      songs:
+        "A loud, clear, descending whistle — 'cheer-cheer-cheer' or 'birdy-birdy-birdy' or 'what-cheer, what-cheer.' Both sexes know up to 24 distinct song patterns.",
+      calls:
+        "A sharp, metallic 'chink' — like a chip of stone snapping. Once learned, it's often the first thing that alerts you to a cardinal nearby.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Northern_Cardinal",
+    },
     variants: [],
   },
   {
@@ -782,7 +1014,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/northern-flicker-voice.mp3",
     call: "/birds/audio/northern-flicker-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Colaptes auratus",
+      order: "Piciformes",
+      family: "Picidae",
+      groupName: "Woodpeckers",
+      habitat: "Open woodland, forest edges, suburbs",
+      food: "Ants, beetles, berries",
+      nesting: "Cavities in trees",
+      behavior: "Forages on the ground for ants",
+      conservation: "Low concern",
+      basicDescription:
+        "An unusually terrestrial woodpecker that spends most of its time on the ground eating ants — its extraordinarily long tongue is covered in sticky saliva for extracting them from tunnels. In flight it flashes brilliant yellow (eastern) or red (western) under the wings and tail. Males have a black or red 'mustache' streak absent in females. They excavate nest cavities used by dozens of other species for years afterward.",
+      songs:
+        "A loud, rhythmic 'wicka-wicka-wicka-wicka' repeated rapidly — one of the most recognizable spring sounds in wooded suburbs.",
+      calls:
+        "A sharp, piercing 'klee-yer!' and a repeated 'wick-wick-wick.' Drumming on resonant metal (gutters, flashing) is used for territory advertisement — and is very good at waking people up.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Northern_Flicker",
+    },
     variants: [],
   },
   {
@@ -793,7 +1042,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/northern-mockingbird-voice.mp3",
     call: "/birds/audio/northern-mockingbird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Mimus polyglottos",
+      order: "Passeriformes",
+      family: "Mimidae",
+      groupName: "Mockingbirds and Thrashers",
+      habitat: "Open areas, suburbs, gardens",
+      food: "Insects, berries, fruits",
+      nesting: "Shrubs and low trees",
+      behavior: "Mimics 200+ species",
+      conservation: "Low concern",
+      basicDescription:
+        "The ultimate vocal impersonator — a single mockingbird can learn over 200 bird songs, plus frogs, insects, and mechanical sounds. Males sing nearly continuously, often through the night during full moons, cycling through their entire repertoire. They are boldly territorial and will dive-bomb cats, dogs, and people who stray too close to their nests — with full commitment, regardless of size difference.",
+      songs:
+        "An endless medley of imitations, each phrase repeated 2–6 times before shifting to the next. Males with larger repertoires attract more mates and add new sounds throughout their lives.",
+      calls:
+        "A sharp, emphatic 'tchack!' when alarmed — and they alarm often. Also gives harsh rasps and chatters when attacking intruders.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Northern_Mockingbird",
+    },
     variants: [],
   },
   {
@@ -804,7 +1070,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/pileated-woodpecker-voice.mp3",
     call: "/birds/audio/pileated-woodpecker-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Dryocopus pileatus",
+      order: "Piciformes",
+      family: "Picidae",
+      groupName: "Woodpeckers",
+      habitat: "Mature forest with large dead trees",
+      food: "Carpenter ants, beetle larvae",
+      nesting: "Large cavities in dead trees",
+      behavior: "Excavates rectangular holes",
+      conservation: "Low concern",
+      basicDescription:
+        "The largest woodpecker in North America — crow-sized, with a blazing red crest and a call like wild jungle laughter. Its chisel-like bill excavates large rectangular holes to reach carpenter ant colonies, and these cavities are later reused by ducks, owls, martens, and many other animals. Pileated Woodpeckers are ecosystem engineers whose work benefits dozens of other species.",
+      songs:
+        "A loud, resonant 'kuk-kuk-kuk-kuk' — wild and laughing, like something from a tropical rainforest. Also a long, wailing call that carries far through the trees.",
+      calls:
+        "The jungle-like laughing call is unmistakable. Drumming is slow and very powerful with a booming resonance that other woodpeckers can't match.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Pileated_Woodpecker",
+    },
     variants: [],
   },
   {
@@ -815,7 +1098,22 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/red-tailed-hawk-voice.mp3",
     call: "/birds/audio/red-tailed-hawk-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Buteo jamaicensis",
+      order: "Accipitriformes",
+      family: "Accipitridae",
+      groupName: "Hawks and Eagles",
+      habitat: "Open country, roadsides, woodlands",
+      food: "Rodents, rabbits, squirrels",
+      nesting: "Tall trees (large stick nest)",
+      behavior: "Soars on thermals, hunts from perches",
+      conservation: "Low concern",
+      basicDescription:
+        "The most common hawk in North America, equally at home over farmland, suburban neighborhoods, and mountain ridges. Adults have the distinctive brick-red tail that gives the species its name — juveniles lack it for their first year. The raspy scream of the Red-tailed Hawk is used in virtually every film and TV scene requiring a dramatic raptor cry, even when the bird on screen is a Bald Eagle or a falcon.",
+      calls:
+        "A raspy, rising 'keeeeeer' — the iconic raptor scream of film and television. Real Bald Eagles sound nothing like this; movie sound editors almost always substitute the Red-tail's cry instead.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Red-tailed_Hawk",
+    },
     variants: [],
   },
   {
@@ -826,7 +1124,22 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/ring-billed-gull-voice.mp3",
     call: "/birds/audio/ring-billed-gull-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Larus delawarensis",
+      order: "Charadriiformes",
+      family: "Laridae",
+      groupName: "Gulls",
+      habitat: "Lakes, rivers, coasts, parking lots",
+      food: "Fish, insects, garbage, grain",
+      nesting: "Ground (colonies on islands)",
+      behavior: "Follows tractors, scavenges",
+      conservation: "Low concern",
+      basicDescription:
+        "The most familiar inland gull in North America, identified by the neat black ring around its yellow bill. These are the gulls of parking lots, fast food dumpsters, and farm fields — highly adaptable omnivores that will eat virtually anything. They follow farm equipment to catch insects and worms turned up by plowing, and in winter gather in massive roosts of tens of thousands at landfills.",
+      calls:
+        "A sharp 'kyow' and a rapid 'kree-kree-kree.' When excited over food or in territorial disputes, produces a hysterical laughing wail similar to other gulls.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Ring-billed_Gull",
+    },
     variants: [],
   },
   {
@@ -837,7 +1150,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/rock-pigeon-voice.mp3",
     call: "/birds/audio/rock-pigeon-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Columba livia",
+      order: "Columbiformes",
+      family: "Columbidae",
+      groupName: "Pigeons and Doves",
+      habitat: "Cities, cliffs, farms",
+      food: "Seeds, grains, scraps",
+      nesting: "Ledges, bridges, buildings",
+      behavior: "Navigates by sun and magnetism",
+      conservation: "Low concern",
+      basicDescription:
+        "The familiar city pigeon is actually one of the most remarkable navigators in the animal kingdom — they can find their way home from hundreds of miles away using the sun, Earth's magnetic field, and even infrasound. They served as vital message carriers in both World Wars. Descended from European cliff-nesting Rock Doves, they treat building ledges as perfectly adequate cliff substitutes.",
+      songs:
+        "A soft, repetitive cooing — 'oo-roo-coo, oo-roo-coo' — produced by males during courtship, often while performing an inflated chest-puffing strut.",
+      calls:
+        "Wings make a loud clapping sound on takeoff. In flight, a musical whistle from the wingtips. Cooing from ledges is a classic urban soundtrack.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Rock_Pigeon",
+    },
     variants: [],
   },
   {
@@ -848,7 +1178,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/rose-breasted-grosbeak-voice.mp3",
     call: "/birds/audio/rose-breasted-grosbeak-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Pheucticus ludovicianus",
+      order: "Passeriformes",
+      family: "Cardinalidae",
+      groupName: "Cardinals and Allies",
+      habitat: "Deciduous and mixed forests",
+      food: "Seeds, insects, berries",
+      nesting: "Trees (flimsy cup nest)",
+      behavior: "Male incubates and sings on nest",
+      conservation: "Low concern",
+      basicDescription:
+        "The male is one of the most striking birds of eastern forests — jet black and white with a brilliant rose-red triangle on the breast. Unusually among songbirds, both sexes share incubation duties equally, and both sing. The male even sings quietly from the nest while incubating — one of very few birds to do so. Females look remarkably like large sparrows with bold white eyebrow stripes.",
+      songs:
+        "A rich, rolling carol similar to an American Robin but smoother and more melodious — described as 'a robin who took singing lessons.' One of the most beautiful and underappreciated songs in eastern forests.",
+      calls:
+        "A sharp, distinctive squeaking 'eek' — very recognizable once learned, impossible to confuse with other species.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Rose-breasted_Grosbeak",
+    },
     variants: [],
   },
   {
@@ -859,7 +1206,25 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/ruby-throated-hummingbird-voice.mp3",
     call: "/birds/audio/ruby-throated-hummingbird-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Archilochus colubris",
+      order: "Apodiformes",
+      family: "Trochilidae",
+      groupName: "Hummingbirds",
+      habitat: "Woodland edges, gardens",
+      food: "Nectar, tiny insects",
+      nesting: "Trees (walnut-sized cup of plant fiber and spider silk)",
+      behavior: "Hovers, wings beat 53×/sec",
+      conservation: "Low concern",
+      basicDescription:
+        "The only breeding hummingbird in eastern North America — a jewel of a bird the size of a thumb. The male's ruby throat glows brilliant red in direct sunlight and looks jet black from an angle. A single individual can visit over 1,000 flowers per day. During fall migration, they fly up to 500 miles non-stop across the Gulf of Mexico — a staggering feat for a creature weighing about 3 grams.",
+      songs:
+        "Doesn't sing a complex song. Produces squeaky, buzzy chips and chattering during chases.",
+      calls:
+        "High-pitched 'twittering' chips when feeding or chasing rivals. Wings produce the signature hum at 53 beats per second — audible from several feet away.",
+      sourceUrl:
+        "https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird",
+    },
     variants: [],
   },
   {
@@ -870,7 +1235,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/sandhill-crane-voice.mp3",
     call: "/birds/audio/sandhill-crane-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Antigone canadensis",
+      order: "Gruiformes",
+      family: "Gruidae",
+      groupName: "Cranes",
+      habitat: "Wetlands, fields, prairies",
+      food: "Grains, tubers, insects, small animals",
+      nesting: "Large platform in shallow water",
+      behavior: "Dances in elaborate courtship",
+      conservation: "Low concern",
+      basicDescription:
+        "One of the oldest living bird species — fossils from Nebraska are 2.5 million years old, making the Sandhill Crane essentially unchanged since the Pliocene epoch. They are famous for spectacular courtship dances involving bowing, jumping, and wing-spreading. One of North America's great wildlife spectacles is the spring migration on Nebraska's Platte River, where over 500,000 cranes congregate in a single stretch of river.",
+      songs:
+        "The bugling call is produced by a long, coiled trachea that resonates like a brass instrument — the sound carries for miles across open country.",
+      calls:
+        "A loud, rolling, rattling 'garooo-a-a-a' — one of the most carrying and ancient-sounding bird calls. Pairs and family groups call constantly to stay in contact during migration.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Sandhill_Crane",
+    },
     variants: [],
   },
   {
@@ -881,7 +1263,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/scarlet-tanager-voice.mp3",
     call: "/birds/audio/scarlet-tanager-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Piranga olivacea",
+      order: "Passeriformes",
+      family: "Cardinalidae",
+      groupName: "Cardinals and Allies",
+      habitat: "Mature deciduous forest",
+      food: "Insects, berries",
+      nesting: "Trees (cup nest, high in canopy)",
+      behavior: "Forages quietly in canopy",
+      conservation: "Low concern",
+      basicDescription:
+        "One of the most visually stunning birds in North America — the breeding male is dipped in molten red with jet-black wings and tail, like something from a tropical cloud forest. Despite the outrageous plumage, they are surprisingly hard to spot as they forage quietly in the forest canopy. In fall, males molt to olive-green before wintering in South American forests.",
+      songs:
+        "A hoarse, burry caroling — 'queer-it, queer-ity, queer-it' — like a robin with a sore throat. Clear and musical but with a distinctive raspiness that sets it apart.",
+      calls:
+        "A sharp 'chip-burr' — a two-note call unlike any other North American bird. Once learned, unmistakable.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Scarlet_Tanager",
+    },
     variants: [],
   },
   {
@@ -892,7 +1291,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/spotted-towhee-voice.mp3",
     call: "/birds/audio/spotted-towhee-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Pipilo maculatus",
+      order: "Passeriformes",
+      family: "Passerellidae",
+      groupName: "Sparrows",
+      habitat: "Dense brush, chaparral, forest edges",
+      food: "Seeds, insects, berries",
+      nesting: "Ground or low shrubs (cup)",
+      behavior: "Double-scratches leaf litter",
+      conservation: "Low concern",
+      basicDescription:
+        "A large, handsome sparrow of the understory with a bold black hood, rufous sides, and white-spotted wings. Spotted Towhees are ground foragers with a signature move: a 'double scratch' — jumping forward and kicking backward simultaneously with both feet to rake aside leaves and expose seeds and insects underneath. They are often heard rustling dramatically in the underbrush before being seen.",
+      songs:
+        "A buzzy, rising trill often written as 'drink-your-teeeeee' — the last part a long buzz. Regionally variable; birds in different areas sing distinctly different versions.",
+      calls:
+        "A rising, cat-like 'mew' and a sharp 'chewink' — the latter giving the bird its old folk name, 'Chewink.' Also gives a rapid 'tik-tik-tik' alarm.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Spotted_Towhee",
+    },
     variants: [],
   },
   {
@@ -903,7 +1319,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/stellers-jay-voice.mp3",
     call: "/birds/audio/stellers-jay-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cyanocitta stelleri",
+      order: "Passeriformes",
+      family: "Corvidae",
+      groupName: "Crows and Jays",
+      habitat: "Coniferous and mountain forests",
+      food: "Acorns, seeds, insects, eggs",
+      nesting: "Trees (bulky cup)",
+      behavior: "Caches food, mimics hawks",
+      conservation: "Low concern",
+      basicDescription:
+        "The only crested jay in the western US — sooty black head fading into brilliant blue body. Steller's Jays are bold, intelligent, and loud, dominating feeders and campsites in western mountain forests. Like the Blue Jay, they excel at mimicking Red-tailed and Red-shouldered Hawk calls, scattering other birds from a feeder so they can swoop in and take over.",
+      songs:
+        "A wide variety of harsh, scraping, and nasal sounds, plus occasional soft warbling notes. A skilled mimic of other species.",
+      calls:
+        "A raucous 'shaack-shaack-shaack' or 'kreck-kreck-kreck.' Also produces low-pitched coughs, rattles, and a surprisingly quiet whisper song.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Stellers_Jay",
+    },
     variants: [],
   },
   {
@@ -914,7 +1347,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/swainsons-thrush-voice.mp3",
     call: "/birds/audio/swainsons-thrush-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Catharus ustulatus",
+      order: "Passeriformes",
+      family: "Turdidae",
+      groupName: "Thrushes",
+      habitat: "Boreal and mountain forests",
+      food: "Insects, berries",
+      nesting: "Trees (cup nest)",
+      behavior: "Migrates at night, sings at dusk",
+      conservation: "Low concern",
+      basicDescription:
+        "A secretive, olive-brown thrush best known for its extraordinary song — a spiraling series of fluty notes that wind upward like a musical staircase. They migrate at night, and their soft 'peep' flight call is one of the most commonly heard sounds during autumn nocturnal migration. More often heard than seen, as they stay in dense undergrowth of boreal forests.",
+      songs:
+        "One of the most beautiful and ethereal songs in North American birding — an upward-spiraling series of flute-like whistles that seem to climb endlessly into the sky. Hearing it in a foggy forest at dusk is unforgettable.",
+      calls:
+        "A liquid 'whit' or 'peep' used as a night flight call during migration. Also a sharp 'weet' during the day.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Swainsons_Thrush",
+    },
     variants: [],
   },
   {
@@ -925,7 +1375,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/tree-swallow-voice.mp3",
     call: "/birds/audio/tree-swallow-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Tachycineta bicolor",
+      order: "Passeriformes",
+      family: "Hirundinidae",
+      groupName: "Swallows",
+      habitat: "Open areas and wetlands",
+      food: "Flying insects, some berries",
+      nesting: "Cavities and nest boxes",
+      behavior: "Aerial insect hunter",
+      conservation: "Low concern",
+      basicDescription:
+        "A sleek, iridescent blue-green swallow and one of the most studied birds in North America due to its enthusiasm for nest boxes. In late summer, Tree Swallows gather in enormous flocks of hundreds of thousands that swirl over marshes like murmurations before their southward migration — one of the great spectacles of the eastern US. Uniquely among swallows, they can survive cold snaps by eating bayberries when insects disappear.",
+      songs:
+        "A liquid, gurgling twitter of 'weet' and 'chirp' notes, bubbly and pleasant.",
+      calls:
+        "A sharp 'weet' or 'chi-veet' given frequently in flight. Churring and chattering near the nest box during disputes.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Tree_Swallow",
+    },
     variants: [],
   },
   {
@@ -936,7 +1403,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/tufted-titmouse-voice.mp3",
     call: "/birds/audio/tufted-titmouse-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Baeolophus bicolor",
+      order: "Passeriformes",
+      family: "Paridae",
+      groupName: "Chickadees and Titmice",
+      habitat: "Deciduous forests, suburbs",
+      food: "Insects, seeds, berries",
+      nesting: "Cavities and nest boxes",
+      behavior: "Caches seeds, bold at feeders",
+      conservation: "Low concern",
+      basicDescription:
+        "A small, gray, crested bird with large dark eyes and an outsized personality. Tufted Titmice are often the loudest voices in a mixed winter flock, and they are famously bold — they will sometimes take sunflower seeds directly from an outstretched hand. They have been expanding northward over the past century, with milder winters and the spread of backyard feeders helping them colonize new territory.",
+      songs:
+        "A loud, clear, repeated whistle — 'peter-peter-peter' or 'here-here-here' — remarkably loud for such a small bird.",
+      calls:
+        "A raspy, scolding 'tsee-tsee-tsee' or 'day-day-day.' Also gives a thin, high 'see' alarm call and soft churring notes within winter flocks.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Tufted_Titmouse",
+    },
     variants: [],
   },
   {
@@ -947,7 +1431,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/western-meadowlark-voice.mp3",
     call: "/birds/audio/western-meadowlark-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sturnella neglecta",
+      order: "Passeriformes",
+      family: "Icteridae",
+      groupName: "Blackbirds",
+      habitat: "Open grasslands, prairies, fields",
+      food: "Insects, seeds",
+      nesting: "Ground (woven dome in grass)",
+      behavior: "Sings from fence posts and wires",
+      conservation: "Low concern (declining)",
+      basicDescription:
+        "The official state bird of six western states and the signature sound of open grasslands. Despite looking nearly identical to the Eastern Meadowlark, the two species rarely interbreed — their songs are completely different, and that's how they tell each other apart. Populations have declined sharply as native grasslands are converted to cropland, making their song increasingly something to seek out.",
+      songs:
+        "A rich, gurgling, flute-like series of melodic whistles — complex and joyful, often described as the most beautiful bird song on the Great Plains. Males sing constantly from fence posts and wires.",
+      calls:
+        "A sharp 'chuck' or 'chup' and a buzzy, rattling 'dzert' in flight.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Western_Meadowlark",
+    },
     variants: [],
   },
   {
@@ -958,7 +1459,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/western-tanager-voice.mp3",
     call: "/birds/audio/western-tanager-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Piranga ludoviciana",
+      order: "Passeriformes",
+      family: "Cardinalidae",
+      groupName: "Cardinals and Allies",
+      habitat: "Open coniferous and mixed forests",
+      food: "Insects, fruit, nectar",
+      nesting: "Trees (cup nest, high in canopy)",
+      behavior: "Gleans insects from canopy",
+      conservation: "Low concern",
+      basicDescription:
+        "One of the most colorful birds of western North America — the breeding male has a flame-red head, lemon-yellow body, and black wings with white bars. Unusually, the red color doesn't come from carotenoid pigments (which most red birds get from food) but from a rare pigment called rhodoxanthin, which they obtain by eating insects. They breed in mountain forests and spend winters in Central America.",
+      songs:
+        "A slightly hoarse, robin-like caroling — 'churry-churree-churroo' — with the same burry raspiness as the Scarlet Tanager.",
+      calls:
+        "A distinctive dry 'pit-er-ick' or 'prit-i-tit' — a three-syllable call quite recognizable once learned.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Western_Tanager",
+    },
     variants: [],
   },
   {
@@ -969,7 +1487,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/white-breasted-nuthatch-voice.mp3",
     call: "/birds/audio/white-breasted-nuthatch-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sitta carolinensis",
+      order: "Passeriformes",
+      family: "Sittidae",
+      groupName: "Nuthatches",
+      habitat: "Deciduous and mixed forests, parks",
+      food: "Insects, seeds, nuts",
+      nesting: "Cavities and nest boxes",
+      behavior: "Walks headfirst down tree trunks",
+      conservation: "Low concern",
+      basicDescription:
+        "The only North American bird that routinely walks headfirst DOWN tree trunks — a unique angle that reveals insects hidden in bark that upward-moving woodpeckers miss entirely. They 'hatch' nuts and seeds by wedging them into bark crevices and hacking them open with their bill — the origin of their name. They often join mixed winter flocks with chickadees, adding their nasal honking to the flock chatter.",
+      songs:
+        "A rapid, nasal 'wha-wha-wha-wha-wha' on one pitch — sometimes described as a tiny car horn honking rapidly. Surprisingly loud.",
+      calls:
+        "A nasal 'yank' or 'enk' given repeatedly and emphatically. Also a thin, high 'tsit' contact note within flocks.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/White-breasted_Nuthatch",
+    },
     variants: [],
   },
   {
@@ -980,7 +1515,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/white-throated-sparrow-voice.mp3",
     call: "/birds/audio/white-throated-sparrow-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Zonotrichia albicollis",
+      order: "Passeriformes",
+      family: "Passerellidae",
+      groupName: "Sparrows",
+      habitat: "Forests, winter gardens and feeders",
+      food: "Seeds, berries, insects",
+      nesting: "Ground near forest edges",
+      behavior: "Scratches in leaf litter",
+      conservation: "Low concern",
+      basicDescription:
+        "A large, handsome sparrow with a crisp white throat and yellow spot between eye and bill. They breed in Canadian forests but are common winter visitors to backyards across the US. White-throated Sparrows come in two permanent color forms — white-striped and tan-striped — that almost always pair with the opposite form. It's a rare genetic quirk, essentially encoding two distinct 'personalities' into the species.",
+      songs:
+        "A plaintive, pure whistle — 'oh-sweet-Canada-Canada-Canada' (or 'old-Sam-Peabody-Peabody-Peabody') — one of the most nostalgic bird songs in North America, forever associated with northern forests.",
+      calls:
+        "A sharp, hard 'chink' and a thin 'tseet' in flight. A sharp chatter when alarmed.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/White-throated_Sparrow",
+    },
     variants: [],
   },
   {
@@ -991,7 +1543,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/wood-duck-voice.mp3",
     call: "/birds/audio/wood-duck-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Aix sponsa",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Ducks",
+      habitat: "Wooded swamps, streams, beaver ponds",
+      food: "Acorns, seeds, insects",
+      nesting: "Tree cavities and nest boxes",
+      behavior: "Perches in trees",
+      conservation: "Low concern",
+      basicDescription:
+        "Often called the most beautiful duck in North America — the male's iridescent plumage of emerald, burgundy, white, and gold looks almost hand-painted. Wood Ducks nest in tree cavities, sometimes 65 feet off the ground. Within 24 hours of hatching, ducklings leap out of the nest hole and free-fall to the ground — their tiny bodies so light they bounce completely unharmed. Hunted nearly to extinction by 1900, they made a full recovery thanks to nest box programs.",
+      songs:
+        "Males give a thin, rising 'jeeee' whistle. Females give a loud 'oo-EEK oo-EEK' rising call that's often the first sign of a Wood Duck flushing from cover.",
+      calls:
+        "The female's loud, rising 'oo-EEK' is distinctive and carries well. Males produce quieter whistles during courtship.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Wood_Duck",
+    },
     variants: [],
   },
   {
@@ -1002,7 +1571,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/yellow-rumped-warbler-voice.mp3",
     call: "/birds/audio/yellow-rumped-warbler-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Setophaga coronata",
+      order: "Passeriformes",
+      family: "Parulidae",
+      groupName: "Wood-warblers",
+      habitat: "Coniferous forests, shrubby winter habitat",
+      food: "Insects, bayberries, wax myrtle",
+      nesting: "Trees (cup nest)",
+      behavior: "Flashes yellow rump patch in flight",
+      conservation: "Low concern",
+      basicDescription:
+        "The most abundant warbler in North America and the only one able to digest the waxy coating of bayberries and wax myrtle — a superpower that lets them winter far farther north than any other warbler. They flash a bold yellow rump patch in flight (affectionately nicknamed 'butter butt'). Two forms — the Myrtle Warbler (east) and Audubon's Warbler (west) — were once considered separate species and still look quite distinct.",
+      songs:
+        "A slow, soft warble that rises or falls at the end — quieter and less complex than many warblers. The Myrtle and Audubon's forms sound slightly different.",
+      calls:
+        "A loud, hard 'chek' — one of the most frequently heard warbler chips in eastern North America, especially during fall migration when thousands of Yellow-rumpeds are on the move.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Yellow-rumped_Warbler",
+    },
     variants: [],
   },
 ];
