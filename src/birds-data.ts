@@ -85,18 +85,7 @@ export const primaryBirds: Bird[] = [
       lifeHistoryUrl:
         "https://www.allaboutbirds.org/guide/American_Coot/lifehistory",
     },
-    variants: [
-      {
-        id: "american-coot-classic-song",
-        label: "Classic song",
-        audio: "/birds/audio/american-coot-classic-song.mp3",
-      },
-      {
-        id: "american-coot-pnw-dialect",
-        label: "PNW dialect",
-        audio: "/birds/audio/american-coot-pnw-dialect.mp3",
-      },
-    ],
+    variants: [],
   },
   {
     id: "american-crow",
@@ -106,7 +95,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/american-crow-voice.mp3",
     call: "/birds/audio/american-crow-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Corvus brachyrhynchos",
+      order: "Passeriformes",
+      family: "Corvidae",
+      groupName: "Crows and Jays",
+      habitat: "Many habitats",
+      food: "Almost anything",
+      nesting: "Trees",
+      behavior: "Ground forager",
+      conservation: "Low concern",
+      basicDescription:
+        "Large, glossy black birds with iridescent purple sheen in sunlight. American Crows are among the most intelligent birds on Earth — they use tools, recognize human faces, hold apparent 'funerals' for dead companions, and pass learned behaviors to their young. Highly adaptable, they thrive from wilderness to city centers.",
+      songs:
+        "Produces the classic 'caw-caw-caw,' but also rattles, coos, clicks, and melodic warbles. Skilled mimics that can reproduce sounds from other birds and even human speech.",
+      calls:
+        "Alarm calls are harsh and sharp; a steady 'caw' series used in contact. Calls speed up and intensify when mobbing owls or hawks.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Crow",
+    },
     variants: [],
   },
   {
@@ -117,7 +123,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/american-goldfinch-voice.mp3",
     call: "/birds/audio/american-goldfinch-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Spinus tristis",
+      order: "Passeriformes",
+      family: "Fringillidae",
+      groupName: "Finches",
+      habitat: "Weedy fields, roadsides",
+      food: "Seeds (especially thistle)",
+      nesting: "Trees and shrubs",
+      behavior: "Forages on seedheads",
+      conservation: "Low concern",
+      basicDescription:
+        "A brilliant yellow-and-black finch that is a strict vegetarian — one of the very few birds that eats almost exclusively seeds, including thistle, sunflower, and alder. They time nesting to late summer when thistle down peaks, lining their cup nests with the fluffy fibers. In flight, they bound through the air in a distinctive roller-coaster pattern, constantly calling.",
+      songs:
+        "Sings a long, canary-like series of musical twitters, trills, and warbles. The melody is lively and constantly varied, often delivered in undulating flight.",
+      calls:
+        "The flight call is a cheerful musical 'potato-chip' or 'per-chick-o-ree,' given constantly while traveling. A descending 'swee' is used as an alarm.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Goldfinch",
+    },
     variants: [],
   },
   {
@@ -128,7 +151,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/american-redstart-voice.mp3",
     call: "/birds/audio/american-redstart-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Setophaga ruticilla",
+      order: "Passeriformes",
+      family: "Parulidae",
+      groupName: "Wood-warblers",
+      habitat: "Deciduous forests, edges",
+      food: "Insects (caught in air)",
+      nesting: "Trees (low cup nest)",
+      behavior: "Fans tail to flush prey",
+      conservation: "Low concern",
+      basicDescription:
+        "An energetic, flamboyant warbler that fans its boldly patterned wings and tail to startle insects into flight — then snatches them on the wing. Males are striking black-and-orange; females olive-gray with yellow patches. It behaves almost like a flycatcher, constantly spinning, fanning, and darting after insects it flushes from foliage.",
+      songs:
+        "Sings a series of 2–8 high, thin notes that may end with an upswing or a downward droop. Males often alternate between two distinct song types. Often described as 'zee-zee-zee-ZEE-tee.'",
+      calls:
+        "A sharp, strong 'chip,' similar to other warblers. Fairly quiet outside of the breeding season.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Redstart",
+    },
     variants: [],
   },
   {
@@ -139,7 +179,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/american-robin-voice.mp3",
     call: "/birds/audio/american-robin-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Turdus migratorius",
+      order: "Passeriformes",
+      family: "Turdidae",
+      groupName: "Thrushes",
+      habitat: "Lawns, forests, parks",
+      food: "Earthworms, fruits, berries",
+      nesting: "Trees and ledges (mud cup)",
+      behavior: "Ground forager",
+      conservation: "Low concern",
+      basicDescription:
+        "America's most familiar thrush, with a warm orange-red breast and a cheerful caroling song. Robins hunt earthworms by sight, cocking their head to one side to look at the ground — not to listen, as is often thought. They don't always migrate; large winter flocks roam nomadically, descending on berry-laden trees before dispersing again in spring.",
+      songs:
+        "Sings a rich, rolling carol of liquid phrases: 'cheerily, cheer-up, cheerio,' often delivered before dawn and well after dusk. One of the most familiar sounds of spring mornings.",
+      calls:
+        "A sharp 'peek' or rapid 'tut-tut-tut' alarm call. A high, thin 'seep' in flight. Chattering scolding when a predator is near.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/American_Robin",
+    },
     variants: [],
   },
   {
@@ -150,7 +207,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/bald-eagle-voice.mp3",
     call: "/birds/audio/bald-eagle-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Haliaeetus leucocephalus",
+      order: "Accipitriformes",
+      family: "Accipitridae",
+      groupName: "Hawks and Eagles",
+      habitat: "Large open water, forests",
+      food: "Fish, waterfowl, carrion",
+      nesting: "Tall trees near water",
+      behavior: "Soars, plunge-dives",
+      conservation: "Low concern",
+      basicDescription:
+        "The national bird and symbol of the United States, immediately recognizable by the snow-white head and tail of adults. These powerful raptors build the largest nests of any North American bird — pairs return to the same nest year after year, adding material until it can weigh over a ton. Brought back from near-extinction after DDT was banned in 1972.",
+      songs:
+        "Doesn't sing in the traditional sense. The real call is surprisingly thin and weak for such a massive bird — a series of high-pitched squealing whistles that many people find underwhelming.",
+      calls:
+        "A series of high, scratchy squeaks and chirps: 'kleek-kik-ik-ik-ik.' This is why filmmakers almost always dub the Bald Eagle's cry with the Red-tailed Hawk's far more dramatic scream.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Bald_Eagle",
+    },
     variants: [],
   },
   {
@@ -161,7 +235,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/baltimore-oriole-voice.mp3",
     call: "/birds/audio/baltimore-oriole-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Icterus galbula",
+      order: "Passeriformes",
+      family: "Icteridae",
+      groupName: "Blackbirds",
+      habitat: "Forest edges, parks, gardens",
+      food: "Insects, nectar, fruit",
+      nesting: "Hanging woven pouch",
+      behavior: "Canopy forager",
+      conservation: "Low concern",
+      basicDescription:
+        "Flame-orange and black males are among the most spectacular songbirds in eastern North America. Their remarkable nests are long, sock-like pouches woven from plant fibers, hair, and string, dangling from the tips of branches. They are attracted to orange halves, nectar feeders, and ripe fruit — and they winter in Central and South America.",
+      songs:
+        "Sings a series of clear, flute-like whistles — rich, melodic, and loud. Males improvise their own phrases, so no two individuals sound exactly alike.",
+      calls:
+        "Gives a dry, chattering rattle and a sharp, whistled 'hew-li.' Alarm is a short, pointed 'chek.'",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Baltimore_Oriole",
+    },
     variants: [],
   },
   {
@@ -172,7 +263,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/belted-kingfisher-voice.mp3",
     call: "/birds/audio/belted-kingfisher-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Megaceryle alcyon",
+      order: "Coraciiformes",
+      family: "Alcedinidae",
+      groupName: "Kingfishers",
+      habitat: "Streams, rivers, ponds",
+      food: "Fish, crayfish",
+      nesting: "Earthen burrows (stream banks)",
+      behavior: "Hovers and plunge-dives",
+      conservation: "Low concern",
+      basicDescription:
+        "A stocky, large-headed bird with a shaggy crest and massive bill. Unusually among birds, the female is more colorful than the male — she sports a rusty belly band he lacks. Belted Kingfishers excavate long burrows into stream banks for nesting, and they're typically seen alone, rattling loudly as they patrol their stretch of water before plunging headfirst for fish.",
+      songs:
+        "The rattling call doubles as its territorial song. Delivers a long, loud, mechanical rattle from a perch or on the wing.",
+      calls:
+        "An unmistakable loud, dry, rattling trill — 'kek-kek-kek-kek-kek' — that carries far over water. Almost always calls in flight as it travels its territory.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Belted_Kingfisher",
+    },
     variants: [],
   },
   {
@@ -184,25 +292,26 @@ export const primaryBirds: Bird[] = [
     voice: "/birds/audio/black-capped-chickadee-voice.mp3",
     call: "/birds/audio/black-capped-chickadee-call.mp3",
     info: {
-      // TODO: Cornell blurb if you want
+      scientificName: "Poecile atricapillus",
+      order: "Passeriformes",
+      family: "Paridae",
+      groupName: "Chickadees and Titmice",
+      habitat: "Forests, edges, suburbs",
+      food: "Insects, seeds, berries",
+      nesting: "Cavities in soft dead wood",
+      behavior: "Acrobatic canopy forager",
+      conservation: "Low concern",
+      basicDescription:
+        "A tiny, bold acrobat with a bold black cap and bib, recognized as one of the most charismatic backyard birds in North America. Chickadees have extraordinary spatial memory — they cache thousands of seeds each fall and can recall each hiding spot months later. Every fall their hippocampus actually grows new neurons to help manage all those memories.",
+      songs:
+        "The whistled 'fee-bee' (or 'hey-sweetie') is one of the clearest, most learnable bird songs — two pure whistles, the second lower. Males begin singing before dawn, and the pitch shifts with temperature.",
+      calls:
+        "The classic 'chick-a-dee-dee-dee' is a sophisticated alarm signal — the more 'dees' added, the more dangerous the predator. Also gives a high, thin 'seet' alarm and a nasal gargle in aggressive encounters.",
+      otherSounds:
+        "Soft contact calls within flocks communicate flock status, predator type, and individual identity in a surprisingly complex social language.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Black-capped_Chickadee",
     },
-    variants: [
-      {
-        id: "bcc-fee-bee",
-        label: "Fee-bee song",
-        audio: "/birds/audio/black-capped-chickadee-fee-bee.mp3",
-      },
-      {
-        id: "bcc-gargle",
-        label: "Gargle call",
-        audio: "/birds/audio/black-capped-chickadee-gargle.mp3",
-      },
-      {
-        id: "bcc-high-see",
-        label: "High see alarm",
-        audio: "/birds/audio/black-capped-chickadee-high-see.mp3",
-      },
-    ],
+    variants: [],
   },
   {
     id: "black-phoebe",
@@ -212,7 +321,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/black-phoebe-voice.mp3",
     call: "/birds/audio/black-phoebe-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Sayornis nigricans",
+      order: "Passeriformes",
+      family: "Tyrannidae",
+      groupName: "Flycatchers",
+      habitat: "Near water — streams, ponds, pools",
+      food: "Insects (caught in air)",
+      nesting: "Mud cup on ledges near water",
+      behavior: "Sallies, pumps tail constantly",
+      conservation: "Low concern",
+      basicDescription:
+        "A small, dapper flycatcher dressed entirely in jet black with a clean white belly — like a tiny bird wearing a tuxedo. Black Phoebes are almost always found near water, perching on low branches to repeatedly dart out and snap up insects in mid-air. They pump their tails up and down almost constantly, a signature behavior shared by all phoebes.",
+      songs:
+        "Sings a buzzy, rising-and-falling 'pi-tsee, pi-tsee' — two alternating phrases repeated from a favorite perch. Males often return to the same song post day after day.",
+      calls:
+        "A sharp, emphatic 'chip' or 'tsip,' often delivered simultaneously with the signature tail pump.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Black_Phoebe",
+    },
     variants: [],
   },
   {
@@ -223,7 +349,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/blue-jay-voice.mp3",
     call: "/birds/audio/blue-jay-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Cyanocitta cristata",
+      order: "Passeriformes",
+      family: "Corvidae",
+      groupName: "Crows and Jays",
+      habitat: "Forests, parks, suburbs",
+      food: "Acorns, seeds, insects, eggs",
+      nesting: "Trees (sturdy cup nest)",
+      behavior: "Caches acorns, mimics hawks",
+      conservation: "Low concern",
+      basicDescription:
+        "A large, bold, crested jay with brilliant blue, white, and black plumage. Blue Jays are highly intelligent and play a vital ecological role — they cache thousands of acorns each fall, burying them in soil and leaf litter. The ones they forget germinate, making Blue Jays one of the primary agents spreading oak forests across eastern North America after the last ice age.",
+      songs:
+        "A skilled mimic that perfectly imitates Red-shouldered and Red-tailed Hawk calls, sending other birds scattering. Also produces a soft, liquid 'queedle-queedle' rarely heard unless you're very close.",
+      calls:
+        "The familiar harsh 'jay-jay-jay' or 'thief-thief' alarm — loud and unmistakable. Also a bell-like 'tool-ool' and a variety of squeaks, rattles, and whistled notes.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Blue_Jay",
+    },
     variants: [],
   },
   {
@@ -234,7 +377,22 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/brown-pelican-voice.mp3",
     call: "/birds/audio/brown-pelican-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Pelecanus occidentalis",
+      order: "Pelecaniformes",
+      family: "Pelecanidae",
+      groupName: "Pelicans",
+      habitat: "Coasts, bays, estuaries",
+      food: "Fish",
+      nesting: "Ground or low trees (colonies)",
+      behavior: "Plunge-dives from height",
+      conservation: "Low concern",
+      basicDescription:
+        "The only pelican that dives headfirst from the air to catch fish — all other pelicans scoop from the surface. Brown Pelicans crash into the water from up to 60 feet high, stunning fish with the impact, then scoop them up in their expandable throat pouch. They were nearly wiped out by DDT in the 1970s and are now a conservation success story.",
+      calls:
+        "Adults are largely silent away from the nesting colony. Chicks beg loudly; adults give low grunts and hisses at the nest.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Brown_Pelican",
+    },
     variants: [],
   },
   {
@@ -245,7 +403,22 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/bufflehead-voice.mp3",
     call: "/birds/audio/bufflehead-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Bucephala albeola",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Ducks",
+      habitat: "Lakes, ponds, bays",
+      food: "Aquatic invertebrates, fish eggs",
+      nesting: "Tree cavities (old woodpecker holes)",
+      behavior: "Dives underwater",
+      conservation: "Low concern",
+      basicDescription:
+        "North America's smallest diving duck, with males sporting a spectacular iridescent purple-green head and a bold white patch. Buffleheads nest almost exclusively in old Northern Flicker and Pileated Woodpecker holes — a dependency that makes their nesting success directly tied to the health of woodpecker populations. They spend winter on coastal bays and open lakes.",
+      calls:
+        "Males give a squeaky, guttural growl during displays; females give a hoarse 'churr.' Generally quiet outside the breeding season.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Bufflehead",
+    },
     variants: [],
   },
   {
@@ -256,7 +429,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/california-quail-voice.mp3",
     call: "/birds/audio/california-quail-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Callipepla californica",
+      order: "Galliformes",
+      family: "Odontophoridae",
+      groupName: "New World Quail",
+      habitat: "Chaparral, oak woodlands, suburbs",
+      food: "Seeds, leaves, insects",
+      nesting: "Ground (scrape hidden in vegetation)",
+      behavior: "Runs rather than flies",
+      conservation: "Low concern",
+      basicDescription:
+        "California's state bird, instantly recognizable by the comma-shaped black plume drooping forward from the crown. They live in coveys of up to 200 birds in fall and winter, moving together through the underbrush. When alarmed, they prefer to run — exploding into flight only as a last resort. Both parents are devoted caregivers to large broods of tiny, precocial chicks.",
+      songs:
+        "The loud, three-syllable 'Chi-CA-go' (or 'where ARE you?') call carries far and is used as a rallying call to reassemble a scattered covey.",
+      calls:
+        "A soft clucking series between flock members. Alarm is a rapid series of sharp 'pit' notes. Males give a variety of shorter notes during courtship.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/California_Quail",
+    },
     variants: [],
   },
   {
@@ -267,7 +457,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/california-scrub-jay-voice.mp3",
     call: "/birds/audio/california-scrub-jay-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Aphelocoma californica",
+      order: "Passeriformes",
+      family: "Corvidae",
+      groupName: "Crows and Jays",
+      habitat: "Scrub, oak woodland, suburbs",
+      food: "Acorns, insects, small animals",
+      nesting: "Trees and shrubs (sturdy cup)",
+      behavior: "Caches acorns, bold at feeders",
+      conservation: "Low concern",
+      basicDescription:
+        "A sleek, crestless jay with vivid blue, white, and gray plumage that thrives in scrubby western habitats and suburban backyards. California Scrub-Jays are highly intelligent — they cache food, deceive other jays they've caught watching them hide food, and re-hide caches when observed. Research shows they plan for the future, a rare cognitive ability outside humans and great apes.",
+      songs:
+        "Produces a wide repertoire of harsh, raspy calls and occasional softer warbling. Not a typical melodic songbird.",
+      calls:
+        "Most common is a loud, rising 'shreek' or 'shrenk.' Also gives a series of harsh, nasal 'check' notes and a rolling 'krrr-krrr' when alarmed.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/California_Scrub-Jay",
+    },
     variants: [],
   },
   {
@@ -278,7 +485,22 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/canada-goose-voice.mp3",
     call: "/birds/audio/canada-goose-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Branta canadensis",
+      order: "Anseriformes",
+      family: "Anatidae",
+      groupName: "Geese",
+      habitat: "Parks, fields, lakes, coasts",
+      food: "Grasses, grains, aquatic plants",
+      nesting: "Ground near water",
+      behavior: "Grazes, flies in V-formation",
+      conservation: "Low concern",
+      basicDescription:
+        "The familiar large goose with the distinctive black head and neck and white cheek patch. Canada Geese mate for life and are intensely devoted parents — both parents guard the nest, and goslings stay with the family for a full year. Their V-formation flying is a masterclass in aerodynamics: each bird drafts off the wingtip vortex of the bird ahead, reducing effort by up to 65%.",
+      calls:
+        "The classic honking 'a-HONK' is one of the most recognized sounds in North America. Males give a deeper, louder honk; females a higher, shorter 'hrink.' Flocks are noisy in flight.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Canada_Goose",
+    },
     variants: [],
   },
   {
@@ -289,7 +511,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/carolina-wren-voice.mp3",
     call: "/birds/audio/carolina-wren-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Thryothorus ludovicianus",
+      order: "Passeriformes",
+      family: "Troglodytidae",
+      groupName: "Wrens",
+      habitat: "Dense shrubs, tangled undergrowth",
+      food: "Insects, spiders, berries",
+      nesting: "Cavities, crevices, nest boxes",
+      behavior: "Explores low tangles, cocks tail",
+      conservation: "Low concern",
+      basicDescription:
+        "A small, richly colored wren with a brilliant white eyebrow stripe and a voice wildly outsized for its body. Carolina Wrens are famously bold and curious, poking into garages, porches, and potted plants to investigate anything interesting. They mate for life and stay on territory year-round, singing every month of the year — even in the coldest weather.",
+      songs:
+        "Sings a loud, ringing 'tea-kettle, tea-kettle, tea-kettle' or 'liberty, liberty, liberty' — repeated 10–15 times with variations. The song is astonishingly loud for such a small bird.",
+      calls:
+        "A rapid, scolding 'chert-chert-chert' rattle is the most common call. Also gives a sharp 'tcheek' and a buzzy descending 'dzeert.'",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Carolina_Wren",
+    },
     variants: [],
   },
   {
@@ -300,7 +539,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/cedar-waxwing-voice.mp3",
     call: "/birds/audio/cedar-waxwing-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Bombycilla cedrorum",
+      order: "Passeriformes",
+      family: "Bombycillidae",
+      groupName: "Waxwings",
+      habitat: "Woodlands, orchards, suburbs",
+      food: "Fruit, berries, insects",
+      nesting: "Trees (cup nest)",
+      behavior: "Roams in flocks following fruit",
+      conservation: "Low concern",
+      basicDescription:
+        "A sleek, crested bird with silky plumage in shades of brown, gray, and lemon yellow, tipped with a bright yellow tail band and glossy red waxy droplets on the wing feathers. Cedar Waxwings are highly social and almost never seen alone. They are fruit specialists, and flocks will descend on berry trees and strip them bare — sometimes eating so many fermented berries that they become intoxicated.",
+      songs:
+        "Not a typical song — produces a high, thin, trilling whistle, almost insect-like in quality.",
+      calls:
+        "The signature call is a very high, thin 'sreee' or 'bzee,' given constantly in flight. A flock passing overhead sounds like a chorus of tiny bells. Easily missed if your high-frequency hearing has faded.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Cedar_Waxwing",
+    },
     variants: [],
   },
   {
@@ -311,7 +567,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/common-loon-voice.mp3",
     call: "/birds/audio/common-loon-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Gavia immer",
+      order: "Gaviiformes",
+      family: "Gaviidae",
+      groupName: "Loons",
+      habitat: "Forest lakes, coastal waters",
+      food: "Fish, crayfish, amphibians",
+      nesting: "Ground at water's edge",
+      behavior: "Dives, rides low in water",
+      conservation: "Low concern",
+      basicDescription:
+        "The haunting calls of the Common Loon are the sound of wild northern lakes. These large, heavy-bodied birds are supremely adapted for diving — they can plunge to 200 feet and chase fish at speed. Their bones are denser than other birds to help them sink. Parents famously carry newly hatched chicks on their backs to protect them from snapping turtles and cold water.",
+      songs:
+        "Four distinct calls: the tremolo (laughing call, alarm), the wail (long-distance contact between mates), the yodel (male territorial declaration), and the hoot (soft, short contact within family).",
+      calls:
+        "The midnight wail echoing across a dark lake is one of the most evocative sounds in nature. The tremolo, often called 'the laugh,' signals alarm or excitement. No two males have the same yodel.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Common_Loon",
+    },
     variants: [],
   },
   {
@@ -322,7 +595,24 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/dark-eyed-junco-voice.mp3",
     call: "/birds/audio/dark-eyed-junco-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Junco hyemalis",
+      order: "Passeriformes",
+      family: "Passerellidae",
+      groupName: "Sparrows",
+      habitat: "Forests, forest edges, suburbs",
+      food: "Seeds, insects",
+      nesting: "Ground (hidden cup nest)",
+      behavior: "Forages on ground, flashes white tail",
+      conservation: "Low concern",
+      basicDescription:
+        "Called 'snowbirds,' Dark-eyed Juncos arrive at feeders across the US each fall as if announcing winter. They flash distinctive white outer tail feathers as they fly — a warning signal to flock members. There are several distinct regional forms (Oregon, Slate-colored, Pink-sided, etc.) that look so different they were once classified as separate species.",
+      songs:
+        "Sings a simple, musical trill on one pitch — reminiscent of a Chipping Sparrow but slower and more musical. Song varies between individuals and regional forms.",
+      calls:
+        "A sharp, smacking 'tick' or rapid 'tit-it-it-it' when alarmed. A light twittering 'tsew' in flight. Flock members stay in constant contact with soft chips.",
+      sourceUrl: "https://www.allaboutbirds.org/guide/Dark-eyed_Junco",
+    },
     variants: [],
   },
   {
@@ -333,7 +623,23 @@ export const primaryBirds: Bird[] = [
     image: "",
     voice: "/birds/audio/double-crested-cormorant-voice.mp3",
     call: "/birds/audio/double-crested-cormorant-call.mp3",
-    info: { songs: "" },
+    info: {
+      scientificName: "Nannopterum auritum",
+      order: "Suliformes",
+      family: "Phalacrocoracidae",
+      groupName: "Cormorants",
+      habitat: "Lakes, rivers, coasts",
+      food: "Fish",
+      nesting: "Trees or ground (colonies)",
+      behavior: "Dives, spreads wings to dry",
+      conservation: "Low concern",
+      basicDescription:
+        "Large, dark waterbirds often seen perched with wings spread wide to dry — unlike ducks, their feathers are not fully waterproof, which lets them dive more easily but means they must air-dry after every swim. They swim with their body low in the water and their bill tilted upward, looking prehistoric. The double crests are only visible in breeding plumage.",
+      calls:
+        "Deep, guttural grunts and pig-like croaks at the nesting colony. Mostly silent in flight.",
+      sourceUrl:
+        "https://www.allaboutbirds.org/guide/Double-crested_Cormorant",
+    },
     variants: [],
   },
   {

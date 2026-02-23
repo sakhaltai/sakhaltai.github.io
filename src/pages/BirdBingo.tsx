@@ -558,10 +558,10 @@ export default function BirdBingo() {
                     {/* Overview / basic description */}
                     {infoBird.info?.basicDescription && (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-1">
                           Overview
                         </div>
-                        <p className="text-sm text-neutral-700 leading-relaxed">
+                        <p className="text-sm text-neutral-900 leading-relaxed">
                           {infoBird.info.basicDescription}
                         </p>
                       </div>
@@ -573,7 +573,7 @@ export default function BirdBingo() {
                       infoBird.info?.behavior ||
                       infoBird.info?.conservation) && (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-2">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-2">
                           Life history
                         </div>
                         <div className="flex flex-wrap gap-2">
@@ -615,30 +615,30 @@ export default function BirdBingo() {
                     {/* Songs / calls / other sounds */}
                     {infoBird.info?.songs && (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-1">
                           Songs
                         </div>
-                        <p className="text-sm text-neutral-700 leading-relaxed">
+                        <p className="text-sm text-neutral-900 leading-relaxed">
                           {infoBird.info.songs}
                         </p>
                       </div>
                     )}
                     {infoBird.info?.calls && (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-1">
                           Calls
                         </div>
-                        <p className="text-sm text-neutral-700 leading-relaxed">
+                        <p className="text-sm text-neutral-900 leading-relaxed">
                           {infoBird.info.calls}
                         </p>
                       </div>
                     )}
                     {infoBird.info?.otherSounds && (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-1">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-1">
                           Other sounds
                         </div>
-                        <p className="text-sm text-neutral-700 leading-relaxed">
+                        <p className="text-sm text-neutral-900 leading-relaxed">
                           {infoBird.info.otherSounds}
                         </p>
                       </div>
@@ -646,7 +646,7 @@ export default function BirdBingo() {
                     {/* Variant buttons */}
                     {infoBird.variants?.length ? (
                       <div>
-                        <div className="uppercase text-xs tracking-[0.18em] font-semibold mb-2">
+                        <div className="uppercase text-xs tracking-[0.18em] font-bold text-black mb-2">
                           Songs / dialects
                         </div>
                         <div className="flex flex-wrap gap-2">
