@@ -2355,7 +2355,7 @@ export const expansionBirds: Bird[] = [
     id: "kookaburra",
     name: "Laughing Kookaburra",
     imageMale: "/birds/img/kookaburra-male.png",
-    imageFemale: "/birds/img/kookaburra-female.png", // dimorphic – female has rufous/chestnut tail, male has blue tail
+    imageFemale: "", // monomorphic
     image: "",
     voice: "/birds/audio/kookaburra-voice.mp3",
     call: "/birds/audio/kookaburra-call.mp3",
@@ -2460,6 +2460,34 @@ export const expansionBirds: Bird[] = [
       calls:
         "Loud piercing whistles and grunts cut through the New Zealand bush on dark nights.",
       sourceUrl: "https://www.allaboutbirds.org/guide/North_Island_Brown_Kiwi",
+    },
+    variants: [],
+  },
+  {
+    id: "okarito-brown-kiwi",
+    name: "Okarito Brown Kiwi",
+    imageMale: "/birds/img/okarito-brown-kiwi-male.png",
+    imageFemale: "", // monomorphic
+    image: "",
+    voice: "/birds/audio/okarito-brown-kiwi-voice.mp3",
+    call: "/birds/audio/okarito-brown-kiwi-call.mp3",
+    info: {
+      scientificName: "Apteryx rowi",
+      order: "Apterygiformes",
+      family: "Apterygidae",
+      groupName: "Kiwis",
+      habitat: "Ōkārito forest, South Island, New Zealand (tiny ~40 sq km range)",
+      food: "Earthworms, insects, and berries sniffed out at night",
+      nesting: "Burrow — male does most incubation; monogamous pairs",
+      behavior: "Nocturnal; strictly territorial; pairs sing to each other across the forest",
+      conservation: "Endangered",
+      basicDescription:
+        "The rarest kiwi — and one of the rarest birds in the world. Found only in a tiny patch of Ōkārito forest on New Zealand's South Island, the entire wild population was once down to around 160 birds. Thanks to intensive conservation efforts — predator trapping, egg collection, and chick rearing in predator-free sanctuaries — the population has climbed back to over 700. Every single bird matters.",
+      songs:
+        "Males give a rapid series of ascending short whistles; females answer with lower, longer, huskier calls.",
+      calls:
+        "Loud, piercing whistles and grunts that cut through the silent forest on still New Zealand nights.",
+      sourceUrl: "https://ebird.org/species/okabki1",
     },
     variants: [],
   },
@@ -2747,7 +2775,7 @@ export const expansionBirds: Bird[] = [
     id: "cassowary",
     name: "Southern Cassowary",
     imageMale: "/birds/img/southern-cassowary-male.png",
-    imageFemale: "/birds/img/southern-cassowary-female.png", // reverse dimorphic – female is larger and more vividly colored
+    imageFemale: "", // monomorphic (female larger but visually similar)
     image: "",
     voice: "/birds/audio/southern-cassowary-voice.mp3",
     call: "/birds/audio/southern-cassowary-call.mp3",
