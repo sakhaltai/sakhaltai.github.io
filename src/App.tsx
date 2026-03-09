@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import BirdBingo from "./pages/BirdBingo";
 import Home from "./pages/Home";
 import JapaneseArticles from "./pages/JapaneseArticles";
 import OscarCare from "./pages/OscarCare";
@@ -74,9 +73,6 @@ export default function App() {
           </a>
           <Link className="btn" to="/teaching">
             Teaching
-          </Link>
-          <Link className="btn" to="/bird-bingo">
-            Bird Bingo
           </Link>
           {/* <Link className="btn" to="/rocky-care">
             Rocky Care
@@ -174,13 +170,6 @@ export default function App() {
                 >
                   Teaching
                 </Link>
-                <Link
-                  className="btn"
-                  to="/bird-bingo"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Bird Bingo
-                </Link>
                 {/* <Link
                   className="btn"
                   to="/rocky-care"
@@ -207,7 +196,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teaching" element={<Teaching />} />
-        <Route path="/bird-bingo" element={<BirdBingo />} />
         <Route path="/rocky-care" element={<RockyCare />} />
         <Route path="/oscar-care" element={<OscarCare />} />
         <Route path="/jp" element={<JapaneseArticles />} />

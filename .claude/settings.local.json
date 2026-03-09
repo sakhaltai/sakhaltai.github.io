@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -File:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(bash /c/Users/sakha/Code/sakhaltai.github.io/generate-bird-audit.sh)",
+      "Bash(node --version:*)",
+      "Bash(node --input-type=commonjs:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
