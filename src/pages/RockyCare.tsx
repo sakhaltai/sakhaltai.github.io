@@ -19,7 +19,7 @@ function useNoIndexMeta(enabled: boolean) {
     if (!enabled) return;
 
     const existing = document.querySelector<HTMLMetaElement>(
-      'meta[name="robots"]'
+      'meta[name="robots"]',
     );
     const meta = existing ?? document.createElement("meta");
     meta.name = "robots";
@@ -362,7 +362,7 @@ export default function RockyCare() {
       { id: "accidents", label: "Accidents" },
       { id: "pay", label: "Payment" },
     ],
-    []
+    [],
   );
 
   const galleryPhotos: Photo[] = [];
@@ -1050,7 +1050,7 @@ export default function RockyCare() {
                 onClick={async () => {
                   try {
                     await navigator.clipboard.writeText(
-                      "1605 Locust Way, Lynnwood, WA 98036"
+                      "1605 Locust Way, Lynnwood, WA 98036",
                     );
                     setToast("Address copied!");
                   } catch {}

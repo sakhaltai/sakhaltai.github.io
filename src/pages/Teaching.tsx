@@ -1,4 +1,5 @@
-import React from "react";
+// src/pages/Teaching.tsx
+
 import { teaching } from "../content";
 
 export default function Teaching() {

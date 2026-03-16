@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from "react";
+// src/components/WorkHistory.tsx
+
+import { useState } from "react";
 import { work } from "../content";
 
 export default function WorkHistory() {

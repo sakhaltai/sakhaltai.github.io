@@ -28,7 +28,8 @@
 }
 
 /* Base layout */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -127,7 +128,14 @@ body {
 }
 
 /* Always do this */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* Prevent accidental sideways page scroll */
-html, body { overflow-x: hidden; }
+html,
+body {
+  overflow-x: hidden;
+}

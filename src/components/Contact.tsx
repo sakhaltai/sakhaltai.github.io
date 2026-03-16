@@ -1,4 +1,7 @@
+// src/components/Contact.tsx
+
 import React from "react";
+import { Link } from "react-router-dom";
 import { site } from "../content";
 
 export default function Contact() {
@@ -19,11 +22,18 @@ export default function Contact() {
       className="rounded-2xl bg-[var(--card)] border border-[var(--border)] p-6 md:p-10 shadow-card text-center"
     >
       <h2 className="text-xl md:text-2xl font-bold text-[var(--text)] mb-2">
-        What’s Next?
+        What's Next?
       </h2>
       <p className="text-[var(--muted)] max-w-prose mx-auto mb-5">
-        I’m open for motion design, editing, and AE instruction. Reach out
-        anytime.
+        I'm open for motion design, automation, teaching, and AI workflow
+        consulting. Check out my{" "}
+        <Link
+          to="/services"
+          className="underline underline-offset-2 hover:text-cyan-300 transition-colors"
+        >
+          services
+        </Link>{" "}
+        or reach out anytime.
       </p>
 
       <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-2">

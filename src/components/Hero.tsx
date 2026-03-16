@@ -1,6 +1,5 @@
 // src/components/Hero.tsx
 
-import React from "react";
 import { site } from "../content";
 
 export default function Hero() {

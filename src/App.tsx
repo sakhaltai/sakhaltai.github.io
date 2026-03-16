@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import JapaneseArticles from "./pages/JapaneseArticles";
 import OscarCare from "./pages/OscarCare";
 import RockyCare from "./pages/RockyCare";
+import Services from "./pages/Services";
 import Teaching from "./pages/Teaching";
 
 export default function App() {
@@ -71,6 +72,9 @@ export default function App() {
           <a className="btn" href="/#contact">
             Contact
           </a>
+          <Link className="btn" to="/services">
+            Services
+          </Link>
           <Link className="btn" to="/teaching">
             Teaching
           </Link>
@@ -165,6 +169,13 @@ export default function App() {
 
                 <Link
                   className="btn"
+                  to="/services"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  className="btn"
                   to="/teaching"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -195,6 +206,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/rocky-care" element={<RockyCare />} />
         <Route path="/oscar-care" element={<OscarCare />} />

@@ -1,4 +1,5 @@
-import React from "react";
+// src/components/Footer.tsx
+
 import { site } from "../content";
 
 export default function Footer() {

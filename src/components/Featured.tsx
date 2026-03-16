@@ -1,4 +1,5 @@
-import React from "react";
+// src/components/Featured.tsx
+
 import { featured } from "../content";
 
 export default function Featured() {

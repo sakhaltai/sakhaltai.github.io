@@ -7,7 +7,7 @@ function useNoIndexMeta(enabled: boolean) {
     if (!enabled) return;
 
     const existing = document.querySelector<HTMLMetaElement>(
-      'meta[name="robots"]'
+      'meta[name="robots"]',
     );
     const meta = existing ?? document.createElement("meta");
     meta.name = "robots";
@@ -198,7 +198,7 @@ export default function OscarCare() {
       { id: "contacts", label: "Contacts" },
       { id: "notes", label: "Notes" },
     ],
-    []
+    [],
   );
 
   return (

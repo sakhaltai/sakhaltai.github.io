@@ -1,4 +1,5 @@
-import React from "react";
+// src/components/About.tsx
+
 import { about } from "../content";
 
 export default function About() {
